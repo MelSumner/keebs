@@ -125,7 +125,6 @@
     spec(dl, 'Case', b.case.color_or_finish);
     spec(dl, 'Material', b.case.material);
     spec(dl, 'Switches', switchLabel(b.switches));
-    spec(dl, 'Type', b.switches.type, capitalize);
     spec(dl, 'Keycaps', b.keycaps.set);
     spec(dl, 'Profile', b.keycaps.profile);
 
