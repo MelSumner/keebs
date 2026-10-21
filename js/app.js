@@ -10,6 +10,7 @@
     q: document.getElementById('q'),
     switchType: document.getElementById('switch'),
     profile: document.getElementById('profile'),
+    sort: document.getElementById('sort'),
     count: document.getElementById('count'),
     grid: document.getElementById('grid'),
     empty: document.getElementById('empty'),
@@ -157,8 +158,26 @@
       q: fold(els.q.value.trim()),
       switchType: els.switchType.value,
       profile: els.profile.value,
+      sort: els.sort.value,
     };
   }
+
+  const DEFAULT_SORT = 'brand';
+  const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+
+  // Blank values sort last so "TBD" entries don't lead the list.
+  function compareText(a, b) {
+    if (isBlank(a) && isBlank(b)) return 0;
+    if (isBlank(a)) return 1;
+    if (isBlank(b)) return -1;
+    return collator.compare(String(a), String(b));
+  }
+
+  const SORTS = {
+    brand: (a, b) => compareText(a.brand, b.brand) || compareText(a.model, b.model) || a.id - b.id,
+    model: (a, b) => compareText(a.model, b.model) || compareText(a.brand, b.brand) || a.id - b.id,
+    id: (a, b) => a.id - b.id,
+  };
 
   function matches(b, f) {
     if (f.switchType && filterValue(b.switches.type) !== f.switchType) return false;
@@ -175,6 +194,7 @@
     if (els.q.value.trim()) params.set('q', els.q.value.trim());
     if (f.switchType) params.set('switch', f.switchType);
     if (f.profile) params.set('profile', f.profile);
+    if (f.sort && f.sort !== DEFAULT_SORT) params.set('sort', f.sort);
     const qs = params.toString();
     const url = `${location.pathname}${qs ? `?${qs}` : ''}${location.hash}`;
     history.replaceState(null, '', url);
@@ -189,11 +209,12 @@
     els.q.value = params.get('q') || '';
     setSelect(els.switchType, params.get('switch'));
     setSelect(els.profile, params.get('profile'));
+    setSelect(els.sort, params.get('sort'));
   }
 
   function render() {
     const f = currentFilters();
-    const visible = builds.filter((b) => matches(b, f));
+    const visible = builds.filter((b) => matches(b, f)).sort(SORTS[f.sort] || SORTS[DEFAULT_SORT]);
     els.grid.replaceChildren(...visible.map(card));
     els.empty.hidden = visible.length !== 0;
     const noun = builds.length === 1 ? 'keyboard' : 'keyboards';
@@ -232,6 +253,7 @@
     });
     els.switchType.addEventListener('change', render);
     els.profile.addEventListener('change', render);
+    els.sort.addEventListener('change', render);
     els.form.addEventListener('submit', (e) => e.preventDefault());
     els.form.addEventListener('reset', () => setTimeout(render, 0));
     els.emptyClear.addEventListener('click', clearFilters);
