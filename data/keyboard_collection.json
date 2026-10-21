@@ -198,7 +198,7 @@
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
-        "color_or_finish": "Ravenclaw-themed top plate",
+        "color_or_finish": "Dark navy with mint details",
         "material": null
       },
       "switches": {
@@ -220,7 +220,7 @@
       "model": "Bauer Lite",
       "case": {
         "color_or_finish": "Bone",
-        "material": null
+        "material": "Injection-molded plastic"
       },
       "switches": {
         "model": "Akko Creamy Yellow",
@@ -233,7 +233,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": "Weight and silicone plate dampener; substituted color-matched 7u spacebar (profile match unconfirmed)"
+      "notes": "Added bottom plate weight and silicone plate dampener. Had to substitute color-matched 7u spacebar."
     },
     {
       "id": 12,
@@ -254,7 +254,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": null
+      "notes": "This is our favorite keyboard so far. First endgame!"
     },
     {
       "id": 13,
@@ -275,7 +275,7 @@
       },
       "photo": null,
       "status": "work_in_progress",
-      "notes": "Work in progress; two exposed switch positions and purple accent keycap"
+      "notes": "Work in progress"
     },
     {
       "id": 14,
@@ -291,7 +291,7 @@
         "type": "linear"
       },
       "keycaps": {
-        "set": "White and teal/turquoise SA keycaps",
+        "set": "White and teal/turquoise keycaps",
         "profile": "SA"
       },
       "photo": null,
@@ -308,16 +308,16 @@
       },
       "switches": {
         "model": "Mako tactile",
-        "description": "Glorious tactile switch, 45g actuation, factory-lubed",
+        "description": "Glorious tactile switch, 45g actuation",
         "type": "tactile"
       },
       "keycaps": {
-        "set": "Lavender and white DSA keycaps",
+        "set": "DSA Hana keycap set",
         "profile": "DSA"
       },
       "photo": null,
       "status": "documented",
-      "notes": "Keqing illustrated spacebar; purple amethyst artisan Escape"
+      "notes": "Only used the white and purple keycaps; added a video game character (Keqing) illustrated spacebar and amethyst artisan ESC."
     },
     {
       "id": 16,
@@ -325,7 +325,7 @@
       "model": "NJ98",
       "case": {
         "color_or_finish": "White",
-        "material": null
+        "material": "Reinforced ABS Plastic"
       },
       "switches": {
         "model": "Cherry MX Brown",
@@ -333,12 +333,12 @@
         "type": "tactile"
       },
       "keycaps": {
-        "set": "Signature Plastics SA Macrodata Refinement",
+        "set": "Signature Plastics Macrodata Refinement",
         "profile": "SA"
       },
       "photo": null,
       "status": "documented",
-      "notes": "Screen and knob"
+      "notes": "I love looking at this board so much that I've been hesitant to use it!"
     },
     {
       "id": 17,
@@ -346,7 +346,7 @@
       "model": "K75",
       "case": {
         "color_or_finish": "Green",
-        "material": null
+        "material": "ABS plastic"
       },
       "switches": {
         "model": "Kailh Silver",
@@ -367,7 +367,7 @@
       "model": "ALT65",
       "case": {
         "color_or_finish": "Arctic Blue",
-        "material": null
+        "material": "Aluminum"
       },
       "switches": {
         "model": "Cherry Red",
@@ -388,7 +388,7 @@
       "model": "K75",
       "case": {
         "color_or_finish": "Purple",
-        "material": null
+        "material": "ABS plastic"
       },
       "switches": {
         "model": "Kailh Silver",
