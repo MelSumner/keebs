@@ -5,6 +5,7 @@
   --muted  #9a93c4  6.84 / 6.42 / 5.87 / 6.17
   --accent #d9b8ff  11.41 / 10.70 / 9.80 / 10.28  (links, focus ring)
   On --card #120426: text 8.72, muted 6.86, accent 11.44, border-strong 5.48
+  --media-icon #8e9ab3 on --media-bg #2b3445: 4.42 (placeholder icon, needs >= 3:1)
   --border-strong #8a7fbf 5.47 / 5.13 / 4.69 / 4.93 (form control boundaries, needs >= 3:1)
   --wip-text #ffd58a on --wip-bg #3b2c14: 9.73
 */
@@ -12,6 +13,8 @@
   --bg: #190029;
   --surface: #220537;
   --card: #120426;
+  --media-bg: #2b3445;
+  --media-icon: #8e9ab3;
   --surface-2: #2d0b47;
   --glow: #260840;
   --text: #aea8d3;
@@ -309,7 +312,7 @@ input::placeholder {
 
 .card__media {
   aspect-ratio: 16 / 9;
-  background: var(--surface-2);
+  background: var(--media-bg);
   border-bottom: 1px solid var(--border);
 }
 
@@ -325,7 +328,7 @@ input::placeholder {
   height: 100%;
   display: grid;
   place-items: center;
-  color: var(--border-strong);
+  color: var(--media-icon);
 }
 
 .placeholder svg {
