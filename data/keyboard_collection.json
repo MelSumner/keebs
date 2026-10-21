@@ -10,11 +10,11 @@
       "model": "M1 V5 HE",
       "case": {
         "color_or_finish": "White",
-        "material": null
+        "material": "Aluminum"
       },
       "switches": {
         "model": "Keychron Ultra-Fast Lime Silent Banana",
-        "description": null,
+        "description": "Keychron Ultra-Fast Lime magnetic (Hall effect) switch, Silent Banana variant",
         "type": "magnetic",
         "mount": null
       },
