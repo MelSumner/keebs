@@ -266,7 +266,7 @@
       },
       "switches": {
         "model": "Durock Ice Kings",
-        "description": null,
+        "description": "Tactile 68g",
         "type": null
       },
       "keycaps": {
@@ -274,8 +274,8 @@
         "profile": "MT3"
       },
       "photo": null,
-      "status": "work_in_progress",
-      "notes": "Work in progress"
+      "status": "documented",
+      "notes": "What about another CSTM80 with Mt3 Operator keycaps but different switches, you say? Well, look no further!"
     },
     {
       "id": 14,
@@ -291,8 +291,8 @@
         "type": "linear"
       },
       "keycaps": {
-        "set": "White and teal/turquoise keycaps",
-        "profile": "SA"
+        "set": "Domikey White and teal/turquoise keycaps",
+        "profile": "SA-like"
       },
       "photo": null,
       "status": "documented",
