@@ -16,7 +16,7 @@
         "model": "Keychron Ultra-Fast Lime Silent Banana",
         "description": "Keychron Ultra-Fast Lime magnetic (Hall effect) switch, Silent Banana variant",
         "type": "magnetic",
-        "mount": null
+        "mount": "n/a"
       },
       "keycaps": {
         "set": "SA BoW",
