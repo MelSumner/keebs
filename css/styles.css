@@ -1,22 +1,22 @@
 /*
-  Navy + purple theme. Contrast ratios (WCAG 2.2 AA) against
-  --bg / --surface / --surface-2 / --glow (darkest purple point of the header glow).
-  --text   #eceefb  15.78 / 14.17 / 12.31 / 12.58
-  --muted  #b4bbdc   9.61 /  8.63 /  7.50 /  7.66
-  --accent #c3a8ff   8.99 /  8.07 /  7.02 /  7.17  (links, focus ring)
-  --border-strong #7d87bd 5.27 / 4.73 / 4.11 (form control boundaries, needs >= 3:1)
+  Purple theme. Contrast ratios (WCAG 2.2 AA) against
+  --bg / --surface / --surface-2 / --glow (lightest point of the header glow).
+  --text   #aea8d3  7.50 / 6.86 / 6.05 / 6.60
+  --muted  #9a93c4  5.90 / 5.40 / 4.75 / 5.19
+  --accent #d9b8ff  9.84 / 9.00 / 7.93 / 8.65  (links, focus ring)
+  --border-strong #8a7fbf 4.71 / 4.31 / 3.80 / 4.15 (form control boundaries, needs >= 3:1)
   --wip-text #ffd58a on --wip-bg #3b2c14: 9.73
 */
 :root {
-  --bg: #0d1330;
-  --surface: #161d40;
-  --surface-2: #1f2850;
-  --glow: #2a2058;
-  --text: #eceefb;
-  --muted: #b4bbdc;
-  --accent: #c3a8ff;
-  --border: #2b3463;
-  --border-strong: #7d87bd;
+  --bg: #31034b;
+  --surface: #3a0a57;
+  --surface-2: #451466;
+  --glow: #3d0e5c;
+  --text: #aea8d3;
+  --muted: #9a93c4;
+  --accent: #d9b8ff;
+  --border: #55307a;
+  --border-strong: #8a7fbf;
   --wip-bg: #3b2c14;
   --wip-text: #ffd58a;
 
