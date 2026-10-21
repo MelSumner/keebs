@@ -1,21 +1,23 @@
 /*
-  Color tokens: contrast ratios (WCAG 2.2 AA) against --bg / --surface / --surface-2.
-  --text   #e8eaed  15.31 / 13.87 / 12.44
-  --muted  #a7aeb9   8.26 /  7.48 /  6.71
-  --accent #8ab4f8   8.76 /  7.93 /  7.11  (links, focus ring)
-  --border-strong #7a828e 4.75 / 4.31 / 3.86 (form control boundaries, needs >= 3:1)
-  --wip-text #ffd58a on --wip-bg #3a2e12: 9.58
+  Navy + purple theme. Contrast ratios (WCAG 2.2 AA) against
+  --bg / --surface / --surface-2 / --glow (darkest purple point of the header glow).
+  --text   #eceefb  15.78 / 14.17 / 12.31 / 12.58
+  --muted  #b4bbdc   9.61 /  8.63 /  7.50 /  7.66
+  --accent #c3a8ff   8.99 /  8.07 /  7.02 /  7.17  (links, focus ring)
+  --border-strong #7d87bd 5.27 / 4.73 / 4.11 (form control boundaries, needs >= 3:1)
+  --wip-text #ffd58a on --wip-bg #3b2c14: 9.73
 */
 :root {
-  --bg: #121417;
-  --surface: #1b1e23;
-  --surface-2: #23272e;
-  --text: #e8eaed;
-  --muted: #a7aeb9;
-  --accent: #8ab4f8;
-  --border: #2f343c;
-  --border-strong: #7a828e;
-  --wip-bg: #3a2e12;
+  --bg: #0d1330;
+  --surface: #161d40;
+  --surface-2: #1f2850;
+  --glow: #2a2058;
+  --text: #eceefb;
+  --muted: #b4bbdc;
+  --accent: #c3a8ff;
+  --border: #2b3463;
+  --border-strong: #7d87bd;
+  --wip-bg: #3b2c14;
   --wip-text: #ffd58a;
 
   --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -42,7 +44,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    radial-gradient(ellipse 80% 40rem at 50% -10rem, var(--glow), transparent),
+    var(--bg);
+  background-repeat: no-repeat;
+  min-height: 100vh;
   color: var(--text);
   font-family: var(--font);
   font-size: 1rem;
@@ -241,8 +247,8 @@ input::placeholder {
 .card__brand {
   display: block;
   font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--muted);
+  font-weight: 600;
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
