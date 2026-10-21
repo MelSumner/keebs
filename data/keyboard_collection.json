@@ -14,7 +14,7 @@
       },
       "switches": {
         "model": "Keychron Ultra-Fast Lime Silent Banana",
-        "description": "Keychron Ultra-Fast Lime magnetic (Hall effect) switch, Silent Banana variant",
+        "description": "Magnetic (Hall effect) switch",
         "type": "magnetic"
       },
       "keycaps": {
@@ -77,7 +77,7 @@
       },
       "switches": {
         "model": "Cherry MX Honey",
-        "description": "Cherry MX2A silent tactile switch, 45g actuation, factory-lubed",
+        "description": "MX2A silent tactile switch, 45g actuation, factory-lubed",
         "type": "tactile"
       },
       "keycaps": {
@@ -181,8 +181,8 @@
         "material": "Aluminum with wood top"
       },
       "switches": {
-        "model": "Anthracite",
-        "description": "Mode silent tactile switch, 48g actuation, 63g tactile peak, pre-lubed",
+        "model": "Mode Anthracite",
+        "description": "Silent tactile switch, 48g actuation, 63g tactile peak, pre-lubed",
         "type": "silent tactile"
       },
       "keycaps": {
@@ -203,7 +203,7 @@
       },
       "switches": {
         "model": "Haimu Whisper Silent Tactile",
-        "description": "Haimu silent tactile, 65g spring, nylon PA66 housing, POM stem, factory-lubed",
+        "description": "Silent tactile, 65g spring, nylon PA66 housing, POM stem, factory-lubed",
         "type": "silent tactile"
       },
       "keycaps": {
@@ -286,8 +286,8 @@
         "material": "Polycarbonate"
       },
       "switches": {
-        "model": "Milky Yellow",
-        "description": "Gateron linear switch, 50g actuation, milky nylon housing",
+        "model": "Gateron Milky Yellow",
+        "description": "Linear switch, 50g actuation, milky nylon housing",
         "type": "linear"
       },
       "keycaps": {
@@ -307,8 +307,8 @@
         "material": "Aluminum"
       },
       "switches": {
-        "model": "Mako tactile",
-        "description": "Glorious tactile switch, 45g actuation",
+        "model": "Glorious Mako tactile",
+        "description": "Tactile switch, 45g actuation",
         "type": "tactile"
       },
       "keycaps": {
@@ -371,7 +371,7 @@
       },
       "switches": {
         "model": "Cherry Red",
-        "description": "Cherry MX linear switch, 45g actuation",
+        "description": "MX linear switch, 45g actuation",
         "type": "linear"
       },
       "keycaps": {
@@ -434,7 +434,7 @@
       },
       "switches": {
         "model": "Akko Rosewood",
-        "description": "Akko linear switch, 40g actuation, factory-lubed",
+        "description": "Linear switch, 40g actuation, factory-lubed",
         "type": "linear"
       },
       "keycaps": {
@@ -497,7 +497,7 @@
       },
       "switches": {
         "model": "Cherry MX Silent Red",
-        "description": "Cherry MX silent linear switch, 45g actuation",
+        "description": "Silent linear switch, 45g actuation",
         "type": "linear"
       },
       "keycaps": {
@@ -539,7 +539,7 @@
       },
       "switches": {
         "model": "Akko Rosewood",
-        "description": "Akko linear switch, 40g actuation, factory-lubed",
+        "description": "Linear switch, 40g actuation, factory-lubed",
         "type": "linear"
       },
       "keycaps": {
