@@ -138,8 +138,8 @@
     },
     {
       "id": 7,
-      "brand": null,
-      "model": "GM87",
+      "brand": "Zuoya",
+      "model": "GMK87",
       "case": {
         "color_or_finish": "Black",
         "material": null
@@ -512,7 +512,7 @@
     },
     {
       "id": 24,
-      "brand": "IQNIX",
+      "brand": "IQUNIX",
       "model": "F96",
       "case": {
         "color_or_finish": null,
@@ -578,8 +578,8 @@
     },
     {
       "id": 27,
-      "brand": null,
-      "model": "GM87",
+      "brand": "Zuoya",
+      "model": "GMK87",
       "case": {
         "color_or_finish": "White",
         "material": null
@@ -600,8 +600,8 @@
     },
     {
       "id": 28,
-      "brand": null,
-      "model": "GM87",
+      "brand": "Zuoya",
+      "model": "GMK87",
       "case": {
         "color_or_finish": "Black",
         "material": null
