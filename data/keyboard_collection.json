@@ -515,8 +515,8 @@
       "brand": "IQUNIX",
       "model": "F96",
       "case": {
-        "color_or_finish": null,
-        "material": null
+        "color_or_finish": "Black",
+        "material": "Aluminum"
       },
       "switches": {
         "model": "Cherry MX Silent Red",
