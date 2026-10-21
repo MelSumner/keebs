@@ -601,9 +601,9 @@
         "material": "ABS plastic"
       },
       "switches": {
-        "model": "Gecko",
-        "description": "Gecko silent linear",
-        "type": null
+        "model": "Kinetic Labs Gecko",
+        "description": "Silent linear, made by Gateron",
+        "type": "silent linear"
       },
       "keycaps": {
         "set": "KBDiy keycaps in a red, white, and blue colorway",
