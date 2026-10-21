@@ -142,7 +142,7 @@
       "model": "GMK87",
       "case": {
         "color_or_finish": "Black",
-        "material": null
+        "material": "Plastic/Silicone with Metal accents"
       },
       "switches": {
         "model": "Gateron Curry",
@@ -582,7 +582,7 @@
       "model": "GMK87",
       "case": {
         "color_or_finish": "White",
-        "material": null
+        "material": "Plastic/Silicone with Metal accents"
       },
       "switches": {
         "model": "Gateron Milky Yellow",
@@ -604,7 +604,7 @@
       "model": "GMK87",
       "case": {
         "color_or_finish": "Black",
-        "material": null
+        "material": "Plastic/Silicone with Metal accents"
       },
       "switches": {
         "model": "Gateron Brown",
