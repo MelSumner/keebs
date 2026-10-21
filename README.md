@@ -33,7 +33,7 @@ The site writes the image's alt text from the brand, model, and keycap set.
 - A card grid that searches across every field (brand, model, case, switches, keycaps, notes).
 - Filters for switch type and keycap profile.
 - Filter state lives in the URL, so a filtered view can be bookmarked or shared, e.g. `?switch=tactile&profile=SA`.
-- A dark, minimal theme in `system-ui` fonts. Every color pair meets WCAG 2.2 AA contrast, and the ratios are listed at the top of `css/styles.css`.
+- A dark, minimal theme set in MonoLisa Text, with `system-ui` as the fallback. Every color pair meets WCAG 2.2 AA contrast, and the ratios are listed at the top of `css/styles.css`.
 - Keyboard accessible, with a skip link, labeled controls, visible focus rings, and a live region that announces the result count.
 
 ## Deploying to GitHub Pages
