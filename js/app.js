@@ -129,7 +129,12 @@
     spec(dl, 'Profile', b.keycaps.profile);
 
     const body = el('div', { class: 'card__body' }, [header, dl]);
-    if (!isBlank(b.notes)) body.append(el('p', { class: 'card__notes', text: b.notes }));
+    if (!isBlank(b.notes)) {
+      body.append(el('div', { class: 'card__notes' }, [
+        el('h3', { class: 'card__notes-label', text: 'Build Notes' }),
+        el('p', { text: b.notes }),
+      ]));
+    }
 
     return el('li', {}, el('article', { class: 'card', 'aria-labelledby': headingId }, [media(b), body]));
   }

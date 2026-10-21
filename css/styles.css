@@ -294,6 +294,19 @@ input::placeholder {
   font-size: 0.875rem;
 }
 
+.card__notes-label {
+  margin: 0 0 var(--space-1);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.card__notes p {
+  margin: 0;
+}
+
 .empty,
 .notice {
   padding: var(--space-8) var(--space-4);
