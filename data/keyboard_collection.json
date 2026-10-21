@@ -1,0 +1,646 @@
+{
+  "schema_version": "1.0",
+  "collection": "Mechanical keyboard inventory",
+  "total_builds": 29,
+  "photo_field_description": "Set photo to the path or URL of a future replacement photograph; null means not assigned.",
+  "builds": [
+    {
+      "id": 1,
+      "brand": "Monsgeek",
+      "model": "M1 V5 HE",
+      "case": {
+        "color_or_finish": "White",
+        "material": null
+      },
+      "switches": {
+        "model": "Keychron Ultra-Fast Lime Silent Banana",
+        "description": null,
+        "type": "magnetic",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "SA BoW",
+        "profile": "SA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
+    },
+    {
+      "id": 2,
+      "brand": "Rainy",
+      "model": "Rainy75",
+      "case": {
+        "color_or_finish": "Black",
+        "material": null
+      },
+      "switches": {
+        "model": "Keychron Silent Banana",
+        "description": null,
+        "type": "tactile",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "CannonKeys CXA WoB",
+        "profile": "CXA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Calcifer artisan on Escape (Howl’s Moving Castle)"
+    },
+    {
+      "id": 3,
+      "brand": "Yunzii",
+      "model": "B75Pro",
+      "case": {
+        "color_or_finish": "Black",
+        "material": null
+      },
+      "switches": {
+        "model": "Kailh Midnight Pro Tactile",
+        "description": null,
+        "type": "tactile",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "GMK Dracula v2 Git Core",
+        "profile": "Cherry"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Git-themed legends; cyan lighting"
+    },
+    {
+      "id": 4,
+      "brand": "Smurv",
+      "model": "Smurv80",
+      "case": {
+        "color_or_finish": "Dark gray",
+        "material": null
+      },
+      "switches": {
+        "model": "Cherry MX Honey",
+        "description": null,
+        "type": null,
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Personalized Thockfactory keycaps",
+        "profile": null
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Playful custom legends"
+    },
+    {
+      "id": 5,
+      "brand": "Womier",
+      "model": "Womier75",
+      "case": {
+        "color_or_finish": "Wood",
+        "material": null
+      },
+      "switches": {
+        "model": null,
+        "description": "Unidentified stock switches",
+        "type": "linear",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Pikarar x Hypyo Tech illustrated keycaps",
+        "profile": null
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
+    },
+    {
+      "id": 6,
+      "brand": "Leobog",
+      "model": "Hi75",
+      "case": {
+        "color_or_finish": "Black",
+        "material": null
+      },
+      "switches": {
+        "model": "HMX Moksae Silent Tactile",
+        "description": null,
+        "type": "tactile",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "DSS Honeywell",
+        "profile": "DSS"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Red case ordered as possible replacement"
+    },
+    {
+      "id": 7,
+      "brand": null,
+      "model": "GM87",
+      "case": {
+        "color_or_finish": "Black",
+        "material": null
+      },
+      "switches": {
+        "model": "Gateron Curry",
+        "description": null,
+        "type": null,
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Signature Plastics SA-P white alphas and orange modifiers",
+        "profile": "SA-P"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Display and knob; possible board/case replacement under consideration"
+    },
+    {
+      "id": 8,
+      "brand": "Yunzii",
+      "model": "AL68",
+      "case": {
+        "color_or_finish": "Black",
+        "material": null
+      },
+      "switches": {
+        "model": null,
+        "description": "Unidentified red-stem switches",
+        "type": "tactile",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "XDA Honey / Japanese Bee",
+        "profile": "XDA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
+    },
+    {
+      "id": 9,
+      "brand": "Mode",
+      "model": "Encore 65%",
+      "case": {
+        "color_or_finish": "Light colorway; wooden upper section",
+        "material": null
+      },
+      "switches": {
+        "model": "Anthracite",
+        "description": null,
+        "type": null,
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Dokodoko Panda",
+        "profile": null
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
+    },
+    {
+      "id": 10,
+      "brand": "Drop",
+      "model": "CSTM80",
+      "case": {
+        "color_or_finish": "Ravenclaw-themed top plate",
+        "material": null
+      },
+      "switches": {
+        "model": "Haimu Whisper Silent Tactile",
+        "description": null,
+        "type": "tactile",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "CannonCaps CXA Iara",
+        "profile": "CXA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
+    },
+    {
+      "id": 11,
+      "brand": "Omnitype",
+      "model": "Bauer Lite",
+      "case": {
+        "color_or_finish": "Bone",
+        "material": null
+      },
+      "switches": {
+        "model": "Akko Creamy Yellow",
+        "description": null,
+        "type": "linear",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "MOA Cute Cat",
+        "profile": "MOA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Weight and silicone plate dampener; substituted color-matched 7u spacebar (profile match unconfirmed)"
+    },
+    {
+      "id": 12,
+      "brand": "Drop",
+      "model": "CSTM80",
+      "case": {
+        "color_or_finish": "Aluminum top plate",
+        "material": null
+      },
+      "switches": {
+        "model": "Keychron Silent Banana",
+        "description": null,
+        "type": "tactile",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "MT3 Operator",
+        "profile": "MT3"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
+    },
+    {
+      "id": 13,
+      "brand": "Drop",
+      "model": "CSTM80",
+      "case": {
+        "color_or_finish": "White",
+        "material": null
+      },
+      "switches": {
+        "model": "Durock Ice Kings",
+        "description": null,
+        "type": null,
+        "mount": null
+      },
+      "keycaps": {
+        "set": "MT3 Operator",
+        "profile": "MT3"
+      },
+      "photo": null,
+      "status": "work_in_progress",
+      "notes": "Work in progress; two exposed switch positions and purple accent keycap"
+    },
+    {
+      "id": 14,
+      "brand": "Drop",
+      "model": "CSTM80",
+      "case": {
+        "color_or_finish": "White",
+        "material": null
+      },
+      "switches": {
+        "model": "Milky Yellow",
+        "description": null,
+        "type": "linear",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "White and teal/turquoise SA keycaps",
+        "profile": "SA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
+    },
+    {
+      "id": 15,
+      "brand": "Glorious",
+      "model": "GMMK Pro",
+      "case": {
+        "color_or_finish": "Aluminum",
+        "material": null
+      },
+      "switches": {
+        "model": "Mako tactile",
+        "description": null,
+        "type": "tactile",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Lavender and white DSA keycaps",
+        "profile": "DSA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Keqing illustrated spacebar; purple amethyst artisan Escape"
+    },
+    {
+      "id": 16,
+      "brand": "Keydous",
+      "model": "NJ98",
+      "case": {
+        "color_or_finish": "White",
+        "material": null
+      },
+      "switches": {
+        "model": "Cherry MX Brown",
+        "description": null,
+        "type": "tactile",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Signature Plastics SA Macrodata Refinement",
+        "profile": "SA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Screen and knob"
+    },
+    {
+      "id": 17,
+      "brand": "FKZ",
+      "model": "K75",
+      "case": {
+        "color_or_finish": "Green",
+        "material": null
+      },
+      "switches": {
+        "model": "Kailh Silver",
+        "description": null,
+        "type": "linear",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Nahida (Genshin Impact) keycaps",
+        "profile": "Cherry"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Purchased via Crunchyroll"
+    },
+    {
+      "id": 18,
+      "brand": "Drop",
+      "model": "ALT65",
+      "case": {
+        "color_or_finish": "Arctic Blue",
+        "material": null
+      },
+      "switches": {
+        "model": "Cherry Red",
+        "description": null,
+        "type": "linear",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "MT3 Fairlane",
+        "profile": "MT3"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
+    },
+    {
+      "id": 19,
+      "brand": "FKZ",
+      "model": "K75",
+      "case": {
+        "color_or_finish": "Purple",
+        "material": null
+      },
+      "switches": {
+        "model": "Kailh Silver",
+        "description": null,
+        "type": "linear",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "DSA Astrolokeys",
+        "profile": "DSA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
+    },
+    {
+      "id": 20,
+      "brand": "NovelKeys",
+      "model": "Classic TKL",
+      "case": {
+        "color_or_finish": "Blue",
+        "material": null
+      },
+      "switches": {
+        "model": "Keychron Silent Banana",
+        "description": null,
+        "type": "tactile",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "KAM Superuser",
+        "profile": "KAM"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Dark caps with green legends and highlight novelties"
+    },
+    {
+      "id": 21,
+      "brand": null,
+      "model": "Lucky65",
+      "case": {
+        "color_or_finish": "Black",
+        "material": null
+      },
+      "switches": {
+        "model": "Akko Rosewood",
+        "description": null,
+        "type": "linear",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "SA WoB",
+        "profile": "SA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Jiji artisan (Kiki’s Delivery Service)"
+    },
+    {
+      "id": 22,
+      "brand": "Ducky",
+      "model": "Tinker 65%",
+      "case": {
+        "color_or_finish": "Black",
+        "material": null
+      },
+      "switches": {
+        "model": "Gecko",
+        "description": null,
+        "type": null,
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Signature Plastics DSA WoB",
+        "profile": "DSA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
+    },
+    {
+      "id": 23,
+      "brand": "Aula",
+      "model": "F75",
+      "case": {
+        "color_or_finish": "Blue",
+        "material": null
+      },
+      "switches": {
+        "model": "Durock Ice Kings",
+        "description": null,
+        "type": null,
+        "mount": null
+      },
+      "keycaps": {
+        "set": "NicePBT Whale",
+        "profile": "Cherry"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Keycap profile provisionally identified as Cherry"
+    },
+    {
+      "id": 24,
+      "brand": "IQNIX",
+      "model": "F96",
+      "case": {
+        "color_or_finish": null,
+        "material": null
+      },
+      "switches": {
+        "model": "Cherry MX Silent Red",
+        "description": null,
+        "type": "linear",
+        "mount": "soldered"
+      },
+      "keycaps": {
+        "set": "GMK Mecha-00",
+        "profile": "Cherry"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Soldered switches; blue/white/black keycaps"
+    },
+    {
+      "id": 25,
+      "brand": "Drop",
+      "model": "CSTM80",
+      "case": {
+        "color_or_finish": "White",
+        "material": null
+      },
+      "switches": {
+        "model": "Capybara",
+        "description": null,
+        "type": null,
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Milkyway Lilith R3",
+        "profile": null
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Evangelion / Rei theme; blue, white and red"
+    },
+    {
+      "id": 26,
+      "brand": "NovelKeys",
+      "model": "Classic TKL",
+      "case": {
+        "color_or_finish": "Red-orange",
+        "material": "ABS plastic"
+      },
+      "switches": {
+        "model": "Akko Rosewood",
+        "description": null,
+        "type": "linear",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Dark gray DCS keycaps with white legends",
+        "profile": "DCS"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Switch identification provisional; ABS injection-molded case; polycarbonate plate; hot-swap PCB; dampening foams; gasket socks. Sound: muted but not deep; constrained brightness"
+    },
+    {
+      "id": 27,
+      "brand": null,
+      "model": "GM87",
+      "case": {
+        "color_or_finish": "White",
+        "material": null
+      },
+      "switches": {
+        "model": "Gateron Milky Yellow",
+        "description": null,
+        "type": "linear",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Mixed DSA WoB + BoW",
+        "profile": "DSA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Yin: white alphas, black modifiers"
+    },
+    {
+      "id": 28,
+      "brand": null,
+      "model": "GM87",
+      "case": {
+        "color_or_finish": "Black",
+        "material": null
+      },
+      "switches": {
+        "model": "Gateron Brown",
+        "description": null,
+        "type": "tactile",
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Mixed DSA WoB + BoW",
+        "profile": "DSA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Yang: black alphas, white modifiers"
+    },
+    {
+      "id": 29,
+      "brand": "Keydous",
+      "model": "NJ80",
+      "case": {
+        "color_or_finish": "White/silver (visual estimate)",
+        "material": null
+      },
+      "switches": {
+        "model": "Gecko",
+        "description": null,
+        "type": null,
+        "mount": null
+      },
+      "keycaps": {
+        "set": "Red, white and blue SA keycaps",
+        "profile": "SA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": "Silver knob; inventory number provisional; exact keycap set unknown"
+    }
+  ]
+}

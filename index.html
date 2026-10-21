@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyboard Collection</title>
+  <meta name="description" content="A collection of mechanical keyboard builds: cases, switches, and keycaps.">
+  <meta name="color-scheme" content="dark">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">Skip to keyboards</a>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Keyboard Collection</h1>
+      <p class="lede">Mechanical keyboard builds: cases, switches, and keycaps.</p>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <form class="filters" id="filters" role="search" aria-label="Filter keyboards">
+      <div class="field field--search">
+        <label for="q">Search</label>
+        <input type="search" id="q" name="q" autocomplete="off" placeholder="Brand, model, switch, keycaps…">
+      </div>
+      <div class="field">
+        <label for="switch">Switch type</label>
+        <select id="switch" name="switch">
+          <option value="">All</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="profile">Keycap profile</label>
+        <select id="profile" name="profile">
+          <option value="">All</option>
+        </select>
+      </div>
+      <div class="field field--action">
+        <button type="reset" class="button" id="clear">Clear filters</button>
+      </div>
+    </form>
+
+    <p class="status" id="count" role="status" aria-live="polite" aria-atomic="true"></p>
+
+    <section id="results" tabindex="-1" aria-label="Keyboards">
+      <ul class="grid" id="grid"></ul>
+      <div class="empty" id="empty" hidden>
+        <p>No keyboards match these filters.</p>
+        <button type="button" class="button" id="empty-clear">Clear filters</button>
+      </div>
+      <noscript>
+        <p class="notice">This site needs JavaScript to load the collection. The raw data is available at <a href="data/keyboard_collection.json">data/keyboard_collection.json</a>.</p>
+      </noscript>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Data: <a href="data/keyboard_collection.json">keyboard_collection.json</a></p>
+    </div>
+  </footer>
+</body>
+</html>
