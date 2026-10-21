@@ -80,13 +80,13 @@
       },
       "switches": {
         "model": "Cherry MX Honey",
-        "description": null,
-        "type": null,
+        "description": "Cherry MX2A silent tactile switch, 45g actuation, factory-lubed",
+        "type": "tactile",
         "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Personalized Thockfactory keycaps",
-        "profile": null
+        "profile": "Cherry"
       },
       "photo": null,
       "status": "documented",
@@ -120,7 +120,7 @@
       "model": "Hi75",
       "case": {
         "color_or_finish": "Black",
-        "material": null
+        "material": "Aluminum"
       },
       "switches": {
         "model": "HMX Moksae Silent Tactile",
@@ -146,8 +146,8 @@
       },
       "switches": {
         "model": "Gateron Curry",
-        "description": null,
-        "type": null,
+        "description": "Gateron EF linear switch, 50g actuation, two-stage spring",
+        "type": "linear",
         "mount": "hot-swap"
       },
       "keycaps": {
@@ -164,7 +164,7 @@
       "model": "AL68",
       "case": {
         "color_or_finish": "Black",
-        "material": null
+        "material": "Aluminum"
       },
       "switches": {
         "model": null,
@@ -186,17 +186,17 @@
       "model": "Encore 65%",
       "case": {
         "color_or_finish": "Light colorway; wooden upper section",
-        "material": null
+        "material": "Aluminum with wood top"
       },
       "switches": {
         "model": "Anthracite",
-        "description": null,
-        "type": null,
+        "description": "Mode silent tactile switch, 48g actuation, 63g tactile peak, pre-lubed",
+        "type": "tactile",
         "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Dokodoko Panda",
-        "profile": null
+        "profile": "Cherry"
       },
       "photo": null,
       "status": "documented",
@@ -252,7 +252,7 @@
       "model": "CSTM80",
       "case": {
         "color_or_finish": "Aluminum top plate",
-        "material": null
+        "material": "Polycarbonate base, aluminum top case"
       },
       "switches": {
         "model": "Keychron Silent Banana",
@@ -274,7 +274,7 @@
       "model": "CSTM80",
       "case": {
         "color_or_finish": "White",
-        "material": null
+        "material": "Polycarbonate"
       },
       "switches": {
         "model": "Durock Ice Kings",
@@ -296,11 +296,11 @@
       "model": "CSTM80",
       "case": {
         "color_or_finish": "White",
-        "material": null
+        "material": "Polycarbonate"
       },
       "switches": {
         "model": "Milky Yellow",
-        "description": null,
+        "description": "Gateron linear switch, 50g actuation, milky nylon housing",
         "type": "linear",
         "mount": "hot-swap"
       },
@@ -318,11 +318,11 @@
       "model": "GMMK Pro",
       "case": {
         "color_or_finish": "Aluminum",
-        "material": null
+        "material": "Aluminum"
       },
       "switches": {
         "model": "Mako tactile",
-        "description": null,
+        "description": "Glorious tactile switch, 45g actuation, factory-lubed",
         "type": "tactile",
         "mount": "hot-swap"
       },
@@ -388,7 +388,7 @@
       },
       "switches": {
         "model": "Cherry Red",
-        "description": null,
+        "description": "Cherry MX linear switch, 45g actuation",
         "type": "linear",
         "mount": "hot-swap"
       },
@@ -428,7 +428,7 @@
       "model": "Classic TKL",
       "case": {
         "color_or_finish": "Blue",
-        "material": null
+        "material": "ABS plastic"
       },
       "switches": {
         "model": "Keychron Silent Banana",
@@ -446,15 +446,15 @@
     },
     {
       "id": 21,
-      "brand": null,
+      "brand": "Weikav",
       "model": "Lucky65",
       "case": {
         "color_or_finish": "Black",
-        "material": null
+        "material": "Aluminum"
       },
       "switches": {
         "model": "Akko Rosewood",
-        "description": null,
+        "description": "Akko linear switch, 40g actuation, factory-lubed",
         "type": "linear",
         "mount": "hot-swap"
       },
@@ -520,7 +520,7 @@
       },
       "switches": {
         "model": "Cherry MX Silent Red",
-        "description": null,
+        "description": "Cherry MX silent linear switch, 45g actuation",
         "type": "linear",
         "mount": "soldered"
       },
@@ -538,7 +538,7 @@
       "model": "CSTM80",
       "case": {
         "color_or_finish": "White",
-        "material": null
+        "material": "Polycarbonate"
       },
       "switches": {
         "model": "Capybara",
@@ -564,7 +564,7 @@
       },
       "switches": {
         "model": "Akko Rosewood",
-        "description": null,
+        "description": "Akko linear switch, 40g actuation, factory-lubed",
         "type": "linear",
         "mount": "hot-swap"
       },
