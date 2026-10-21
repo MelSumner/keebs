@@ -1,0 +1,56 @@
+name: Add keyboard from issue
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  add-keyboard:
+    # Only the repo owner's "New keyboard" issues create pull requests.
+    if: >-
+      contains(github.event.issue.labels.*.name, 'new-keyboard') &&
+      github.event.issue.author_association == 'OWNER'
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Add entry to the collection
+        id: add
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_BODY_FILE: ${{ runner.temp }}/pr_body.md
+        run: python .github/scripts/add_keyboard.py
+
+      - name: Open pull request
+        env:
+          NEW_ID: ${{ steps.add.outputs.id }}
+          TITLE: ${{ steps.add.outputs.title }}
+          PR_BODY_FILE: ${{ runner.temp }}/pr_body.md
+        run: |
+          branch="add-keyboard/issue-${ISSUE_NUMBER}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add data images
+          git commit -m "Add keyboard #${NEW_ID}: ${TITLE}" -m "Closes #${ISSUE_NUMBER}"
+          git push -u origin "$branch"
+          gh pr create --base "${{ github.event.repository.default_branch }}" --head "$branch" \
+            --title "Add keyboard #${NEW_ID}: ${TITLE}" --body-file "$PR_BODY_FILE"
+
+      - name: Report failure on the issue
+        if: failure()
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "Sorry, I couldn't add this keyboard automatically. See the [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details."

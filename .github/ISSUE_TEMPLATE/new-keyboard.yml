@@ -1,0 +1,88 @@
+name: New keyboard
+description: Add a keyboard to the collection. A pull request with the new entry opens automatically.
+title: "New keyboard: "
+labels: ["new-keyboard"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill in what you know and leave the rest blank. Blank fields show as "TBD" on the site.
+        When you submit, a pull request with the new entry opens automatically. Merge it to publish.
+  - type: input
+    id: brand
+    attributes:
+      label: Brand
+      placeholder: Keychron
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      placeholder: Q1 Pro
+    validations:
+      required: true
+  - type: input
+    id: case-color
+    attributes:
+      label: Case color or finish
+      placeholder: Shell white
+  - type: input
+    id: case-material
+    attributes:
+      label: Case material
+      placeholder: Aluminum
+  - type: input
+    id: switch-model
+    attributes:
+      label: Switches
+      description: Switch brand and name.
+      placeholder: Gateron Milky Yellow
+  - type: dropdown
+    id: switch-type
+    attributes:
+      label: Switch type
+      options:
+        - Not sure
+        - linear
+        - tactile
+        - clicky
+        - silent linear
+        - silent tactile
+        - magnetic
+      default: 0
+  - type: input
+    id: switch-description
+    attributes:
+      label: Switch details
+      description: Optional. Actuation force, lube, springs, or a description if you don't know the switch name.
+      placeholder: 50g actuation, factory-lubed
+  - type: input
+    id: keycap-set
+    attributes:
+      label: Keycaps
+      placeholder: NicePBT Whale
+  - type: input
+    id: keycap-profile
+    attributes:
+      label: Keycap profile
+      description: For example Cherry, OEM, SA, DSA, XDA, MT3, CXA, KAM.
+      placeholder: Cherry
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Documented
+        - Work in progress
+      default: 0
+  - type: textarea
+    id: notes
+    attributes:
+      label: Build notes
+      description: Shown on the card under "Build Notes".
+  - type: textarea
+    id: photo
+    attributes:
+      label: Photo
+      description: Optional. Drag one photo into this box (JPEG, PNG, WebP, or GIF). It's saved to the images folder.

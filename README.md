@@ -11,6 +11,16 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
+## Adding a keyboard
+
+Open a new issue on GitHub and choose **New keyboard**. Fill in what you know, and drag a photo into the Photo box if you have one. When you submit it, a GitHub Action adds the entry and opens a pull request. Merging the pull request publishes the keyboard and closes the issue.
+
+- Only issues you open as the repository owner trigger it.
+- Blank fields become `null` and show as **TBD**.
+- If the photo can't be downloaded, the pull request says so, and you can add it by hand (see Photos below).
+- The pieces are `.github/ISSUE_TEMPLATE/new-keyboard.yml`, `.github/workflows/add-keyboard.yml` and `.github/scripts/add_keyboard.py`.
+- It needs **Settings → Actions → General → Workflow permissions → Allow GitHub Actions to create and approve pull requests** turned on.
+
 ## Editing the collection
 
 All content comes from `data/keyboard_collection.json`. Edit the `builds` array, and the filters and counts update on their own.
