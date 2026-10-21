@@ -1,21 +1,21 @@
 /*
   Purple theme. Contrast ratios (WCAG 2.2 AA) against
   --bg / --surface / --surface-2 / --glow (lightest point of the header glow).
-  --text   #aea8d3  7.50 / 6.86 / 6.05 / 6.60
-  --muted  #9a93c4  5.90 / 5.40 / 4.75 / 5.19
-  --accent #d9b8ff  9.84 / 9.00 / 7.93 / 8.65  (links, focus ring)
-  --border-strong #8a7fbf 4.71 / 4.31 / 3.80 / 4.15 (form control boundaries, needs >= 3:1)
+  --text   #aea8d3  8.70 / 8.16 / 7.47 / 7.84
+  --muted  #9a93c4  6.84 / 6.42 / 5.87 / 6.17
+  --accent #d9b8ff  11.41 / 10.70 / 9.80 / 10.28  (links, focus ring)
+  --border-strong #8a7fbf 5.47 / 5.13 / 4.69 / 4.93 (form control boundaries, needs >= 3:1)
   --wip-text #ffd58a on --wip-bg #3b2c14: 9.73
 */
 :root {
-  --bg: #31034b;
-  --surface: #3a0a57;
-  --surface-2: #451466;
-  --glow: #3d0e5c;
+  --bg: #190029;
+  --surface: #220537;
+  --surface-2: #2d0b47;
+  --glow: #260840;
   --text: #aea8d3;
   --muted: #9a93c4;
   --accent: #d9b8ff;
-  --border: #55307a;
+  --border: #43215f;
   --border-strong: #8a7fbf;
   --wip-bg: #3b2c14;
   --wip-text: #ffd58a;
