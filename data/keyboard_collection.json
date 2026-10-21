@@ -18,8 +18,8 @@
         "type": "magnetic"
       },
       "keycaps": {
-        "set": "SA BoW",
-        "profile": "SA"
+        "set": "KBDiy keycaps, BoW",
+        "profile": "SA-like"
       },
       "photo": null,
       "status": "documented",
@@ -31,7 +31,7 @@
       "model": "Rainy75",
       "case": {
         "color_or_finish": "Black",
-        "material": null
+        "material": "Aluminum"
       },
       "switches": {
         "model": "Keychron Silent Banana",
@@ -44,7 +44,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": "Calcifer artisan on Escape (Howl’s Moving Castle)"
+      "notes": "Calcifer artisan"
     },
     {
       "id": 3,
@@ -52,12 +52,12 @@
       "model": "B75Pro",
       "case": {
         "color_or_finish": "Black",
-        "material": null
+        "material": "ABS plastic"
       },
       "switches": {
         "model": "Kailh Midnight Pro Tactile",
-        "description": null,
-        "type": "tactile"
+        "description": "very fast! very quiet!",
+        "type": "silent tactile"
       },
       "keycaps": {
         "set": "GMK Dracula v2 Git Core",
@@ -65,7 +65,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": "Git-themed legends; cyan lighting"
+      "notes": "Git-themed legends"
     },
     {
       "id": 4,
@@ -86,7 +86,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": "Playful custom legends"
+      "notes": "I wanted a build that matches my IDE. I also wanted to have a bit of fun, and these custom legends bring me joy. I used the Codelia typeface and the Dracula Pro colorway"
     },
     {
       "id": 5,
@@ -94,7 +94,7 @@
       "model": "Womier75",
       "case": {
         "color_or_finish": "Wood",
-        "material": null
+        "material": "Wood shell"
       },
       "switches": {
         "model": null,
@@ -107,7 +107,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": null
+      "notes": "It took me a long time to find the right board for this keycap set. It didn't come with enough keys to support a WKL type keyboard."
     },
     {
       "id": 6,
@@ -118,8 +118,8 @@
         "material": "Aluminum"
       },
       "switches": {
-        "model": "HMX Moksae Silent Tactile",
-        "description": null,
+        "model": "HMX Moksae",
+        "description": "Silent tactile",
         "type": "tactile"
       },
       "keycaps": {
@@ -128,7 +128,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": "Red case ordered as possible replacement"
+      "notes": "Red case ordered as possible replacement; I think it would look good on red; plus the red keyboard doesn't have a logo on the volume knob."
     },
     {
       "id": 7,
@@ -140,16 +140,16 @@
       },
       "switches": {
         "model": "Gateron Curry",
-        "description": "Gateron EF linear switch, 50g actuation, two-stage spring",
+        "description": "EF linear switch, 50g actuation, two-stage spring",
         "type": "linear"
       },
       "keycaps": {
-        "set": "Signature Plastics SA-P white alphas and orange modifiers",
-        "profile": "SA-P"
+        "set": "Signature Plastics SA-P white alphas and SA orange modifiers",
+        "profile": "SA-P, SA"
       },
       "photo": null,
       "status": "documented",
-      "notes": "Display and knob; possible board/case replacement under consideration"
+      "notes": "Display and knob on keyboard; I think there's an opportunity to find a higher-quality black board and keep this as a collection piece."
     },
     {
       "id": 8,
@@ -191,7 +191,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": null
+      "notes": "I love this combination. It is aesthetically pleasing and completely adorable all while being a little irreverent."
     },
     {
       "id": 10,
@@ -199,7 +199,7 @@
       "model": "CSTM80",
       "case": {
         "color_or_finish": "Dark navy with mint details",
-        "material": null
+        "material": "Polycarbonate"
       },
       "switches": {
         "model": "Haimu Whisper Silent Tactile",
@@ -212,7 +212,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": null
+      "notes": "The keycap set came with pink legends/novelties, but I thought the board was more enjoyable with a single colorway."
     },
     {
       "id": 11,
@@ -472,11 +472,11 @@
       "model": "F75",
       "case": {
         "color_or_finish": "Blue",
-        "material": null
+        "material": "ABS plastic"
       },
       "switches": {
         "model": "Durock Ice Kings",
-        "description": null,
+        "description": "tactile",
         "type": null
       },
       "keycaps": {
@@ -485,7 +485,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": "Keycap profile provisionally identified as Cherry"
+      "notes": "This was a keyboard that came fully built. I didn't like the sound, so I replaced the switches and the caps. It now sounds deeper and fuller."
     },
     {
       "id": 24,
@@ -501,12 +501,12 @@
         "type": "linear"
       },
       "keycaps": {
-        "set": "GMK Mecha-00",
+        "set": "GMK Mecha-00, bright blue/black/white colorway",
         "profile": "Cherry"
       },
       "photo": null,
       "status": "documented",
-      "notes": "Soldered switches; blue/white/black keycaps"
+      "notes": "This was my first mechanical keyboard. I don't think they even sell this board anymore. Not knowing any better back then, I chose soldered switches. I was able to remove the keys, clean everything up really good, and then add fresh keycaps."
     },
     {
       "id": 25,
@@ -517,17 +517,17 @@
         "material": "Polycarbonate"
       },
       "switches": {
-        "model": "Capybara",
-        "description": null,
+        "model": "Haimu Capybara",
+        "description": "Linear with a deep thock",
         "type": null
       },
       "keycaps": {
         "set": "Milkyway Lilith R3",
-        "profile": null
+        "profile": "Cherry"  
       },
       "photo": null,
       "status": "documented",
-      "notes": "Evangelion / Rei theme; blue, white and red"
+      "notes": "Rei (Evangelion) inspired theme; blue, white and red"
     },
     {
       "id": 26,
@@ -543,12 +543,12 @@
         "type": "linear"
       },
       "keycaps": {
-        "set": "Dark gray DCS keycaps with white legends",
+        "set": "Signature Plastics WoB DCS keycaps",
         "profile": "DCS"
       },
       "photo": null,
       "status": "documented",
-      "notes": "Switch identification provisional; ABS injection-molded case; polycarbonate plate; hot-swap PCB; dampening foams; gasket socks. Sound: muted but not deep; constrained brightness"
+      "notes": "ABS injection-molded case; polycarbonate plate; hot-swap PCB; dampening foams; gasket socks. Sound: muted but not deep; constrained brightness"
     },
     {
       "id": 27,
@@ -564,7 +564,7 @@
         "type": "linear"
       },
       "keycaps": {
-        "set": "Mixed DSA WoB + BoW",
+        "set": "Signature Plastics DSA WoB and BoW",
         "profile": "DSA"
       },
       "photo": null,
@@ -585,7 +585,7 @@
         "type": "tactile"
       },
       "keycaps": {
-        "set": "Mixed DSA WoB + BoW",
+        "set": "Signature Plastics DSA WoB and BoW",
         "profile": "DSA"
       },
       "photo": null,
@@ -597,21 +597,21 @@
       "brand": "Keydous",
       "model": "NJ80",
       "case": {
-        "color_or_finish": "White/silver (visual estimate)",
-        "material": null
+        "color_or_finish": "White",
+        "material": "ABS plastic"
       },
       "switches": {
         "model": "Gecko",
-        "description": null,
+        "description": "Gecko silent linear",
         "type": null
       },
       "keycaps": {
-        "set": "Red, white and blue SA keycaps",
-        "profile": "SA"
+        "set": "KBDiy keycaps in a red, white, and blue colorway",
+        "profile": "SA-like"
       },
       "photo": null,
       "status": "documented",
-      "notes": "Silver knob; inventory number provisional; exact keycap set unknown"
+      "notes": "Silver volume knob (even though the board is white)."
     }
   ]
 }
