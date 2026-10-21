@@ -53,6 +53,28 @@
     return isBlank(sw.model) ? sw.description : sw.model;
   }
 
+  const FILLER = new Set(['switch', 'switches', 'variant']);
+  const TYPE_WORDS = new Set(['silent', 'linear', 'tactile', 'clicky', 'magnetic']);
+  const words = (s) => s.toLowerCase().match(/[a-z0-9]+(?:-[a-z0-9]+)*/g) || [];
+
+  // Combine type and description without repeating the switch name or the type.
+  function switchTypeLabel(sw) {
+    if (isBlank(sw.description) || isBlank(sw.model)) return sw.type;
+    const known = new Set([...words(sw.model), ...FILLER]);
+    const segments = sw.description.split(',').map((seg, i) => {
+      if (words(seg).every((w) => known.has(w))) return '';
+      if (i > 0) return seg.trim();
+      return seg.split(/\s+/).filter((t) => {
+        const ws = words(t);
+        return !ws.length || ws.some((w) => TYPE_WORDS.has(w) || !known.has(w));
+      }).join(' ');
+    }).filter((seg) => seg.trim());
+    if (!segments.length) return sw.type;
+    let label = segments.join(', ');
+    if (!isBlank(sw.type) && !new RegExp(`\\b${sw.type}\\b`, 'i').test(label)) label = `${sw.type}, ${label}`;
+    return label;
+  }
+
   function searchText(b) {
     const text = [
       b.brand, b.model, b.case.color_or_finish, b.case.material,
@@ -125,6 +147,7 @@
     spec(dl, 'Case', b.case.color_or_finish);
     spec(dl, 'Material', b.case.material);
     spec(dl, 'Switches', switchLabel(b.switches));
+    spec(dl, 'Type', switchTypeLabel(b.switches), capitalize);
     spec(dl, 'Keycaps', b.keycaps.set);
     spec(dl, 'Profile', b.keycaps.profile);
 
