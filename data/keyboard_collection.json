@@ -451,11 +451,11 @@
       "model": "Tinker 65%",
       "case": {
         "color_or_finish": "Black",
-        "material": null
+        "material": "Polycarbonate...probably"
       },
       "switches": {
-        "model": "Gecko",
-        "description": null,
+        "model": "Gateron Gecko",
+        "description": "silent linear",
         "type": null
       },
       "keycaps": {
@@ -464,14 +464,14 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": null
+      "notes": "I made this board for travel. I bought a BYOK device recently, and my hope is that a light keyboard like this will make it easy to write while I travel."
     },
     {
       "id": 23,
       "brand": "Aula",
       "model": "F75",
       "case": {
-        "color_or_finish": "Blue",
+        "color_or_finish": "Light Blue",
         "material": "ABS plastic"
       },
       "switches": {
