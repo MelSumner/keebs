@@ -72,6 +72,7 @@ a {
 
 .skip-link {
   position: absolute;
+  font-size: 1rem;
   left: var(--space-4);
   top: -100px;
   padding: var(--space-2) var(--space-4);
@@ -107,6 +108,7 @@ h1 {
 
 .lede {
   margin: var(--space-2) 0 0;
+  font-size: 1rem;
   color: var(--muted);
 }
 
@@ -318,6 +320,7 @@ input::placeholder {
 
 .empty,
 .notice {
+  font-size: 1rem;
   padding: var(--space-8) var(--space-4);
   text-align: center;
   background: var(--surface);
