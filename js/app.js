@@ -55,7 +55,7 @@
   function searchText(b) {
     const text = [
       b.brand, b.model, b.case.color_or_finish, b.case.material,
-      b.switches.model, b.switches.description, b.switches.type, b.switches.mount,
+      b.switches.model, b.switches.description, b.switches.type,
       b.keycaps.set, b.keycaps.profile, b.notes,
       b.status === 'work_in_progress' ? 'work in progress' : null,
     ].filter((v) => !isBlank(v)).join(' ');
@@ -68,7 +68,7 @@
       brand: raw.brand ?? null,
       model: raw.model ?? null,
       case: { color_or_finish: null, material: null, ...raw.case },
-      switches: { model: null, description: null, type: null, mount: null, ...raw.switches },
+      switches: { model: null, description: null, type: null, ...raw.switches },
       keycaps: { set: null, profile: null, ...raw.keycaps },
       photo: raw.photo ?? null,
       status: raw.status ?? null,
