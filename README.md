@@ -1,6 +1,6 @@
 # Keyboard Collection
 
-A static site that shows a mechanical keyboard collection. It's plain HTML, CSS, and JavaScript with no build step, and it's built to be served by GitHub Pages.
+A static site that shows my mechanical keyboard collection. It's plain HTML, CSS, and JavaScript with no build step, and it's built to be served by GitHub Pages.
 
 ## Local development
 
@@ -36,25 +36,3 @@ The site writes the image's alt text from the brand, model, and keycap set.
 - A dark, minimal theme set in MonoLisa Text, with `system-ui` as the fallback. Every color pair meets WCAG 2.2 AA contrast, and the ratios are listed at the top of `css/styles.css`.
 - Keyboard accessible, with a skip link, labeled controls, visible focus rings, and a live region that announces the result count.
 
-## Deploying to GitHub Pages
-
-1. Create a GitHub repository and push:
-   ```sh
-   git remote add origin git@github.com:<you>/keyboard-collection.git
-   git push -u origin main
-   ```
-2. In the repository, go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, then **Branch: `main`** and **Folder: `/ (root)`**.
-4. The site will be available at `https://<you>.github.io/keyboard-collection/`.
-
-The `.nojekyll` file tells Pages to serve the files as they are, without running Jekyll.
-
-## Structure
-
-```
-index.html                      page shell
-css/styles.css                  theme and layout
-js/app.js                       data loading, rendering, filtering
-data/keyboard_collection.json   the collection
-images/                         keyboard photos
-```
