@@ -16,7 +16,7 @@
         "model": "Keychron Ultra-Fast Lime Silent Banana",
         "description": "Keychron Ultra-Fast Lime magnetic (Hall effect) switch, Silent Banana variant",
         "type": "magnetic",
-        "mount": "n/a"
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "SA BoW",
@@ -38,7 +38,7 @@
         "model": "Keychron Silent Banana",
         "description": null,
         "type": "tactile",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "CannonKeys CXA WoB",
@@ -60,7 +60,7 @@
         "model": "Kailh Midnight Pro Tactile",
         "description": null,
         "type": "tactile",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "GMK Dracula v2 Git Core",
@@ -82,7 +82,7 @@
         "model": "Cherry MX Honey",
         "description": null,
         "type": null,
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Personalized Thockfactory keycaps",
@@ -104,7 +104,7 @@
         "model": null,
         "description": "Unidentified stock switches",
         "type": "linear",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Pikarar x Hypyo Tech illustrated keycaps",
@@ -126,7 +126,7 @@
         "model": "HMX Moksae Silent Tactile",
         "description": null,
         "type": "tactile",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "DSS Honeywell",
@@ -148,7 +148,7 @@
         "model": "Gateron Curry",
         "description": null,
         "type": null,
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Signature Plastics SA-P white alphas and orange modifiers",
@@ -170,7 +170,7 @@
         "model": null,
         "description": "Unidentified red-stem switches",
         "type": "tactile",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "XDA Honey / Japanese Bee",
@@ -192,7 +192,7 @@
         "model": "Anthracite",
         "description": null,
         "type": null,
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Dokodoko Panda",
@@ -214,7 +214,7 @@
         "model": "Haimu Whisper Silent Tactile",
         "description": null,
         "type": "tactile",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "CannonCaps CXA Iara",
@@ -236,7 +236,7 @@
         "model": "Akko Creamy Yellow",
         "description": null,
         "type": "linear",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "MOA Cute Cat",
@@ -258,7 +258,7 @@
         "model": "Keychron Silent Banana",
         "description": null,
         "type": "tactile",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "MT3 Operator",
@@ -280,7 +280,7 @@
         "model": "Durock Ice Kings",
         "description": null,
         "type": null,
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "MT3 Operator",
@@ -302,7 +302,7 @@
         "model": "Milky Yellow",
         "description": null,
         "type": "linear",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "White and teal/turquoise SA keycaps",
@@ -324,7 +324,7 @@
         "model": "Mako tactile",
         "description": null,
         "type": "tactile",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Lavender and white DSA keycaps",
@@ -346,7 +346,7 @@
         "model": "Cherry MX Brown",
         "description": null,
         "type": "tactile",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Signature Plastics SA Macrodata Refinement",
@@ -368,7 +368,7 @@
         "model": "Kailh Silver",
         "description": null,
         "type": "linear",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Nahida (Genshin Impact) keycaps",
@@ -390,7 +390,7 @@
         "model": "Cherry Red",
         "description": null,
         "type": "linear",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "MT3 Fairlane",
@@ -412,7 +412,7 @@
         "model": "Kailh Silver",
         "description": null,
         "type": "linear",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "DSA Astrolokeys",
@@ -434,7 +434,7 @@
         "model": "Keychron Silent Banana",
         "description": null,
         "type": "tactile",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "KAM Superuser",
@@ -456,7 +456,7 @@
         "model": "Akko Rosewood",
         "description": null,
         "type": "linear",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "SA WoB",
@@ -478,7 +478,7 @@
         "model": "Gecko",
         "description": null,
         "type": null,
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Signature Plastics DSA WoB",
@@ -500,7 +500,7 @@
         "model": "Durock Ice Kings",
         "description": null,
         "type": null,
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "NicePBT Whale",
@@ -544,7 +544,7 @@
         "model": "Capybara",
         "description": null,
         "type": null,
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Milkyway Lilith R3",
@@ -566,7 +566,7 @@
         "model": "Akko Rosewood",
         "description": null,
         "type": "linear",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Dark gray DCS keycaps with white legends",
@@ -588,7 +588,7 @@
         "model": "Gateron Milky Yellow",
         "description": null,
         "type": "linear",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Mixed DSA WoB + BoW",
@@ -610,7 +610,7 @@
         "model": "Gateron Brown",
         "description": null,
         "type": "tactile",
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Mixed DSA WoB + BoW",
@@ -632,7 +632,7 @@
         "model": "Gecko",
         "description": null,
         "type": null,
-        "mount": null
+        "mount": "hot-swap"
       },
       "keycaps": {
         "set": "Red, white and blue SA keycaps",
