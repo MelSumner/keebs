@@ -396,7 +396,7 @@
         "type": "linear"
       },
       "keycaps": {
-        "set": "DSA Astrolokeys",
+        "set": "Astrolokeys by cassidoo & sailorhg",
         "profile": "DSA"
       },
       "photo": null,
@@ -438,12 +438,12 @@
         "type": "linear"
       },
       "keycaps": {
-        "set": "SA WoB",
-        "profile": "SA"
+        "set": "KBDiy WoB",
+        "profile": "SA-like"
       },
       "photo": null,
       "status": "documented",
-      "notes": "Jiji artisan (Kiki’s Delivery Service)"
+      "notes": "Jiji artisan"
     },
     {
       "id": 22,
@@ -527,7 +527,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": "Rei (Evangelion) inspired theme; blue, white and red"
+      "notes": "Rei (Evangelion) inspired colorway"
     },
     {
       "id": 26,
@@ -564,7 +564,7 @@
         "type": "linear"
       },
       "keycaps": {
-        "set": "Signature Plastics DSA WoB and BoW",
+        "set": "Signature Plastics WoB and BoW",
         "profile": "DSA"
       },
       "photo": null,
@@ -585,7 +585,7 @@
         "type": "tactile"
       },
       "keycaps": {
-        "set": "Signature Plastics DSA WoB and BoW",
+        "set": "Signature Plastics WoB and BoW",
         "profile": "DSA"
       },
       "photo": null,
