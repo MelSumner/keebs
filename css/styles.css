@@ -240,6 +240,13 @@ h1 {
   }
 }
 
+.filters__hint {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
 .field {
   display: flex;
   flex-direction: column;

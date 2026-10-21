@@ -22,25 +22,26 @@
 
   <main id="main" class="container">
     <form class="filters" id="filters" role="search" aria-label="Filter keyboards">
+      <p class="filters__hint" id="filters-hint">Results update automatically as you type or change a filter.</p>
       <div class="field field--search">
         <label for="q">Search</label>
-        <input type="search" id="q" name="q" autocomplete="off" placeholder="Brand, model, switch, keycaps…">
+        <input type="search" id="q" name="q" aria-describedby="filters-hint" autocomplete="off" placeholder="Brand, model, switch, keycaps…">
       </div>
       <div class="field">
         <label for="switch">Switch type</label>
-        <select id="switch" name="switch">
+        <select id="switch" name="switch" aria-describedby="filters-hint">
           <option value="">All</option>
         </select>
       </div>
       <div class="field">
         <label for="profile">Keycap profile</label>
-        <select id="profile" name="profile">
+        <select id="profile" name="profile" aria-describedby="filters-hint">
           <option value="">All</option>
         </select>
       </div>
       <div class="field">
         <label for="sort">Sort by</label>
-        <select id="sort" name="sort">
+        <select id="sort" name="sort" aria-describedby="filters-hint">
           <option value="brand">Brand (A–Z)</option>
           <option value="model">Model (A–Z)</option>
           <option value="id">Inventory number</option>
