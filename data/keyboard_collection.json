@@ -27,7 +27,7 @@
     },
     {
       "id": 2,
-      "brand": "Rainy",
+      "brand": "Wobkey",
       "model": "Rainy75",
       "case": {
         "color_or_finish": "Black",
@@ -49,13 +49,13 @@
     {
       "id": 3,
       "brand": "Yunzii",
-      "model": "B75Pro",
+      "model": "B75 Pro",
       "case": {
         "color_or_finish": "Black",
         "material": "ABS plastic"
       },
       "switches": {
-        "model": "Kailh Midnight Pro Tactile",
+        "model": "Kailh Midnight Pro Silent Tactile",
         "description": "very fast! very quiet!",
         "type": "silent tactile"
       },
@@ -183,7 +183,7 @@
       "switches": {
         "model": "Anthracite",
         "description": "Mode silent tactile switch, 48g actuation, 63g tactile peak, pre-lubed",
-        "type": "tactile"
+        "type": "silent tactile"
       },
       "keycaps": {
         "set": "Dokodoko Panda",
@@ -203,8 +203,8 @@
       },
       "switches": {
         "model": "Haimu Whisper Silent Tactile",
-        "description": null,
-        "type": "tactile"
+        "description": "Haimu silent tactile, 65g spring, nylon PA66 housing, POM stem, factory-lubed",
+        "type": "silent tactile"
       },
       "keycaps": {
         "set": "CannonCaps CXA Iara",
@@ -240,7 +240,7 @@
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
-        "color_or_finish": "Aluminum top plate",
+        "color_or_finish": "Aluminum top case",
         "material": "Polycarbonate base, aluminum top case"
       },
       "switches": {
@@ -265,9 +265,9 @@
         "material": "Polycarbonate"
       },
       "switches": {
-        "model": "Durock Ice Kings",
-        "description": "Tactile 68g",
-        "type": null
+        "model": "Durock Ice King Tactile",
+        "description": "58g actuation, 68g bottom-out",
+        "type": "tactile"
       },
       "keycaps": {
         "set": "MT3 Operator",
@@ -364,7 +364,7 @@
     {
       "id": 18,
       "brand": "Drop",
-      "model": "ALT65",
+      "model": "ALT",
       "case": {
         "color_or_finish": "Arctic Blue",
         "material": "Aluminum"
@@ -448,15 +448,15 @@
     {
       "id": 22,
       "brand": "Ducky",
-      "model": "Tinker 65%",
+      "model": "ProjectD Tinker 65",
       "case": {
         "color_or_finish": "Black",
         "material": "Polycarbonate...probably"
       },
       "switches": {
-        "model": "Gateron Gecko",
-        "description": "silent linear",
-        "type": null
+        "model": "Kinetic Labs Gecko",
+        "description": "Silent linear, made by Gateron",
+        "type": "silent linear"
       },
       "keycaps": {
         "set": "Signature Plastics DSA WoB",
@@ -475,9 +475,9 @@
         "material": "ABS plastic"
       },
       "switches": {
-        "model": "Durock Ice Kings",
-        "description": "tactile",
-        "type": null
+        "model": "Durock Ice King Tactile",
+        "description": "58g actuation, 68g bottom-out",
+        "type": "tactile"
       },
       "keycaps": {
         "set": "NicePBT Whale",
@@ -523,7 +523,7 @@
       },
       "keycaps": {
         "set": "Milkyway Lilith R3",
-        "profile": "Cherry"  
+        "profile": "Cherry"
       },
       "photo": null,
       "status": "documented",
@@ -560,7 +560,7 @@
       },
       "switches": {
         "model": "Gateron Milky Yellow",
-        "description": null,
+        "description": "50g actuation",
         "type": "linear"
       },
       "keycaps": {
@@ -581,7 +581,7 @@
       },
       "switches": {
         "model": "Gateron Brown",
-        "description": null,
+        "description": "55g actuation",
         "type": "tactile"
       },
       "keycaps": {
