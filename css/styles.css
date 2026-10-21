@@ -222,6 +222,14 @@ h1 {
   font-size: 0.875rem;
 }
 
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer p + p {
+  margin-top: var(--space-2);
+}
+
 /* Filters */
 .filters {
   display: grid;
