@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "collection": "Mechanical keyboard inventory",
-  "total_builds": 29,
+  "total_builds": 30,
   "photo_field_description": "Set photo to the path or URL of a future replacement photograph; null means not assigned.",
   "builds": [
     {
@@ -612,6 +612,27 @@
       "photo": null,
       "status": "documented",
       "notes": "Silver volume knob (even though the board is white)."
+    },
+    {
+      "id": 30,
+      "brand": "Keychron",
+      "model": "Q2",
+      "case": {
+        "color_or_finish": "Blue",
+        "material": "Aluminum"
+      },
+      "switches": {
+        "model": "Keychron Silent Banana",
+        "description": null,
+        "type": "silent tactile"
+      },
+      "keycaps": {
+        "set": "SP Oblivion V2 Git modifiers",
+        "profile": "SA"
+      },
+      "photo": null,
+      "status": "documented",
+      "notes": null
     }
   ]
 }
