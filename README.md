@@ -40,6 +40,14 @@ Every card shows a placeholder until its `photo` field is set. To add a photo:
 
 The site writes the image's alt text from the brand, model, and keycap set.
 
+Before committing a photo, resize it so its longest side is 1600px and compress it. On macOS:
+
+```sh
+sips -Z 1600 -s formatOptions 55 images/kb-NN-IMG_1234.jpg
+```
+
+That keeps most photos under 300 KB. If the file comes out larger than it went in, the original was already heavily compressed, so keep the original instead.
+
 ## Features
 
 - A card grid that searches across every field (brand, model, case, switches, keycaps, notes).
