@@ -54,6 +54,13 @@
     return document.createTextNode(transform ? transform(String(v)) : String(v));
   }
 
+  function caseLabel(c) {
+    const parts = [c.color_or_finish, c.material].filter((v) => !isBlank(v)).map((v) => String(v).trim());
+    // Skip a value the other already contains (e.g. "Aluminum top case" inside the material).
+    const unique = parts.filter((v, i) => !parts.some((o, j) => j !== i && fold(o).includes(fold(v)) && (o.length > v.length || j < i)));
+    return unique.join(', ') || null;
+  }
+
   function switchLabel(sw) {
     return isBlank(sw.model) ? sw.description : sw.model;
   }
@@ -212,8 +219,7 @@
     header.append(permalink);
 
     const dl = el('dl', { class: 'specs' });
-    spec(dl, 'Case', b.case.color_or_finish);
-    spec(dl, 'Material', b.case.material);
+    spec(dl, 'Case', caseLabel(b.case));
     spec(dl, 'Plate', b.plate);
     spec(dl, 'Switches', switchLabel(b.switches));
     spec(dl, 'Type', switchTypeLabel(b.switches), capitalize);
