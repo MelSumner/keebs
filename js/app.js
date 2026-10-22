@@ -140,7 +140,19 @@
       valueNode(b.model),
     ]);
 
-    const header = el('div', { class: 'card__header' }, h2);
+    // Same parts as the slug, so every link has a unique name.
+    const linkName = [
+      [b.brand, b.model].filter((v) => !isBlank(v)).join(' '), b.switches.model, b.keycaps.set,
+    ].filter((v) => !isBlank(v)).join(', ');
+    const label = `Link to ${linkName}`;
+    // The tooltip is visual only; aria-label gives screen readers the same text.
+    const permalink = el('a', { class: 'permalink', href: `#${b.slug}`, 'aria-label': label }, [
+      el('span', { class: 'permalink__mark', 'aria-hidden': 'true', text: '\u00A7' }),
+      el('span', { class: 'permalink__tip', 'aria-hidden': 'true', text: label }),
+    ]);
+
+    const header = el('div', { class: 'card__header' },
+      el('div', { class: 'card__title' }, [h2, permalink]));
     if (b.status === 'work_in_progress') {
       header.append(el('span', { class: 'badge', text: 'Work in progress' }));
     }
@@ -160,13 +172,6 @@
         el('p', { text: b.notes }),
       ]));
     }
-
-    // Same parts as the slug, so every link has a unique visible name.
-    const linkName = [
-      [b.brand, b.model].filter((v) => !isBlank(v)).join(' '), b.switches.model, b.keycaps.set,
-    ].filter((v) => !isBlank(v)).join(', ');
-    body.append(el('p', { class: 'card__permalink' },
-      el('a', { href: `#${b.slug}`, text: `Link to ${linkName}` })));
 
     const cls = b.slug === targetSlug ? 'card is-target' : 'card';
     return el('li', {}, el('article', {
@@ -322,6 +327,16 @@
     els.emptyClear.addEventListener('click', clearFilters);
 
     window.addEventListener('hashchange', showTarget);
+
+    // Escape hides an open permalink tooltip (WCAG 1.4.13) until the pointer or focus leaves.
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      document.querySelectorAll('.permalink:hover, .permalink:focus-visible')
+        .forEach((a) => a.classList.add('is-dismissed'));
+    });
+    const undismiss = (e) => e.target.closest?.('.permalink')?.classList.remove('is-dismissed');
+    els.grid.addEventListener('mouseout', undismiss);
+    els.grid.addEventListener('focusout', undismiss);
 
     render();
     if (location.hash) showTarget();
