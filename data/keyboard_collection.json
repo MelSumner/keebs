@@ -304,7 +304,7 @@
       "brand": "Glorious",
       "model": "GMMK Pro",
       "case": {
-        "color_or_finish": "Aluminum",
+        "color_or_finish": "Silver",
         "material": "Aluminum"
       },
       "switches": {
@@ -318,7 +318,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": "Only used the white and purple keycaps; added a video game character (Keqing) illustrated spacebar and amethyst artisan ESC. Also: this was before I figured out not to buy this keyboard brand."
+      "notes": "Only used the white and purple keycaps; added a video game character (Keqing) illustrated spacebar and amethyst artisan ESC. Also: this was before I figured out _not_ to buy this keyboard brand."
     },
     {
       "id": 16,
