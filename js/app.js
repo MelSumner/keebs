@@ -106,6 +106,14 @@
     '<path d="M8 9h4M16 9h4M24 9h4M32 9h4M40 9h4M48 9h8M8 16h8M20 16h4M28 16h4M36 16h4M44 16h12M8 23h6M18 23h28M50 23h6" stroke-linecap="round"/>' +
     '</svg>';
 
+  // Chain-link icon, after Feather Icons (MIT).
+  const LINK_SVG =
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" ' +
+    'stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+    '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>' +
+    '<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>' +
+    '</svg>';
+
   function media(b) {
     const wrap = el('div', { class: 'card__media' });
     if (!isBlank(b.photo)) {
@@ -145,17 +153,14 @@
       [b.brand, b.model].filter((v) => !isBlank(v)).join(' '), b.switches.model, b.keycaps.set,
     ].filter((v) => !isBlank(v)).join(', ');
     const label = `Link to ${linkName}`;
-    // The tooltip is visual only; aria-label gives screen readers the same text.
-    const permalink = el('a', { class: 'permalink', href: `#${cardId}`, 'aria-label': label }, [
-      el('span', { class: 'permalink__mark', 'aria-hidden': 'true', text: '\u00A7' }),
-      el('span', { class: 'permalink__tip', 'aria-hidden': 'true', text: label }),
-    ]);
+    const permalink = el('a', { class: 'permalink', href: `#${cardId}`, 'aria-label': label });
+    permalink.innerHTML = LINK_SVG;
 
-    const header = el('div', { class: 'card__header' },
-      el('div', { class: 'card__title' }, [h2, permalink]));
+    const header = el('div', { class: 'card__header' }, h2);
     if (b.status === 'work_in_progress') {
       header.append(el('span', { class: 'badge', text: 'Work in progress' }));
     }
+    header.append(permalink);
 
     const dl = el('dl', { class: 'specs' });
     spec(dl, 'Case', b.case.color_or_finish);
@@ -321,15 +326,6 @@
 
     window.addEventListener('hashchange', showTarget);
 
-    // Escape hides an open permalink tooltip (WCAG 1.4.13) until the pointer or focus leaves.
-    document.addEventListener('keydown', (e) => {
-      if (e.key !== 'Escape') return;
-      document.querySelectorAll('.permalink:hover, .permalink:focus-visible')
-        .forEach((a) => a.classList.add('is-dismissed'));
-    });
-    const undismiss = (e) => e.target.closest?.('.permalink')?.classList.remove('is-dismissed');
-    els.grid.addEventListener('mouseout', undismiss);
-    els.grid.addEventListener('focusout', undismiss);
 
     render();
     if (location.hash) showTarget();

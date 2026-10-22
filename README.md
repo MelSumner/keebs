@@ -45,7 +45,7 @@ The site writes the image's alt text from the brand, model, and keycap set.
 - A card grid that searches across every field (brand, model, case, switches, keycaps, notes).
 - Filters for switch type and keycap profile.
 - Filter state lives in the URL, so a filtered view can be bookmarked or shared, e.g. `?switch=tactile&profile=SA`.
-- Every card has a `§` permalink (`#kb-<id>`) next to the model. Its name ("Link to …" with the brand, model, switches, and keycaps) is unique per card, is its accessible name, and shows as a tooltip on hover and focus. The tooltip can be hovered and closed with Escape. Opening one clears any filter that would hide the card, then scrolls to it, highlights it, and moves focus to it.
+- Every card has a link icon in its top-right corner that links to the card (`#kb-<id>`). Its accessible name ("Link to …" with the brand, model, switches, and keycaps) is unique per card. Opening one clears any filter that would hide the card, then scrolls to it, highlights it, and moves focus to it.
 - A dark, minimal theme set in MonoLisa Text, with `system-ui` as the fallback. Every color pair meets WCAG 2.2 AA contrast, and the ratios are listed at the top of `css/styles.css`.
 - Keyboard accessible, with a skip link, labeled controls, visible focus rings, and a live region that announces the result count.
 
