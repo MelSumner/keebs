@@ -118,7 +118,10 @@
     const wrap = el('div', { class: 'card__media' });
     if (!isBlank(b.photo)) {
       const alt = [b.brand, b.model].filter((v) => !isBlank(v)).join(' ') +
-        (isBlank(b.keycaps.set) ? ' keyboard' : ` keyboard with ${b.keycaps.set} keycaps`);
+        (isBlank(b.keycaps.set) ? ' keyboard'
+          // Don't double up when the set name already says "keycaps" or "keycap set".
+          : /\bkeycaps?\b/i.test(b.keycaps.set) ? ` keyboard with ${b.keycaps.set.trim()}`
+          : ` keyboard with ${b.keycaps.set} keycaps`);
       const img = el('img', { src: b.photo, alt: alt.trim(), loading: 'lazy', decoding: 'async' });
       img.addEventListener('error', () => {
         wrap.replaceChildren(placeholder());
