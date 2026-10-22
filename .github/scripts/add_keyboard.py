@@ -36,7 +36,7 @@ def clean(value):
 
 def slugify(*parts):
     text = "-".join(p for p in parts if p)
-    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:60] or "keyboard"
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-") or "keyboard"
 
 
 def unique_slug(wanted, taken):
@@ -94,11 +94,12 @@ def main():
     collection = json.loads(DATA.read_text(encoding="utf-8"))
     builds = collection["builds"]
     new_id = max((b["id"] for b in builds), default=0) + 1
-    link_name = clean(form.get("Link name"))
-    slug = unique_slug(slugify(link_name) if link_name else slugify(brand, model), {b.get("slug") for b in builds})
 
     status = "work_in_progress" if (form.get("Status") or "").strip().lower() == "work in progress" else "documented"
     switch_type = clean(form.get("Switch type"))
+    switch_model, keycap_set = clean(form.get("Switches")), clean(form.get("Keycaps"))
+    # Brand, model, switches, and keycaps. Stored, so later edits don't break shared links.
+    slug = unique_slug(slugify(brand, model, switch_model, keycap_set), {b.get("slug") for b in builds})
     entry = {
         "id": new_id,
         "slug": slug,
@@ -109,12 +110,12 @@ def main():
             "material": clean(form.get("Case material")),
         },
         "switches": {
-            "model": clean(form.get("Switches")),
+            "model": switch_model,
             "description": clean(form.get("Switch details")),
             "type": switch_type.lower() if switch_type else None,
         },
         "keycaps": {
-            "set": clean(form.get("Keycaps")),
+            "set": keycap_set,
             "profile": clean(form.get("Keycap profile")),
         },
         "photo": None,
@@ -126,7 +127,7 @@ def main():
     url = find_image_url(form.get("Photo"))
     if url:
         try:
-            entry["photo"] = download_photo(url, f"{new_id:02d}-{slug}")
+            entry["photo"] = download_photo(url, f"{new_id:02d}-{slugify(brand, model)[:60]}")
             photo_note = f"Photo saved to `{entry['photo']}`."
         except Exception as err:  # keep the entry; the photo can be added later
             photo_note = f"Couldn't download the photo ({err}). Add it to `images/` and set `photo` by hand."

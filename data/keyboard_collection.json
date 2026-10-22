@@ -6,7 +6,7 @@
   "builds": [
     {
       "id": 1,
-      "slug": "monsgeek-m1-v5-he",
+      "slug": "monsgeek-m1-v5-he-keychron-ultra-fast-lime-silent-banana-kbdiy-keycaps-bow",
       "brand": "Monsgeek",
       "model": "M1 V5 HE",
       "case": {
@@ -28,7 +28,7 @@
     },
     {
       "id": 2,
-      "slug": "wobkey-rainy75",
+      "slug": "wobkey-rainy75-keychron-silent-banana-cannonkeys-cxa-wob",
       "brand": "Wobkey",
       "model": "Rainy75",
       "case": {
@@ -50,7 +50,7 @@
     },
     {
       "id": 3,
-      "slug": "yunzii-b75-pro",
+      "slug": "yunzii-b75-pro-kailh-midnight-pro-silent-tactile-gmk-dracula-v2-git-core",
       "brand": "Yunzii",
       "model": "B75 Pro",
       "case": {
@@ -72,7 +72,7 @@
     },
     {
       "id": 4,
-      "slug": "smurv-smurv80",
+      "slug": "smurv-smurv80-cherry-mx-honey-personalized-thockfactory-keycaps",
       "brand": "Smurv",
       "model": "Smurv80",
       "case": {
@@ -94,7 +94,7 @@
     },
     {
       "id": 5,
-      "slug": "womier-womier75",
+      "slug": "womier-womier75-pikarar-x-hypyo-tech-illustrated-keycaps",
       "brand": "Womier",
       "model": "Womier75",
       "case": {
@@ -116,7 +116,7 @@
     },
     {
       "id": 6,
-      "slug": "leobog-hi75",
+      "slug": "leobog-hi75-hmx-moksae-dss-honeywell",
       "brand": "Leobog",
       "model": "Hi75",
       "case": {
@@ -138,7 +138,7 @@
     },
     {
       "id": 7,
-      "slug": "zuoya-gmk87-sa-orange",
+      "slug": "zuoya-gmk87-gateron-curry-signature-plastics-sa-p-white-alphas-and-sa-orange-modifiers",
       "brand": "Zuoya",
       "model": "GMK87",
       "case": {
@@ -160,7 +160,7 @@
     },
     {
       "id": 8,
-      "slug": "yunzii-al68",
+      "slug": "yunzii-al68-xda-honey-japanese-bee",
       "brand": "Yunzii",
       "model": "AL68",
       "case": {
@@ -182,7 +182,7 @@
     },
     {
       "id": 9,
-      "slug": "mode-encore-65",
+      "slug": "mode-encore-65-mode-anthracite-dokodoko-panda",
       "brand": "Mode",
       "model": "Encore 65%",
       "case": {
@@ -204,7 +204,7 @@
     },
     {
       "id": 10,
-      "slug": "drop-cstm80-iara",
+      "slug": "drop-cstm80-haimu-whisper-silent-tactile-cannoncaps-cxa-iara",
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
@@ -226,7 +226,7 @@
     },
     {
       "id": 11,
-      "slug": "omnitype-bauer-lite",
+      "slug": "omnitype-bauer-lite-akko-creamy-yellow-moa-cute-cat",
       "brand": "Omnitype",
       "model": "Bauer Lite",
       "case": {
@@ -248,7 +248,7 @@
     },
     {
       "id": 12,
-      "slug": "drop-cstm80-operator-aluminum",
+      "slug": "drop-cstm80-keychron-silent-banana-mt3-operator",
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
@@ -270,7 +270,7 @@
     },
     {
       "id": 13,
-      "slug": "drop-cstm80-operator-white",
+      "slug": "drop-cstm80-durock-ice-king-tactile-mt3-operator",
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
@@ -292,7 +292,7 @@
     },
     {
       "id": 14,
-      "slug": "drop-cstm80-domikey",
+      "slug": "drop-cstm80-gateron-milky-yellow-domikey-white-and-teal-turquoise-keycaps",
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
@@ -314,7 +314,7 @@
     },
     {
       "id": 15,
-      "slug": "glorious-gmmk-pro",
+      "slug": "glorious-gmmk-pro-glorious-mako-dsa-hana-keycap-set",
       "brand": "Glorious",
       "model": "GMMK Pro",
       "case": {
@@ -336,7 +336,7 @@
     },
     {
       "id": 16,
-      "slug": "keydous-nj98",
+      "slug": "keydous-nj98-cherry-mx-brown-signature-plastics-macrodata-refinement",
       "brand": "Keydous",
       "model": "NJ98",
       "case": {
@@ -358,7 +358,7 @@
     },
     {
       "id": 17,
-      "slug": "fkz-k75-nahida",
+      "slug": "fkz-k75-kailh-silver-nahida-genshin-impact-keycaps",
       "brand": "FKZ",
       "model": "K75",
       "case": {
@@ -380,7 +380,7 @@
     },
     {
       "id": 18,
-      "slug": "drop-alt",
+      "slug": "drop-alt-cherry-red-mt3-fairlane",
       "brand": "Drop",
       "model": "ALT",
       "case": {
@@ -402,7 +402,7 @@
     },
     {
       "id": 19,
-      "slug": "fkz-k75-astrolokeys",
+      "slug": "fkz-k75-kailh-silver-astrolokeys-by-cassidoo-sailorhg",
       "brand": "FKZ",
       "model": "K75",
       "case": {
@@ -424,7 +424,7 @@
     },
     {
       "id": 20,
-      "slug": "novelkeys-classic-tkl-superuser",
+      "slug": "novelkeys-classic-tkl-keychron-silent-banana-kam-superuser",
       "brand": "NovelKeys",
       "model": "Classic TKL",
       "case": {
@@ -446,7 +446,7 @@
     },
     {
       "id": 21,
-      "slug": "weikav-lucky65",
+      "slug": "weikav-lucky65-akko-rosewood-kbdiy-wob",
       "brand": "Weikav",
       "model": "Lucky65",
       "case": {
@@ -468,7 +468,7 @@
     },
     {
       "id": 22,
-      "slug": "ducky-projectd-tinker-65",
+      "slug": "ducky-projectd-tinker-65-kinetic-labs-gecko-signature-plastics-dsa-wob",
       "brand": "Ducky",
       "model": "ProjectD Tinker 65",
       "case": {
@@ -490,7 +490,7 @@
     },
     {
       "id": 23,
-      "slug": "aula-f75",
+      "slug": "aula-f75-durock-ice-king-tactile-nicepbt-whale",
       "brand": "Aula",
       "model": "F75",
       "case": {
@@ -512,7 +512,7 @@
     },
     {
       "id": 24,
-      "slug": "iqunix-f96",
+      "slug": "iqunix-f96-cherry-mx-silent-red-gmk-mecha-00-bright-blue-black-white-colorway",
       "brand": "IQUNIX",
       "model": "F96",
       "case": {
@@ -534,7 +534,7 @@
     },
     {
       "id": 25,
-      "slug": "drop-cstm80-lilith",
+      "slug": "drop-cstm80-haimu-capybara-milkyway-lilith-r3",
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
@@ -556,7 +556,7 @@
     },
     {
       "id": 26,
-      "slug": "novelkeys-classic-tkl-red",
+      "slug": "novelkeys-classic-tkl-akko-rosewood-signature-plastics-wob-dcs-keycaps",
       "brand": "NovelKeys",
       "model": "Classic TKL",
       "case": {
@@ -578,7 +578,7 @@
     },
     {
       "id": 27,
-      "slug": "zuoya-gmk87-white",
+      "slug": "zuoya-gmk87-gateron-milky-yellow-signature-plastics-wob-and-bow",
       "brand": "Zuoya",
       "model": "GMK87",
       "case": {
@@ -600,7 +600,7 @@
     },
     {
       "id": 28,
-      "slug": "zuoya-gmk87-black",
+      "slug": "zuoya-gmk87-gateron-brown-signature-plastics-wob-and-bow",
       "brand": "Zuoya",
       "model": "GMK87",
       "case": {
@@ -622,7 +622,7 @@
     },
     {
       "id": 29,
-      "slug": "keydous-nj80",
+      "slug": "keydous-nj80-kinetic-labs-gecko-kbdiy-keycaps-in-a-red-white-and-blue-colorway",
       "brand": "Keydous",
       "model": "NJ80",
       "case": {
@@ -644,7 +644,7 @@
     },
     {
       "id": 30,
-      "slug": "keychron-q2",
+      "slug": "keychron-q2-keychron-silent-banana-sp-oblivion-v2-git-modifiers-calm-depths-keycaps",
       "brand": "Keychron",
       "model": "Q2",
       "case": {

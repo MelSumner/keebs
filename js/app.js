@@ -161,12 +161,12 @@
       ]));
     }
 
-    const name = [[b.brand, b.model].filter((v) => !isBlank(v)).join(' '), b.keycaps.set]
-      .filter((v) => !isBlank(v)).join(', ');
-    body.append(el('p', { class: 'card__permalink' }, el('a', { href: `#${b.slug}` }, [
-      'Link to this keyboard',
-      el('span', { class: 'visually-hidden', text: name ? ` (${name})` : '' }),
-    ])));
+    // Same parts as the slug, so every link has a unique visible name.
+    const linkName = [
+      [b.brand, b.model].filter((v) => !isBlank(v)).join(' '), b.switches.model, b.keycaps.set,
+    ].filter((v) => !isBlank(v)).join(', ');
+    body.append(el('p', { class: 'card__permalink' },
+      el('a', { href: `#${b.slug}`, text: `Link to ${linkName}` })));
 
     const cls = b.slug === targetSlug ? 'card is-target' : 'card';
     return el('li', {}, el('article', {
