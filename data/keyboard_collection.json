@@ -287,7 +287,7 @@
       },
       "switches": {
         "model": "Gateron Milky Yellow",
-        "description": "Linear switch, 50g actuation, milky nylon housing",
+        "description": "Linear switch, 50g actuation",
         "type": "linear"
       },
       "keycaps": {
@@ -317,7 +317,7 @@
       },
       "photo": null,
       "status": "documented",
-      "notes": "Only used the white and purple keycaps; added a video game character (Keqing) illustrated spacebar and amethyst artisan ESC."
+      "notes": "Only used the white and purple keycaps; added a video game character (Keqing) illustrated spacebar and amethyst artisan ESC. Also: this was before I figured out not to buy this keyboard brand."
     },
     {
       "id": 16,
