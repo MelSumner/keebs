@@ -23,6 +23,12 @@ body:
     validations:
       required: true
   - type: input
+    id: link-name
+    attributes:
+      label: Link name
+      description: Optional. The end of this keyboard's shareable link, like `keychron-q1-pro`. Leave blank to build it from the brand and model. Don't change it once it's published, or old links will break.
+      placeholder: keychron-q1-pro
+  - type: input
     id: case-color
     attributes:
       label: Case color or finish

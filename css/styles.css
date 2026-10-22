@@ -335,6 +335,38 @@ input::placeholder {
   overflow: hidden;
 }
 
+.card {
+  scroll-margin-top: var(--space-4);
+}
+
+.card.is-target {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.card:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.card__permalink {
+  margin: auto 0 0;
+  font-size: 0.875rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 .card__media {
   aspect-ratio: 16 / 9;
   background: var(--media-bg);

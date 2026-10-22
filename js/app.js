@@ -19,6 +19,7 @@
   };
 
   let builds = [];
+  let targetSlug = null;
 
   const isBlank = (v) => v === null || v === undefined || String(v).trim() === '';
   const display = (v) => (isBlank(v) ? TBD : String(v));
@@ -88,6 +89,7 @@
   function normalize(raw) {
     return {
       id: raw.id,
+      slug: isBlank(raw.slug) ? `keyboard-${raw.id}` : String(raw.slug),
       brand: raw.brand ?? null,
       model: raw.model ?? null,
       case: { color_or_finish: null, material: null, ...raw.case },
@@ -159,7 +161,17 @@
       ]));
     }
 
-    return el('li', {}, el('article', { class: 'card', 'aria-labelledby': headingId }, [media(b), body]));
+    const name = [[b.brand, b.model].filter((v) => !isBlank(v)).join(' '), b.keycaps.set]
+      .filter((v) => !isBlank(v)).join(', ');
+    body.append(el('p', { class: 'card__permalink' }, el('a', { href: `#${b.slug}` }, [
+      'Link to this keyboard',
+      el('span', { class: 'visually-hidden', text: name ? ` (${name})` : '' }),
+    ])));
+
+    const cls = b.slug === targetSlug ? 'card is-target' : 'card';
+    return el('li', {}, el('article', {
+      id: b.slug, class: cls, tabindex: '-1', 'aria-labelledby': headingId,
+    }, [media(b), body]));
   }
 
   function populateSelect(select, values, transform) {
@@ -246,6 +258,35 @@
     syncUrl(f);
   }
 
+  function hashSlug() {
+    try {
+      return decodeURIComponent(location.hash.slice(1));
+    } catch {
+      return '';
+    }
+  }
+
+  // Shared links point at #slug. Clear filters that would hide the card, then move focus to it.
+  function showTarget() {
+    targetSlug = builds.some((b) => b.slug === hashSlug()) ? hashSlug() : null;
+    if (targetSlug && !document.getElementById(targetSlug)) {
+      // The reset handler re-renders on the next tick, so focus after that.
+      els.form.reset();
+      setTimeout(focusTarget, 0);
+    } else {
+      render();
+      focusTarget();
+    }
+  }
+
+  function focusTarget() {
+    const target = targetSlug && document.getElementById(targetSlug);
+    if (target) {
+      target.scrollIntoView({ block: 'start' });
+      target.focus({ preventScroll: true });
+    }
+  }
+
   function clearFilters() {
     els.form.reset();
     render();
@@ -280,7 +321,10 @@
     els.form.addEventListener('reset', () => setTimeout(render, 0));
     els.emptyClear.addEventListener('click', clearFilters);
 
+    window.addEventListener('hashchange', showTarget);
+
     render();
+    if (location.hash) showTarget();
   }
 
   init();

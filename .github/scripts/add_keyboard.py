@@ -39,6 +39,14 @@ def slugify(*parts):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:60] or "keyboard"
 
 
+def unique_slug(wanted, taken):
+    """Return wanted, or wanted-2, wanted-3, ... if it's already used."""
+    slug, n = wanted, 2
+    while slug in taken:
+        slug, n = f"{wanted}-{n}", n + 1
+    return slug
+
+
 def find_image_url(text):
     if not text:
         return None
@@ -86,11 +94,14 @@ def main():
     collection = json.loads(DATA.read_text(encoding="utf-8"))
     builds = collection["builds"]
     new_id = max((b["id"] for b in builds), default=0) + 1
+    link_name = clean(form.get("Link name"))
+    slug = unique_slug(slugify(link_name) if link_name else slugify(brand, model), {b.get("slug") for b in builds})
 
     status = "work_in_progress" if (form.get("Status") or "").strip().lower() == "work in progress" else "documented"
     switch_type = clean(form.get("Switch type"))
     entry = {
         "id": new_id,
+        "slug": slug,
         "brand": brand,
         "model": model,
         "case": {
@@ -115,7 +126,7 @@ def main():
     url = find_image_url(form.get("Photo"))
     if url:
         try:
-            entry["photo"] = download_photo(url, f"{new_id:02d}-{slugify(brand, model)}")
+            entry["photo"] = download_photo(url, f"{new_id:02d}-{slug}")
             photo_note = f"Photo saved to `{entry['photo']}`."
         except Exception as err:  # keep the entry; the photo can be added later
             photo_note = f"Couldn't download the photo ({err}). Add it to `images/` and set `photo` by hand."
@@ -127,7 +138,7 @@ def main():
 
     issue = os.environ.get("ISSUE_NUMBER", "")
     rows = [
-        ("Brand", brand), ("Model", model),
+        ("Brand", brand), ("Model", model), ("Link", f"#{slug}"),
         ("Case", entry["case"]["color_or_finish"]), ("Material", entry["case"]["material"]),
         ("Switches", entry["switches"]["model"]), ("Switch type", entry["switches"]["type"]),
         ("Switch details", entry["switches"]["description"]),

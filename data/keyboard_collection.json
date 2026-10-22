@@ -6,6 +6,7 @@
   "builds": [
     {
       "id": 1,
+      "slug": "monsgeek-m1-v5-he",
       "brand": "Monsgeek",
       "model": "M1 V5 HE",
       "case": {
@@ -27,6 +28,7 @@
     },
     {
       "id": 2,
+      "slug": "wobkey-rainy75",
       "brand": "Wobkey",
       "model": "Rainy75",
       "case": {
@@ -48,6 +50,7 @@
     },
     {
       "id": 3,
+      "slug": "yunzii-b75-pro",
       "brand": "Yunzii",
       "model": "B75 Pro",
       "case": {
@@ -69,6 +72,7 @@
     },
     {
       "id": 4,
+      "slug": "smurv-smurv80",
       "brand": "Smurv",
       "model": "Smurv80",
       "case": {
@@ -90,6 +94,7 @@
     },
     {
       "id": 5,
+      "slug": "womier-womier75",
       "brand": "Womier",
       "model": "Womier75",
       "case": {
@@ -111,6 +116,7 @@
     },
     {
       "id": 6,
+      "slug": "leobog-hi75",
       "brand": "Leobog",
       "model": "Hi75",
       "case": {
@@ -132,6 +138,7 @@
     },
     {
       "id": 7,
+      "slug": "zuoya-gmk87-sa-orange",
       "brand": "Zuoya",
       "model": "GMK87",
       "case": {
@@ -153,6 +160,7 @@
     },
     {
       "id": 8,
+      "slug": "yunzii-al68",
       "brand": "Yunzii",
       "model": "AL68",
       "case": {
@@ -174,6 +182,7 @@
     },
     {
       "id": 9,
+      "slug": "mode-encore-65",
       "brand": "Mode",
       "model": "Encore 65%",
       "case": {
@@ -195,6 +204,7 @@
     },
     {
       "id": 10,
+      "slug": "drop-cstm80-iara",
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
@@ -216,6 +226,7 @@
     },
     {
       "id": 11,
+      "slug": "omnitype-bauer-lite",
       "brand": "Omnitype",
       "model": "Bauer Lite",
       "case": {
@@ -237,6 +248,7 @@
     },
     {
       "id": 12,
+      "slug": "drop-cstm80-operator-aluminum",
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
@@ -258,6 +270,7 @@
     },
     {
       "id": 13,
+      "slug": "drop-cstm80-operator-white",
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
@@ -279,6 +292,7 @@
     },
     {
       "id": 14,
+      "slug": "drop-cstm80-domikey",
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
@@ -300,6 +314,7 @@
     },
     {
       "id": 15,
+      "slug": "glorious-gmmk-pro",
       "brand": "Glorious",
       "model": "GMMK Pro",
       "case": {
@@ -321,6 +336,7 @@
     },
     {
       "id": 16,
+      "slug": "keydous-nj98",
       "brand": "Keydous",
       "model": "NJ98",
       "case": {
@@ -342,6 +358,7 @@
     },
     {
       "id": 17,
+      "slug": "fkz-k75-nahida",
       "brand": "FKZ",
       "model": "K75",
       "case": {
@@ -363,6 +380,7 @@
     },
     {
       "id": 18,
+      "slug": "drop-alt",
       "brand": "Drop",
       "model": "ALT",
       "case": {
@@ -384,6 +402,7 @@
     },
     {
       "id": 19,
+      "slug": "fkz-k75-astrolokeys",
       "brand": "FKZ",
       "model": "K75",
       "case": {
@@ -405,6 +424,7 @@
     },
     {
       "id": 20,
+      "slug": "novelkeys-classic-tkl-superuser",
       "brand": "NovelKeys",
       "model": "Classic TKL",
       "case": {
@@ -426,6 +446,7 @@
     },
     {
       "id": 21,
+      "slug": "weikav-lucky65",
       "brand": "Weikav",
       "model": "Lucky65",
       "case": {
@@ -447,6 +468,7 @@
     },
     {
       "id": 22,
+      "slug": "ducky-projectd-tinker-65",
       "brand": "Ducky",
       "model": "ProjectD Tinker 65",
       "case": {
@@ -468,6 +490,7 @@
     },
     {
       "id": 23,
+      "slug": "aula-f75",
       "brand": "Aula",
       "model": "F75",
       "case": {
@@ -489,6 +512,7 @@
     },
     {
       "id": 24,
+      "slug": "iqunix-f96",
       "brand": "IQUNIX",
       "model": "F96",
       "case": {
@@ -510,6 +534,7 @@
     },
     {
       "id": 25,
+      "slug": "drop-cstm80-lilith",
       "brand": "Drop",
       "model": "CSTM80",
       "case": {
@@ -531,6 +556,7 @@
     },
     {
       "id": 26,
+      "slug": "novelkeys-classic-tkl-red",
       "brand": "NovelKeys",
       "model": "Classic TKL",
       "case": {
@@ -552,6 +578,7 @@
     },
     {
       "id": 27,
+      "slug": "zuoya-gmk87-white",
       "brand": "Zuoya",
       "model": "GMK87",
       "case": {
@@ -573,6 +600,7 @@
     },
     {
       "id": 28,
+      "slug": "zuoya-gmk87-black",
       "brand": "Zuoya",
       "model": "GMK87",
       "case": {
@@ -594,6 +622,7 @@
     },
     {
       "id": 29,
+      "slug": "keydous-nj80",
       "brand": "Keydous",
       "model": "NJ80",
       "case": {
@@ -615,6 +644,7 @@
     },
     {
       "id": 30,
+      "slug": "keychron-q2",
       "brand": "Keychron",
       "model": "Q2",
       "case": {
