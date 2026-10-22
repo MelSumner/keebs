@@ -123,7 +123,7 @@
         "color_or_finish": "Black",
         "material": "Aluminum"
       },
-      "plate": null,
+      "plate": "Polypropylene (PP)",
       "switches": {
         "model": "HMX Moksae",
         "description": "Silent tactile",
@@ -145,7 +145,7 @@
         "color_or_finish": "Black",
         "material": "Plastic/Silicone with Metal accents"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Gateron Curry",
         "description": "EF linear switch, 50g actuation, two-stage spring",
@@ -167,7 +167,7 @@
         "color_or_finish": "Black",
         "material": "Aluminum"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": null,
         "description": "Unidentified red-stem switches",
@@ -211,7 +211,7 @@
         "color_or_finish": "Dark navy with mint details",
         "material": "Polycarbonate"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Haimu Whisper Silent Tactile",
         "description": "Silent tactile, 65g spring, nylon PA66 housing, POM stem, factory-lubed",
@@ -255,7 +255,7 @@
         "color_or_finish": "Aluminum top case",
         "material": "Polycarbonate base, aluminum top case"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
@@ -277,7 +277,7 @@
         "color_or_finish": "White",
         "material": "Polycarbonate"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Durock Ice King Tactile",
         "description": "58g actuation, 68g bottom-out",
@@ -299,7 +299,7 @@
         "color_or_finish": "White",
         "material": "Polycarbonate"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Gateron Milky Yellow",
         "description": "Linear switch, 50g actuation",
@@ -321,7 +321,7 @@
         "color_or_finish": "Silver",
         "material": "Aluminum"
       },
-      "plate": null,
+      "plate": "Aluminum",
       "switches": {
         "model": "Glorious Mako",
         "description": "Tactile switch, 45g actuation",
@@ -387,7 +387,7 @@
         "color_or_finish": "Arctic Blue",
         "material": "Aluminum"
       },
-      "plate": null,
+      "plate": "Steel",
       "switches": {
         "model": "Cherry Red",
         "description": "MX linear switch, 45g actuation",
@@ -431,7 +431,7 @@
         "color_or_finish": "Blue",
         "material": "ABS plastic"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
@@ -497,7 +497,7 @@
         "color_or_finish": "Light Blue",
         "material": "ABS plastic"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Durock Ice King Tactile",
         "description": "58g actuation, 68g bottom-out",
@@ -541,7 +541,7 @@
         "color_or_finish": "White",
         "material": "Polycarbonate"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Haimu Capybara",
         "description": "Linear with a deep thock",
@@ -585,7 +585,7 @@
         "color_or_finish": "White",
         "material": "Plastic/Silicone with Metal accents"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Gateron Milky Yellow",
         "description": "50g actuation",
@@ -607,7 +607,7 @@
         "color_or_finish": "Black",
         "material": "Plastic/Silicone with Metal accents"
       },
-      "plate": null,
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Gateron Brown",
         "description": "55g actuation",
@@ -651,7 +651,7 @@
         "color_or_finish": "Blue",
         "material": "Aluminum"
       },
-      "plate": null,
+      "plate": "Steel",
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
