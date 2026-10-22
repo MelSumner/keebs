@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -48,11 +49,25 @@ def find_image_url(text):
     return match.group(1) if match else None
 
 
+def is_github_attachment(url):
+    """True for photos uploaded to GitHub (dragged into the issue), not arbitrary links."""
+    parts = urllib.parse.urlsplit(url)
+    if parts.scheme != "https" or parts.username or parts.password or parts.port:
+        return False
+    host = parts.hostname or ""
+    if host == "github.com":
+        return parts.path.startswith("/user-attachments/assets/")
+    return host in {"user-images.githubusercontent.com", "private-user-images.githubusercontent.com"}
+
+
 def download_photo(url, stem):
     """Save the photo to images/ and return its site-relative path."""
+    if not is_github_attachment(url):
+        raise ValueError("only photos uploaded to the issue are downloaded, not links to other sites")
     req = urllib.request.Request(url, headers={"User-Agent": "keebs-add-keyboard"})
     token = os.environ.get("GITHUB_TOKEN")
-    if token:
+    # Only github.com ever sees the token.
+    if token and urllib.parse.urlsplit(url).hostname == "github.com":
         # Unredirected so the token isn't forwarded to the storage host GitHub redirects to.
         req.add_unredirected_header("Authorization", f"Bearer {token}")
     with urllib.request.urlopen(req, timeout=60) as res:

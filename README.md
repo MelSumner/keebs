@@ -18,6 +18,7 @@ Open a new issue on GitHub and choose **New keyboard**. Fill in what you know, a
 - Only issues you open as the repository owner trigger it.
 - Blank fields become `null` and show as **TBD**.
 - The new keyboard gets the ID in `next_id`, and `next_id` goes up by one, so IDs are never reused.
+- Only photos dragged into the issue (uploaded to GitHub) are downloaded. Links to other sites are skipped, so the workflow's token never goes to an outside server.
 - If the photo can't be downloaded, the pull request says so, and you can add it by hand (see Photos below).
 - The pieces are `.github/ISSUE_TEMPLATE/new-keyboard.yml`, `.github/workflows/add-keyboard.yml` and `.github/scripts/add_keyboard.py`.
 - It needs **Settings → Actions → General → Workflow permissions → Allow GitHub Actions to create and approve pull requests** turned on.
@@ -54,6 +55,7 @@ That keeps most photos under 300 KB. If the file comes out larger than it went i
 - Filters for switch type and keycap profile.
 - Filter state lives in the URL, so a filtered view can be bookmarked or shared, e.g. `?switch=tactile&profile=SA`.
 - Every card has a link icon in its top-right corner that links to the card (`#kb-<id>`). Its accessible name ("Link to …" with the brand, model, switches, and keycaps) is unique per card. Opening one clears any filter that would hide the card, then scrolls to it, highlights it, and moves focus to it.
+- Selecting a card's photo opens the whole, uncropped photo in a modal dialog. Focus stays in the dialog until you close it with the close button, Esc, or a click outside the photo, and then returns to the card.
 - A dark, minimal theme set in MonoLisa Text, with `system-ui` as the fallback. Every color pair meets WCAG 2.2 AA contrast, and the ratios are listed at the top of `css/styles.css`.
 - Keyboard accessible, with a skip link, labeled controls, visible focus rings, and a live region that announces the result count.
 
