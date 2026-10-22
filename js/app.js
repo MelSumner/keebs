@@ -199,7 +199,7 @@
   function card(b) {
     const cardId = `kb-${b.id}`;
     const headingId = `${cardId}-title`;
-    const h2 = el('h2', { id: headingId }, [
+    const title = el('h3', { id: headingId }, [
       el('span', { class: 'card__brand' }, valueNode(b.brand)),
       valueNode(b.model),
     ]);
@@ -212,7 +212,7 @@
     const permalink = el('a', { class: 'permalink', href: `#${cardId}`, 'aria-label': label });
     permalink.innerHTML = LINK_SVG;
 
-    const header = el('div', { class: 'card__header' }, h2);
+    const header = el('div', { class: 'card__header' }, title);
     if (b.status === 'work_in_progress') {
       header.append(el('span', { class: 'badge', text: 'Work in progress' }));
     }
@@ -229,7 +229,7 @@
     const body = el('div', { class: 'card__body' }, [header, dl]);
     if (!isBlank(b.notes)) {
       body.append(el('div', { class: 'card__notes' }, [
-        el('h3', { class: 'card__notes-label', text: 'Build Notes' }),
+        el('h4', { class: 'card__notes-label', text: 'Build Notes' }),
         el('p', { text: b.notes }),
       ]));
     }
