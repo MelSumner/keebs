@@ -49,6 +49,11 @@ sips -Z 1600 -s formatOptions 55 images/kb-NN-IMG_1234.jpg
 
 That keeps most photos under 300 KB. If the file comes out larger than it went in, the original was already heavily compressed, so keep the original instead.
 
+### Link preview and icons
+
+- `images/og-preview.jpg` is the 1200×630 image shown when the site is shared (Open Graph and `twitter:card` tags in `index.html`). Its source is `tools/og-image.html`. To change it, edit that file, serve the repo, open `http://localhost:8000/tools/og-image.html` at a 1200×630 viewport, screenshot it, and save it as a JPEG. Every `#kb-<id>` link shares this one preview, because link-preview crawlers ignore the part after `#`.
+- `favicon.svg` is the browser icon. `favicon-32.png` (32×32) and `apple-touch-icon.png` (180×180) are PNG copies of it for browsers and devices that need them.
+
 ## Features
 
 - A card grid that searches across every field (brand, model, case, plate, switches, keycaps, notes).
