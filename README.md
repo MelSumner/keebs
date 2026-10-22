@@ -51,7 +51,7 @@ That keeps most photos under 300 KB. If the file comes out larger than it went i
 
 ## Features
 
-- A card grid that searches across every field (brand, model, case, switches, keycaps, notes).
+- A card grid that searches across every field (brand, model, case, plate, switches, keycaps, notes).
 - Filters for switch type and keycap profile.
 - Filter state lives in the URL, so a filtered view can be bookmarked or shared, e.g. `?switch=tactile&profile=SA`.
 - Every card has a link icon in its top-right corner that links to the card (`#kb-<id>`). Its accessible name ("Link to …" with the brand, model, switches, and keycaps) is unique per card. Opening one clears any filter that would hide the card, then scrolls to it, highlights it, and moves focus to it.

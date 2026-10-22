@@ -13,6 +13,7 @@
         "color_or_finish": "White",
         "material": "Aluminum"
       },
+      "plate": null,
       "switches": {
         "model": "Keychron Ultra-Fast Lime Silent Banana",
         "description": "Magnetic (Hall effect) switch",
@@ -34,6 +35,7 @@
         "color_or_finish": "Black",
         "material": "Aluminum"
       },
+      "plate": null,
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
@@ -55,6 +57,7 @@
         "color_or_finish": "Black",
         "material": "ABS plastic"
       },
+      "plate": null,
       "switches": {
         "model": "Kailh Midnight Pro Silent Tactile",
         "description": "very fast! very quiet!",
@@ -76,6 +79,7 @@
         "color_or_finish": "Dark gray",
         "material": null
       },
+      "plate": null,
       "switches": {
         "model": "Cherry MX Honey",
         "description": "MX2A silent tactile switch, 45g actuation, factory-lubed",
@@ -97,6 +101,7 @@
         "color_or_finish": "Wood",
         "material": "Wood shell"
       },
+      "plate": null,
       "switches": {
         "model": null,
         "description": "Unidentified stock switches",
@@ -118,6 +123,7 @@
         "color_or_finish": "Black",
         "material": "Aluminum"
       },
+      "plate": null,
       "switches": {
         "model": "HMX Moksae",
         "description": "Silent tactile",
@@ -139,6 +145,7 @@
         "color_or_finish": "Black",
         "material": "Plastic/Silicone with Metal accents"
       },
+      "plate": null,
       "switches": {
         "model": "Gateron Curry",
         "description": "EF linear switch, 50g actuation, two-stage spring",
@@ -160,6 +167,7 @@
         "color_or_finish": "Black",
         "material": "Aluminum"
       },
+      "plate": null,
       "switches": {
         "model": null,
         "description": "Unidentified red-stem switches",
@@ -181,6 +189,7 @@
         "color_or_finish": "Light colorway; wooden upper section",
         "material": "Aluminum with wood top"
       },
+      "plate": null,
       "switches": {
         "model": "Mode Anthracite",
         "description": "Silent tactile switch, 48g actuation, 63g tactile peak",
@@ -202,6 +211,7 @@
         "color_or_finish": "Dark navy with mint details",
         "material": "Polycarbonate"
       },
+      "plate": null,
       "switches": {
         "model": "Haimu Whisper Silent Tactile",
         "description": "Silent tactile, 65g spring, nylon PA66 housing, POM stem, factory-lubed",
@@ -223,6 +233,7 @@
         "color_or_finish": "Bone",
         "material": "Injection-molded plastic"
       },
+      "plate": null,
       "switches": {
         "model": "Akko Creamy Yellow",
         "description": null,
@@ -244,6 +255,7 @@
         "color_or_finish": "Aluminum top case",
         "material": "Polycarbonate base, aluminum top case"
       },
+      "plate": null,
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
@@ -265,6 +277,7 @@
         "color_or_finish": "White",
         "material": "Polycarbonate"
       },
+      "plate": null,
       "switches": {
         "model": "Durock Ice King Tactile",
         "description": "58g actuation, 68g bottom-out",
@@ -286,6 +299,7 @@
         "color_or_finish": "White",
         "material": "Polycarbonate"
       },
+      "plate": null,
       "switches": {
         "model": "Gateron Milky Yellow",
         "description": "Linear switch, 50g actuation",
@@ -307,6 +321,7 @@
         "color_or_finish": "Silver",
         "material": "Aluminum"
       },
+      "plate": null,
       "switches": {
         "model": "Glorious Mako",
         "description": "Tactile switch, 45g actuation",
@@ -328,6 +343,7 @@
         "color_or_finish": "White",
         "material": "Reinforced ABS Plastic"
       },
+      "plate": null,
       "switches": {
         "model": "Cherry MX Brown",
         "description": null,
@@ -349,6 +365,7 @@
         "color_or_finish": "Green",
         "material": "ABS plastic"
       },
+      "plate": null,
       "switches": {
         "model": "Kailh Silver",
         "description": null,
@@ -370,6 +387,7 @@
         "color_or_finish": "Arctic Blue",
         "material": "Aluminum"
       },
+      "plate": null,
       "switches": {
         "model": "Cherry Red",
         "description": "MX linear switch, 45g actuation",
@@ -391,6 +409,7 @@
         "color_or_finish": "Purple",
         "material": "ABS plastic"
       },
+      "plate": null,
       "switches": {
         "model": "Kailh Silver",
         "description": null,
@@ -412,6 +431,7 @@
         "color_or_finish": "Blue",
         "material": "ABS plastic"
       },
+      "plate": null,
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
@@ -433,6 +453,7 @@
         "color_or_finish": "Black",
         "material": "Aluminum"
       },
+      "plate": null,
       "switches": {
         "model": "Akko Rosewood",
         "description": "Linear switch, 40g actuation, factory-lubed",
@@ -454,6 +475,7 @@
         "color_or_finish": "Black",
         "material": "Polycarbonate...probably"
       },
+      "plate": null,
       "switches": {
         "model": "Kinetic Labs Gecko",
         "description": "Silent linear, made by Gateron",
@@ -475,6 +497,7 @@
         "color_or_finish": "Light Blue",
         "material": "ABS plastic"
       },
+      "plate": null,
       "switches": {
         "model": "Durock Ice King Tactile",
         "description": "58g actuation, 68g bottom-out",
@@ -496,6 +519,7 @@
         "color_or_finish": "Black",
         "material": "Aluminum"
       },
+      "plate": null,
       "switches": {
         "model": "Cherry MX Silent Red",
         "description": "Silent linear switch, 45g actuation",
@@ -517,6 +541,7 @@
         "color_or_finish": "White",
         "material": "Polycarbonate"
       },
+      "plate": null,
       "switches": {
         "model": "Haimu Capybara",
         "description": "Linear with a deep thock",
@@ -538,6 +563,7 @@
         "color_or_finish": "Red-orange",
         "material": "ABS plastic"
       },
+      "plate": "Polycarbonate",
       "switches": {
         "model": "Akko Rosewood",
         "description": "Linear switch, 40g actuation, factory-lubed",
@@ -559,6 +585,7 @@
         "color_or_finish": "White",
         "material": "Plastic/Silicone with Metal accents"
       },
+      "plate": null,
       "switches": {
         "model": "Gateron Milky Yellow",
         "description": "50g actuation",
@@ -580,6 +607,7 @@
         "color_or_finish": "Black",
         "material": "Plastic/Silicone with Metal accents"
       },
+      "plate": null,
       "switches": {
         "model": "Gateron Brown",
         "description": "55g actuation",
@@ -601,6 +629,7 @@
         "color_or_finish": "White",
         "material": "ABS plastic"
       },
+      "plate": null,
       "switches": {
         "model": "Kinetic Labs Gecko",
         "description": "Silent linear, made by Gateron",
@@ -622,6 +651,7 @@
         "color_or_finish": "Blue",
         "material": "Aluminum"
       },
+      "plate": null,
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,

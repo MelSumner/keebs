@@ -33,6 +33,12 @@ body:
       label: Case material
       placeholder: Aluminum
   - type: input
+    id: plate
+    attributes:
+      label: Plate
+      description: Plate material.
+      placeholder: Polycarbonate
+  - type: input
     id: switch-model
     attributes:
       label: Switches

@@ -82,7 +82,7 @@
 
   function searchText(b) {
     const text = [
-      b.brand, b.model, b.case.color_or_finish, b.case.material,
+      b.brand, b.model, b.case.color_or_finish, b.case.material, b.plate,
       b.switches.model, b.switches.description, b.switches.type,
       b.keycaps.set, b.keycaps.profile, b.notes,
       b.status === 'work_in_progress' ? 'work in progress' : null,
@@ -96,6 +96,7 @@
       brand: raw.brand ?? null,
       model: raw.model ?? null,
       case: { color_or_finish: null, material: null, ...raw.case },
+      plate: raw.plate ?? null,
       switches: { model: null, description: null, type: null, ...raw.switches },
       keycaps: { set: null, profile: null, ...raw.keycaps },
       photo: raw.photo ?? null,
@@ -213,6 +214,7 @@
     const dl = el('dl', { class: 'specs' });
     spec(dl, 'Case', b.case.color_or_finish);
     spec(dl, 'Material', b.case.material);
+    spec(dl, 'Plate', b.plate);
     spec(dl, 'Switches', switchLabel(b.switches));
     spec(dl, 'Type', switchTypeLabel(b.switches), capitalize);
     spec(dl, 'Keycaps', b.keycaps.set);

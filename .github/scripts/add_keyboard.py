@@ -114,6 +114,7 @@ def main():
             "color_or_finish": clean(form.get("Case color or finish")),
             "material": clean(form.get("Case material")),
         },
+        "plate": clean(form.get("Plate")),
         "switches": {
             "model": switch_model,
             "description": clean(form.get("Switch details")),
@@ -147,6 +148,7 @@ def main():
     rows = [
         ("Brand", brand), ("Model", model), ("Link", f"#kb-{new_id}"),
         ("Case", entry["case"]["color_or_finish"]), ("Material", entry["case"]["material"]),
+        ("Plate", entry["plate"]),
         ("Switches", entry["switches"]["model"]), ("Switch type", entry["switches"]["type"]),
         ("Switch details", entry["switches"]["description"]),
         ("Keycaps", entry["keycaps"]["set"]), ("Profile", entry["keycaps"]["profile"]),
