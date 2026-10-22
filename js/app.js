@@ -19,7 +19,7 @@
   };
 
   let builds = [];
-  let targetSlug = null;
+  let targetId = null;
 
   const isBlank = (v) => v === null || v === undefined || String(v).trim() === '';
   const display = (v) => (isBlank(v) ? TBD : String(v));
@@ -89,7 +89,6 @@
   function normalize(raw) {
     return {
       id: raw.id,
-      slug: isBlank(raw.slug) ? `keyboard-${raw.id}` : String(raw.slug),
       brand: raw.brand ?? null,
       model: raw.model ?? null,
       case: { color_or_finish: null, material: null, ...raw.case },
@@ -134,19 +133,20 @@
   }
 
   function card(b) {
-    const headingId = `kb-${b.id}`;
+    const cardId = `kb-${b.id}`;
+    const headingId = `${cardId}-title`;
     const h2 = el('h2', { id: headingId }, [
       el('span', { class: 'card__brand' }, valueNode(b.brand)),
       valueNode(b.model),
     ]);
 
-    // Same parts as the slug, so every link has a unique name.
+    // Brand, model, switches, and keycaps, so every link has a unique name.
     const linkName = [
       [b.brand, b.model].filter((v) => !isBlank(v)).join(' '), b.switches.model, b.keycaps.set,
     ].filter((v) => !isBlank(v)).join(', ');
     const label = `Link to ${linkName}`;
     // The tooltip is visual only; aria-label gives screen readers the same text.
-    const permalink = el('a', { class: 'permalink', href: `#${b.slug}`, 'aria-label': label }, [
+    const permalink = el('a', { class: 'permalink', href: `#${cardId}`, 'aria-label': label }, [
       el('span', { class: 'permalink__mark', 'aria-hidden': 'true', text: '\u00A7' }),
       el('span', { class: 'permalink__tip', 'aria-hidden': 'true', text: label }),
     ]);
@@ -173,9 +173,9 @@
       ]));
     }
 
-    const cls = b.slug === targetSlug ? 'card is-target' : 'card';
+    const cls = cardId === targetId ? 'card is-target' : 'card';
     return el('li', {}, el('article', {
-      id: b.slug, class: cls, tabindex: '-1', 'aria-labelledby': headingId,
+      id: cardId, class: cls, tabindex: '-1', 'aria-labelledby': headingId,
     }, [media(b), body]));
   }
 
@@ -263,18 +263,11 @@
     syncUrl(f);
   }
 
-  function hashSlug() {
-    try {
-      return decodeURIComponent(location.hash.slice(1));
-    } catch {
-      return '';
-    }
-  }
-
-  // Shared links point at #slug. Clear filters that would hide the card, then move focus to it.
+  // Shared links point at #kb-<id>. Clear filters that would hide the card, then move focus to it.
   function showTarget() {
-    targetSlug = builds.some((b) => b.slug === hashSlug()) ? hashSlug() : null;
-    if (targetSlug && !document.getElementById(targetSlug)) {
+    const hash = location.hash.slice(1);
+    targetId = builds.some((b) => `kb-${b.id}` === hash) ? hash : null;
+    if (targetId && !document.getElementById(targetId)) {
       // The reset handler re-renders on the next tick, so focus after that.
       els.form.reset();
       setTimeout(focusTarget, 0);
@@ -285,7 +278,7 @@
   }
 
   function focusTarget() {
-    const target = targetSlug && document.getElementById(targetSlug);
+    const target = targetId && document.getElementById(targetId);
     if (target) {
       target.scrollIntoView({ block: 'start' });
       target.focus({ preventScroll: true });

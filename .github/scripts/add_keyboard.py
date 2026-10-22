@@ -39,14 +39,6 @@ def slugify(*parts):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-") or "keyboard"
 
 
-def unique_slug(wanted, taken):
-    """Return wanted, or wanted-2, wanted-3, ... if it's already used."""
-    slug, n = wanted, 2
-    while slug in taken:
-        slug, n = f"{wanted}-{n}", n + 1
-    return slug
-
-
 def find_image_url(text):
     if not text:
         return None
@@ -93,16 +85,14 @@ def main():
 
     collection = json.loads(DATA.read_text(encoding="utf-8"))
     builds = collection["builds"]
-    new_id = max((b["id"] for b in builds), default=0) + 1
+    # IDs are permanent link targets (#kb-<id>), so never reuse one, even after a delete.
+    new_id = max(collection.get("next_id", 1), max((b["id"] for b in builds), default=0) + 1)
 
     status = "work_in_progress" if (form.get("Status") or "").strip().lower() == "work in progress" else "documented"
     switch_type = clean(form.get("Switch type"))
     switch_model, keycap_set = clean(form.get("Switches")), clean(form.get("Keycaps"))
-    # Brand, model, switches, and keycaps. Stored, so later edits don't break shared links.
-    slug = unique_slug(slugify(brand, model, switch_model, keycap_set), {b.get("slug") for b in builds})
     entry = {
         "id": new_id,
-        "slug": slug,
         "brand": brand,
         "model": model,
         "case": {
@@ -135,11 +125,12 @@ def main():
     builds.append(entry)
     if "total_builds" in collection:
         collection["total_builds"] = len(builds)
+    collection["next_id"] = new_id + 1
     DATA.write_text(json.dumps(collection, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     issue = os.environ.get("ISSUE_NUMBER", "")
     rows = [
-        ("Brand", brand), ("Model", model), ("Link", f"#{slug}"),
+        ("Brand", brand), ("Model", model), ("Link", f"#kb-{new_id}"),
         ("Case", entry["case"]["color_or_finish"]), ("Material", entry["case"]["material"]),
         ("Switches", entry["switches"]["model"]), ("Switch type", entry["switches"]["type"]),
         ("Switch details", entry["switches"]["description"]),
