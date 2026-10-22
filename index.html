@@ -57,7 +57,10 @@
 
     <section id="results" tabindex="-1" aria-labelledby="results-heading">
       <h2 class="results__heading" id="results-heading">Keyboards</h2>
-      <p class="status" id="count" role="status" aria-live="polite" aria-atomic="true"></p>
+      <p class="status">
+        <span id="count" role="status" aria-live="polite" aria-atomic="true"></span>
+        <span id="count-hint" hidden>A full view of the keyboard can be accessed by clicking on the keyboard thumbnail.</span>
+      </p>
       <ul class="grid" id="grid"></ul>
       <div class="empty" id="empty" hidden>
         <p>No keyboards match these filters.</p>

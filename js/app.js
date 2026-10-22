@@ -12,6 +12,7 @@
     profile: document.getElementById('profile'),
     sort: document.getElementById('sort'),
     count: document.getElementById('count'),
+    countHint: document.getElementById('count-hint'),
     grid: document.getElementById('grid'),
     empty: document.getElementById('empty'),
     emptyClear: document.getElementById('empty-clear'),
@@ -319,8 +320,9 @@
     els.empty.hidden = visible.length !== 0;
     const noun = builds.length === 1 ? 'keyboard' : 'keyboards';
     els.count.textContent = visible.length === builds.length
-      ? `Showing all ${builds.length} ${noun}`
-      : `Showing ${visible.length} of ${builds.length} ${noun}`;
+      ? `Showing all ${builds.length} ${noun}.`
+      : `Showing ${visible.length} of ${builds.length} ${noun}.`;
+    els.countHint.hidden = !visible.some((b) => !isBlank(b.photo));
     syncUrl(f);
   }
 
