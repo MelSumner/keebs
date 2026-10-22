@@ -16,6 +16,10 @@
     empty: document.getElementById('empty'),
     emptyClear: document.getElementById('empty-clear'),
     results: document.getElementById('results'),
+    lightbox: document.getElementById('lightbox'),
+    lightboxTitle: document.getElementById('lightbox-title'),
+    lightboxImg: document.getElementById('lightbox-img'),
+    lightboxClose: document.getElementById('lightbox-close'),
   };
 
   let builds = [];
@@ -122,15 +126,56 @@
           // Don't double up when the set name already says "keycaps" or "keycap set".
           : /\bkeycaps?\b/i.test(b.keycaps.set) ? ` keyboard with ${b.keycaps.set.trim()}`
           : ` keyboard with ${b.keycaps.set} keycaps`);
-      const img = el('img', { src: b.photo, alt: alt.trim(), loading: 'lazy', decoding: 'async' });
+      const img = el('img', { src: b.photo, alt: '', loading: 'lazy', decoding: 'async' });
       img.addEventListener('error', () => {
         wrap.replaceChildren(placeholder());
       }, { once: true });
-      wrap.append(img);
+      const name = [b.brand, b.model].filter((v) => !isBlank(v)).join(' ') || 'Keyboard';
+      const button = el('button', {
+        type: 'button',
+        class: 'card__zoom',
+        'aria-haspopup': 'dialog',
+        'aria-label': `View larger photo: ${alt.trim()}`,
+      }, img);
+      button.addEventListener('click', () => openLightbox(b.photo, alt.trim(), name, button));
+      wrap.append(button);
     } else {
       wrap.append(placeholder());
     }
     return wrap;
+  }
+
+  let lightboxOpener = null;
+
+  function openLightbox(src, alt, title, opener) {
+    lightboxOpener = opener;
+    els.lightboxTitle.textContent = title;
+    els.lightboxImg.src = src;
+    els.lightboxImg.alt = alt;
+    els.lightbox.showModal();
+    els.lightboxClose.focus();
+  }
+
+  function setupLightbox() {
+    const dlg = els.lightbox;
+    els.lightboxClose.addEventListener('click', () => dlg.close());
+    // The panel fills the dialog's content box, so a click whose target is the
+    // dialog itself landed on the backdrop (for browsers without closedby).
+    dlg.addEventListener('click', (e) => {
+      if (e.target === dlg) dlg.close();
+    });
+    // The close button is the only control, so keep Tab on it.
+    dlg.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        els.lightboxClose.focus();
+      }
+    });
+    dlg.addEventListener('close', () => {
+      els.lightboxImg.removeAttribute('src');
+      if (lightboxOpener && lightboxOpener.isConnected) lightboxOpener.focus();
+      lightboxOpener = null;
+    });
   }
 
   function placeholder() {
@@ -328,6 +373,7 @@
     els.emptyClear.addEventListener('click', clearFilters);
 
     window.addEventListener('hashchange', showTarget);
+    setupLightbox();
 
 
     render();

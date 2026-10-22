@@ -69,6 +69,18 @@
     </section>
   </main>
 
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title" closedby="any">
+    <div class="lightbox__panel">
+      <div class="lightbox__bar">
+        <h2 class="lightbox__title" id="lightbox-title"></h2>
+        <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Close" autofocus>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <img class="lightbox__img" id="lightbox-img" alt="">
+    </div>
+  </dialog>
+
   <footer class="site-footer">
     <div class="container">
       <p>Made with a bit too much enthusiasm & a smart robot or two...and other things <span aria-hidden="true">☕</span> | <a href="https://github.com/MelSumner/keebs">Source on GitHub</a></p>

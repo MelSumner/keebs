@@ -385,6 +385,99 @@ input::placeholder {
   display: block;
 }
 
+.card__zoom {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+/* Inset, so the card's rounded, clipped corners don't hide the ring. */
+.card__zoom:focus-visible {
+  outline-offset: -3px;
+}
+
+.card__zoom:hover img {
+  filter: brightness(1.08);
+}
+
+.lightbox {
+  /* No padding: a click whose target is the dialog itself is on the backdrop. */
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow: hidden;
+}
+
+.lightbox::backdrop {
+  background: rgb(5 8 22 / 0.85);
+}
+
+.lightbox__panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox__bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+}
+
+.lightbox__title {
+  flex: 1;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.lightbox__close {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.lightbox__close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.lightbox__close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* The whole photo, scaled to fit the viewport below the title bar. */
+.lightbox__img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - 2rem - 2px);
+  max-height: calc(100dvh - 2rem - 2px - 3.75rem);
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+html:has(.lightbox[open]) {
+  overflow: hidden;
+}
+
 .placeholder {
   width: 100%;
   height: 100%;
