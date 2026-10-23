@@ -445,8 +445,9 @@ input::placeholder {
   position: absolute;
   top: var(--space-2);
   left: var(--space-2);
-  padding: 0.125rem 0.625rem;
-  border: 1px solid var(--accent);
+  padding: 0.0625rem 0.5625rem;
+  /* Dark ring keeps the light badge distinct on light photos (8.99:1 against --accent). */
+  border: 2px solid var(--bg);
   border-radius: 999px;
   background: var(--accent);
   color: var(--bg);
