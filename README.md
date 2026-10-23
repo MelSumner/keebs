@@ -36,8 +36,8 @@ All content comes from `data/keyboard_collection.json`. Edit the `builds` array,
 
 Every card shows a placeholder until its `photo` field is set. To add a photo:
 
-1. Put the image in `images/`, for example `images/01-monsgeek-m1.jpg`.
-2. Set `"photo": "images/01-monsgeek-m1.jpg"` on that build. Use a relative path with no leading `/` so it works under the GitHub Pages subpath. A full `https://` URL also works.
+1. Put the image in `images/`, named with `kb-` and the build's two-digit ID, for example `images/kb-01-IMG_1485.jpg`. Photos added by the issue form are named `kb-NN-brand-model.jpg`.
+2. Set `"photo": "images/kb-01-IMG_1485.jpg"` on that build. Use a relative path with no leading `/` so it works under the GitHub Pages subpath. A full `https://` URL also works.
 
 The site writes the image's alt text from the brand, model, and keycap set.
 

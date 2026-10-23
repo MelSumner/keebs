@@ -133,7 +133,7 @@ def main():
     url = find_image_url(form.get("Photo"))
     if url:
         try:
-            entry["photo"] = download_photo(url, f"{new_id:02d}-{slugify(brand, model)[:60]}")
+            entry["photo"] = download_photo(url, f"kb-{new_id:02d}-{slugify(brand, model)[:60]}")
             photo_note = f"Photo saved to `{entry['photo']}`."
         except Exception as err:  # keep the entry; the photo can be added later
             photo_note = f"Couldn't download the photo ({err}). Add it to `images/` and set `photo` by hand."
