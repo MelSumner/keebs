@@ -186,7 +186,7 @@
       wrap.append(placeholder());
     }
     if (b.daily_driver) {
-      wrap.append(el('span', { class: 'card__daily', text: 'Daily driver' }));
+      wrap.append(el('span', { class: 'card__daily', 'aria-hidden': 'true', text: 'Daily driver' }));
     }
     return wrap;
   }
