@@ -274,10 +274,7 @@
         "set": "MT3 Operator",
         "profile": "MT3"
       },
-      "photo": "images/kb-12-IMG_1512.jpg",
-      "additional_photos": [
-        "images/kb-12-01-image.jpg"
-      ],
+      "photo": "images/kb-12-image.jpg",
       "status": "documented",
       "notes": "This is our favorite keyboard so far. First endgame!"
     },
