@@ -381,35 +381,94 @@ input::placeholder {
 }
 
 .card__media {
+  overflow: hidden;
   aspect-ratio: 16 / 9;
   background: var(--media-bg);
   border-bottom: 1px solid var(--border);
 }
 
-.card__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 .card__zoom {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
   padding: 0;
   border: 0;
+  overflow: hidden;
   background: none;
+  color: inherit;
   cursor: zoom-in;
 }
 
-/* Inset, so the card's rounded, clipped corners don't hide the ring. */
-.card__zoom:focus-visible {
-  outline-offset: -3px;
+/* A blurred, dimmed copy of the photo fills the frame... */
+.card__backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(18px) brightness(0.5) saturate(1.2);
+  transform: scale(1.2);
 }
 
-.card__zoom:hover img {
-  filter: brightness(1.08);
+/* ...so the photo itself can show the whole keyboard, uncropped. */
+.card__photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgb(0 0 0 / 0.5));
+}
+
+.card__expand {
+  position: absolute;
+  right: var(--space-2);
+  bottom: var(--space-2);
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  background: rgb(13 19 48 / 0.85);
+  color: var(--text);
+}
+
+.card__expand svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.card__zoom:hover .card__expand,
+.card__zoom:focus-visible .card__expand {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Drawn on top of the photo, inset so the card's clipped corners don't hide it. */
+.card__zoom:focus-visible {
+  outline: none;
+}
+
+.card__zoom:focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid var(--accent);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card__photo {
+    transition: transform 200ms ease;
+  }
+
+  .card__zoom:hover .card__photo,
+  .card__zoom:focus-visible .card__photo {
+    transform: scale(1.04);
+  }
 }
 
 .lightbox {

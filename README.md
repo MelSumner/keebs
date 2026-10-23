@@ -49,6 +49,14 @@ sips -Z 1600 -s formatOptions 55 images/kb-NN-IMG_1234.jpg
 
 That keeps most photos under 300 KB. If the file comes out larger than it went in, the original was already heavily compressed, so keep the original instead.
 
+Then make the card thumbnail, a 900px copy in `images/thumbs/` with the same file name:
+
+```sh
+sips -Z 900 -s formatOptions 60 images/kb-NN-IMG_1234.jpg --out images/thumbs/kb-NN-IMG_1234.jpg
+```
+
+Cards load the thumbnail and the photo dialog loads the full photo. If a thumbnail is missing (for example, for a photo added by the issue-form Action), the card falls back to the full photo.
+
 ### Link preview and icons
 
 - `images/og-preview.jpg` is the 1200×630 image shown when the site is shared (Open Graph and `twitter:card` tags in `index.html`). Its source is `tools/og-image.html`. To change it, edit that file, serve the repo, open `http://localhost:8000/tools/og-image.html` at a 1200×630 viewport, screenshot it, and save it as a JPEG. Every `#kb-<id>` link shares this one preview, because link-preview crawlers ignore the part after `#`.
@@ -60,7 +68,7 @@ That keeps most photos under 300 KB. If the file comes out larger than it went i
 - Filters for switch type and keycap profile.
 - Filter state lives in the URL, so a filtered view can be bookmarked or shared, e.g. `?switch=tactile&profile=SA`.
 - Every card has a link icon in its top-right corner that links to the card (`#kb-<id>`). Its accessible name ("Link to …" with the brand, model, switches, and keycaps) is unique per card. Opening one clears any filter that would hide the card, then scrolls to it, highlights it, and moves focus to it.
-- Selecting a card's photo opens the whole, uncropped photo in a modal dialog. Focus stays in the dialog until you close it with the close button, Esc, or a click outside the photo, and then returns to the card.
+- Card photos show the whole keyboard, uncropped, over a blurred copy of the photo, with an expand icon. Selecting one opens the full-size photo in a modal dialog. Focus stays in the dialog until you close it with the close button, Esc, or a click outside the photo, and then returns to the card.
 - A dark, minimal theme set in MonoLisa Text, with `system-ui` as the fallback. Every color pair meets WCAG 2.2 AA contrast, and the ratios are listed at the top of `css/styles.css`.
 - Keyboard accessible, with a skip link, labeled controls, visible focus rings, and a live region that announces the result count.
 

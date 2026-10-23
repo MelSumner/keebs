@@ -127,6 +127,13 @@
     '<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>' +
     '</svg>';
 
+  // Expand icon, after Feather Icons "maximize-2" (MIT).
+  const EXPAND_SVG =
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" ' +
+    'stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+    '<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>' +
+    '</svg>';
+
   function media(b) {
     const wrap = el('div', { class: 'card__media' });
     if (!isBlank(b.photo)) {
@@ -135,17 +142,28 @@
           // Don't double up when the set name already says "keycaps" or "keycap set".
           : /\bkeycaps?\b/i.test(b.keycaps.set) ? ` keyboard with ${b.keycaps.set.trim()}`
           : ` keyboard with ${b.keycaps.set} keycaps`);
-      const img = el('img', { src: b.photo, alt: '', loading: 'lazy', decoding: 'async' });
+      const thumb = /^images\//.test(b.photo) ? b.photo.replace(/^images\//, 'images/thumbs/') : b.photo;
+      // Blurred copy of the photo fills the frame behind the uncropped photo.
+      const backdrop = el('img', { class: 'card__backdrop', src: thumb, alt: '', loading: 'lazy', decoding: 'async' });
+      const img = el('img', { class: 'card__photo', src: thumb, alt: '', loading: 'lazy', decoding: 'async' });
       img.addEventListener('error', () => {
-        wrap.replaceChildren(placeholder());
-      }, { once: true });
+        if (img.getAttribute('src') !== b.photo) {
+          // No thumbnail yet; use the full photo.
+          img.src = b.photo;
+          backdrop.src = b.photo;
+        } else {
+          wrap.replaceChildren(placeholder());
+        }
+      });
       const name = [b.brand, b.model].filter((v) => !isBlank(v)).join(' ') || 'Keyboard';
+      const icon = el('span', { class: 'card__expand', 'aria-hidden': 'true' });
+      icon.innerHTML = EXPAND_SVG;
       const button = el('button', {
         type: 'button',
         class: 'card__zoom',
         'aria-haspopup': 'dialog',
         'aria-label': `View larger photo: ${alt.trim()}`,
-      }, img);
+      }, [backdrop, img, icon]);
       button.addEventListener('click', () => openLightbox(b.photo, alt.trim(), name, button));
       wrap.append(button);
     } else {
