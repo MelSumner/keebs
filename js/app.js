@@ -21,6 +21,10 @@
     lightboxTitle: document.getElementById('lightbox-title'),
     lightboxImg: document.getElementById('lightbox-img'),
     lightboxClose: document.getElementById('lightbox-close'),
+    lightboxNav: document.getElementById('lightbox-nav'),
+    lightboxPrev: document.getElementById('lightbox-prev'),
+    lightboxNext: document.getElementById('lightbox-next'),
+    lightboxCounter: document.getElementById('lightbox-counter'),
   };
 
   let builds = [];
@@ -108,6 +112,9 @@
       switches: { model: null, description: null, type: null, ...raw.switches },
       keycaps: { set: null, profile: null, ...raw.keycaps },
       photo: raw.photo ?? null,
+      additional_photos: Array.isArray(raw.additional_photos)
+        ? raw.additional_photos.filter((p) => !isBlank(p))
+        : [],
       status: raw.status ?? null,
       notes: raw.notes ?? null,
     };
@@ -158,13 +165,20 @@
       const name = [b.brand, b.model].filter((v) => !isBlank(v)).join(' ') || 'Keyboard';
       const icon = el('span', { class: 'card__expand', 'aria-hidden': 'true' });
       icon.innerHTML = EXPAND_SVG;
+      const photos = [b.photo, ...b.additional_photos];
+      const parts = [backdrop, img, icon];
+      if (photos.length > 1) {
+        parts.push(el('span', { class: 'card__count', 'aria-hidden': 'true' }, [`${photos.length} photos`]));
+      }
       const button = el('button', {
         type: 'button',
         class: 'card__zoom',
         'aria-haspopup': 'dialog',
-        'aria-label': `View larger photo: ${alt.trim()}`,
-      }, [backdrop, img, icon]);
-      button.addEventListener('click', () => openLightbox(b.photo, alt.trim(), name, button));
+        'aria-label': photos.length > 1
+          ? `View ${photos.length} photos: ${alt.trim()}`
+          : `View larger photo: ${alt.trim()}`,
+      }, parts);
+      button.addEventListener('click', () => openLightbox(photos, alt.trim(), name, button));
       wrap.append(button);
     } else {
       wrap.append(placeholder());
@@ -173,12 +187,28 @@
   }
 
   let lightboxOpener = null;
+  const lightboxState = { photos: [], index: 0, alt: '' };
 
-  function openLightbox(src, alt, title, opener) {
+  function showLightboxPhoto(index) {
+    const { photos, alt } = lightboxState;
+    const n = photos.length;
+    lightboxState.index = (index + n) % n;
+    const i = lightboxState.index;
+    els.lightboxImg.src = photos[i];
+    els.lightboxImg.alt = n > 1 ? `${alt}, photo ${i + 1} of ${n}` : alt;
+    els.lightboxCounter.textContent = `Photo ${i + 1} of ${n}`;
+    // Warm the cache so the next photo appears without a gap.
+    if (n > 1) new Image().src = photos[(i + 1) % n];
+  }
+
+  function openLightbox(photos, alt, title, opener) {
     lightboxOpener = opener;
+    lightboxState.photos = photos;
+    lightboxState.alt = alt;
     els.lightboxTitle.textContent = title;
-    els.lightboxImg.src = src;
-    els.lightboxImg.alt = alt;
+    els.lightboxNav.hidden = photos.length < 2;
+    els.lightbox.classList.toggle('lightbox--multi', photos.length > 1);
+    showLightboxPhoto(0);
     els.lightbox.showModal();
     els.lightboxClose.focus();
   }
@@ -186,20 +216,29 @@
   function setupLightbox() {
     const dlg = els.lightbox;
     els.lightboxClose.addEventListener('click', () => dlg.close());
+    els.lightboxPrev.addEventListener('click', () => showLightboxPhoto(lightboxState.index - 1));
+    els.lightboxNext.addEventListener('click', () => showLightboxPhoto(lightboxState.index + 1));
     // The panel fills the dialog's content box, so a click whose target is the
     // dialog itself landed on the backdrop (for browsers without closedby).
     dlg.addEventListener('click', (e) => {
       if (e.target === dlg) dlg.close();
     });
-    // The close button is the only control, so keep Tab on it.
     dlg.addEventListener('keydown', (e) => {
       if (e.key === 'Tab') {
+        // Keep focus cycling through the dialog's visible buttons.
+        const controls = [...dlg.querySelectorAll('button')].filter((b) => !b.closest('[hidden]'));
+        const at = controls.indexOf(document.activeElement);
+        const next = at === -1 ? 0 : (at + (e.shiftKey ? -1 : 1) + controls.length) % controls.length;
         e.preventDefault();
-        els.lightboxClose.focus();
+        controls[next].focus();
+      } else if (lightboxState.photos.length > 1 && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+        e.preventDefault();
+        showLightboxPhoto(lightboxState.index + (e.key === 'ArrowLeft' ? -1 : 1));
       }
     });
     dlg.addEventListener('close', () => {
       els.lightboxImg.removeAttribute('src');
+      lightboxState.photos = [];
       if (lightboxOpener && lightboxOpener.isConnected) lightboxOpener.focus();
       lightboxOpener = null;
     });

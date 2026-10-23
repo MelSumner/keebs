@@ -55,6 +55,13 @@ Then make the card thumbnail, a 900px copy in `images/thumbs/` with the same fil
 sips -Z 900 -s formatOptions 60 images/kb-NN-IMG_1234.jpg --out images/thumbs/kb-NN-IMG_1234.jpg
 ```
 
+To show more than one photo, list the extras in `additional_photos`, in order. Give each one a thumbnail too. Name them `kb-NN-01-…`, `kb-NN-02-…`, and so on, with `-01` as the card photo:
+
+```json
+"photo": "images/kb-09-01-IMG_1419.jpg",
+"additional_photos": ["images/kb-09-02-IMG_1421.jpg", "images/kb-09-03-IMG_1478.jpg"],
+```
+
 Cards load the thumbnail and the photo dialog loads the full photo. If a thumbnail is missing (for example, for a photo added by the issue-form Action), the card falls back to the full photo.
 
 ### Link preview and icons
@@ -68,7 +75,7 @@ Cards load the thumbnail and the photo dialog loads the full photo. If a thumbna
 - Filters for switch type and keycap profile.
 - Filter state lives in the URL, so a filtered view can be bookmarked or shared, e.g. `?switch=tactile&profile=SA`.
 - Every card has a link icon in its top-right corner that links to the card (`#kb-<id>`). Its accessible name ("Link to …" with the brand, model, switches, and keycaps) is unique per card. Opening one clears any filter that would hide the card, then scrolls to it, highlights it, and moves focus to it.
-- Card photos show the whole keyboard, uncropped, over a blurred copy of the photo, with an expand icon. Selecting one opens the full-size photo in a modal dialog. Focus stays in the dialog until you close it with the close button, Esc, or a click outside the photo, and then returns to the card.
+- Card photos show the whole keyboard, uncropped, over a blurred copy of the photo, with an expand icon. Selecting one opens the full-size photo in a modal dialog. A build with more than one photo shows a "3 photos" label on its card, and the dialog has previous and next buttons (or the Left and Right arrow keys) and a "Photo 1 of 3" counter. Focus stays in the dialog until you close it with the close button, Esc, or a click outside the photo, and then returns to the card.
 - A dark, minimal theme set in MonoLisa Text, with `system-ui` as the fallback. Every color pair meets WCAG 2.2 AA contrast, and the ratios are listed at the top of `css/styles.css`.
 - Keyboard accessible, with a skip link, labeled controls, visible focus rings, and a live region that announces the result count.
 

@@ -440,6 +440,20 @@ input::placeholder {
   height: 1rem;
 }
 
+.card__count {
+  position: absolute;
+  left: var(--space-2);
+  bottom: var(--space-2);
+  padding: 0.125rem 0.625rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: rgb(13 19 48 / 0.85);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
 .card__zoom:hover .card__expand,
 .card__zoom:focus-visible .card__expand {
   border-color: var(--accent);
@@ -506,7 +520,8 @@ input::placeholder {
   font-weight: 600;
 }
 
-.lightbox__close {
+.lightbox__close,
+.lightbox__btn {
   display: inline-grid;
   place-items: center;
   flex: none;
@@ -520,14 +535,35 @@ input::placeholder {
   cursor: pointer;
 }
 
-.lightbox__close:hover {
+.lightbox__close:hover,
+.lightbox__btn:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.lightbox__close svg {
+.lightbox__close svg,
+.lightbox__btn svg {
   width: 1.25rem;
   height: 1.25rem;
+}
+
+.lightbox__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-2);
+}
+
+.lightbox__nav[hidden] {
+  display: none;
+}
+
+.lightbox__counter {
+  min-width: 13ch;
+  margin: 0;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
 }
 
 /* The whole photo, scaled to fit the viewport below the title bar. */
@@ -539,6 +575,13 @@ input::placeholder {
   max-height: calc(100dvh - 2rem - 2px - 3.75rem);
   object-fit: contain;
   margin-inline: auto;
+}
+
+/* A fixed frame, so the previous/next buttons stay put between photos of different shapes. */
+.lightbox--multi .lightbox__img {
+  width: min(calc(100vw - 2rem - 2px), 1600px);
+  height: min(calc(100dvh - 2rem - 2px - 7.5rem), 1200px);
+  max-height: none;
 }
 
 html:has(.lightbox[open]) {

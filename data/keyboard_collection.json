@@ -4,6 +4,7 @@
   "total_builds": 30,
   "next_id": 31,
   "photo_field_description": "Set photo to the path or URL of a future replacement photograph; null means not assigned.",
+  "additional_photos_field_description": "Optional list of extra photo paths. The photo dialog shows photo first, then these in order.",
   "builds": [
     {
       "id": 1,
@@ -200,6 +201,10 @@
         "profile": "Cherry"
       },
       "photo": "images/kb-09-01-IMG_1419.jpg",
+      "additional_photos": [
+        "images/kb-09-02-IMG_1421.jpg",
+        "images/kb-09-03-IMG_1478.jpg"
+      ],
       "status": "documented",
       "notes": "I love this combination. It is aesthetically pleasing and completely adorable all while being a little irreverent."
     },
