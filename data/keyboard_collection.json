@@ -44,8 +44,8 @@
         "type": "tactile"
       },
       "keycaps": {
-        "set": null,
-        "profile": null
+        "set": "CannonKeys PBS WoB",
+        "profile": "PBS"
       },
       "photo": null,
       "status": "documented",
