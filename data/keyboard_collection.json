@@ -44,8 +44,8 @@
         "type": "tactile"
       },
       "keycaps": {
-        "set": "CannonKeys CXA WoB",
-        "profile": "CXA"
+        "set": null,
+        "profile": null
       },
       "photo": null,
       "status": "documented",
@@ -512,8 +512,8 @@
         "type": "silent linear"
       },
       "keycaps": {
-        "set": "Signature Plastics DSA WoB",
-        "profile": "DSA"
+        "set": "CannonKeys CXA WoB",
+        "profile": "CXA"
       },
       "photo": null,
       "status": "documented",
