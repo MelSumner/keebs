@@ -55,11 +55,11 @@ Then make the card thumbnail, a 900px copy in `images/thumbs/` with the same fil
 sips -Z 900 -s formatOptions 60 images/kb-NN-IMG_1234.jpg --out images/thumbs/kb-NN-IMG_1234.jpg
 ```
 
-To show more than one photo, list the extras in `additional_photos`, in order. Give each one a thumbnail too. Number them after the build's ID (`kb-NN-01-…`, `kb-NN-02-…`) so they sort together. The card shows `photo`, and the dialog shows `photo` first, then the extras:
+To show more than one photo, list the extras in `additional_photos`, in order. Give each one a thumbnail too. File names show which is which: a name with one number after `kb-` is the card photo (`kb-09-IMG_1478.jpg`), and a name with a second number is an extra, in order (`kb-09-01-…`, `kb-09-02-…`). The dialog shows `photo` first, then the extras:
 
 ```json
-"photo": "images/kb-09-01-IMG_1419.jpg",
-"additional_photos": ["images/kb-09-02-IMG_1421.jpg", "images/kb-09-03-IMG_1478.jpg"],
+"photo": "images/kb-09-IMG_1478.jpg",
+"additional_photos": ["images/kb-09-01-IMG_1419.jpg", "images/kb-09-02-IMG_1421.jpg"],
 ```
 
 Cards load the thumbnail and the photo dialog loads the full photo. If a thumbnail is missing (for example, for a photo added by the issue-form Action), the card falls back to the full photo.
