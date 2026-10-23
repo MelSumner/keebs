@@ -55,7 +55,7 @@ Then make the card thumbnail, a 900px copy in `images/thumbs/` with the same fil
 sips -Z 900 -s formatOptions 60 images/kb-NN-IMG_1234.jpg --out images/thumbs/kb-NN-IMG_1234.jpg
 ```
 
-To show more than one photo, list the extras in `additional_photos`, in order. Give each one a thumbnail too. Name them `kb-NN-01-…`, `kb-NN-02-…`, and so on, with `-01` as the card photo:
+To show more than one photo, list the extras in `additional_photos`, in order. Give each one a thumbnail too. Number them after the build's ID (`kb-NN-01-…`, `kb-NN-02-…`) so they sort together. The card shows `photo`, and the dialog shows `photo` first, then the extras:
 
 ```json
 "photo": "images/kb-09-01-IMG_1419.jpg",

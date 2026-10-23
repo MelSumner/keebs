@@ -90,7 +90,11 @@
         "set": "Personalized Thockfactory keycaps",
         "profile": "Cherry"
       },
-      "photo": null,
+      "photo": "images/kb-04-IMG_0952.jpg",
+      "additional_photos": [
+        "images/kb-04-01-IMG_0955.jpg",
+        "images/kb-04-02-IMG_0957.jpg"
+      ],
       "status": "documented",
       "notes": "I wanted a build that matches my IDE. I also wanted to have a bit of fun, and these custom legends bring me joy. I used the Codelia typeface and the Dracula Pro colorway"
     },
@@ -271,6 +275,9 @@
         "profile": "MT3"
       },
       "photo": "images/kb-12-IMG_1512.jpg",
+      "additional_photos": [
+        "images/kb-12-01-image.jpg"
+      ],
       "status": "documented",
       "notes": "This is our favorite keyboard so far. First endgame!"
     },
@@ -380,7 +387,7 @@
         "set": "Nahida (Genshin Impact) keycaps",
         "profile": "Cherry"
       },
-      "photo": null,
+      "photo": "images/kb-17-IMG_1505.jpg",
       "status": "documented",
       "notes": "Purchased keycaps via Crunchyroll"
     },
@@ -424,7 +431,7 @@
         "set": "Astrolokeys by cassidoo & sailorhg",
         "profile": "DSA"
       },
-      "photo": null,
+      "photo": "images/kb-19-IMG_1507.jpg",
       "status": "documented",
       "notes": null
     },
@@ -535,6 +542,9 @@
         "profile": "Cherry"
       },
       "photo": "images/kb-24-IMG_1492.jpg",
+      "additional_photos": [
+        "images/kb-24-IMG_0134.jpg"
+      ],
       "status": "documented",
       "notes": "This was my first mechanical keyboard. I don't think they even sell this board anymore. Not knowing any better back then, I chose soldered switches. I was able to remove the keys, clean everything up really good, and then add fresh keycaps."
     },
@@ -578,7 +588,7 @@
         "set": "Signature Plastics WoB DCS keycaps",
         "profile": "DCS"
       },
-      "photo": null,
+      "photo": "images/kb-26-IMG_1470.jpg",
       "status": "documented",
       "notes": "ABS injection-molded case; polycarbonate plate; hot-swap PCB; dampening foams; gasket socks. Sound: muted but not deep; constrained brightness"
     },
@@ -644,7 +654,7 @@
         "set": "KBDiy keycaps in a red, white, and blue colorway",
         "profile": "SA-like"
       },
-      "photo": null,
+      "photo": "images/kb-29-IMG_1552.jpg",
       "status": "documented",
       "notes": "Silver volume knob (even though the board is white)."
     },
