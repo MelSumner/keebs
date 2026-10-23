@@ -126,6 +126,7 @@ def main():
         },
         "photo": None,
         "status": status,
+        "daily_driver": (form.get("Daily driver") or "").strip().lower() == "yes",
         "notes": clean(form.get("Build notes")),
     }
 
@@ -138,6 +139,15 @@ def main():
         except Exception as err:  # keep the entry; the photo can be added later
             photo_note = f"Couldn't download the photo ({err}). Add it to `images/` and set `photo` by hand."
 
+    # There's only ever one daily driver, so a new one takes the title from the old.
+    driver_note = ""
+    if entry["daily_driver"]:
+        previous = [b for b in builds if b.get("daily_driver")]
+        for b in builds:
+            b["daily_driver"] = False
+        if previous:
+            names = ", ".join(f"#{b['id']} {b.get('brand') or ''} {b.get('model') or ''}".strip() for b in previous)
+            driver_note = f" It replaces {names} as the daily driver."
     builds.append(entry)
     if "total_builds" in collection:
         collection["total_builds"] = len(builds)
@@ -152,12 +162,13 @@ def main():
         ("Switches", entry["switches"]["model"]), ("Switch type", entry["switches"]["type"]),
         ("Switch details", entry["switches"]["description"]),
         ("Keycaps", entry["keycaps"]["set"]), ("Profile", entry["keycaps"]["profile"]),
-        ("Status", status), ("Notes", entry["notes"]),
+        ("Status", status), ("Daily driver", "yes" if entry["daily_driver"] else "no"),
+        ("Notes", entry["notes"]),
     ]
     table = "\n".join(f"| {k} | {(v or 'TBD').replace('|', '&#124;').replace(chr(10), ' ')} |" for k, v in rows)
     Path(os.environ.get("PR_BODY_FILE", ROOT / "pr_body.md")).write_text(
         f"Adds keyboard #{new_id} from the issue form.\n\n| Field | Value |\n|---|---|\n{table}\n\n"
-        f"{photo_note}\n\nMerge to publish it on the site.{f' Closes #{issue}.' if issue else ''}\n",
+        f"{photo_note}{driver_note}\n\nMerge to publish it on the site.{f' Closes #{issue}.' if issue else ''}\n",
         encoding="utf-8",
     )
     set_output(id=new_id, title=f"{brand} {model}".replace("\n", " "))

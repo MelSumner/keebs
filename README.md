@@ -30,6 +30,7 @@ All content comes from `data/keyboard_collection.json`. Edit the `builds` array,
 - Fields set to `null` show as **TBD**.
 - When `switches.model` is `null`, the card shows `switches.description` instead.
 - A `status` of `"work_in_progress"` shows a "Work in progress" badge.
+- `daily_driver` is `true` or `false`. `true` shows a "Daily driver" badge in the top-left corner of the card's photo. Only one build should be `true` at a time. To switch on GitHub, open `data/keyboard_collection.json`, select the pencil icon, set the old board to `false` and the new one to `true`, and commit. (Search the file for `"daily_driver": true` to find the current one.) A new keyboard added through the issue form with **Daily driver: Yes** switches it for you.
 - `id` is permanent: it's the card's link, `#kb-12`. Never change or reuse an ID. To retire a board, keep its record (or delete it, but don't give its ID to another board). When adding a build by hand, use `next_id` as its `id` and then increase `next_id` by one.
 
 ### Photos

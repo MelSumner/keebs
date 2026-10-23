@@ -26,6 +26,7 @@
       },
       "photo": "images/kb-01-IMG_1485.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": null
     },
     {
@@ -48,6 +49,7 @@
       },
       "photo": null,
       "status": "documented",
+      "daily_driver": false,
       "notes": "Calcifer artisan"
     },
     {
@@ -70,6 +72,7 @@
       },
       "photo": null,
       "status": "documented",
+      "daily_driver": false,
       "notes": "Git-themed legends"
     },
     {
@@ -96,6 +99,7 @@
         "images/kb-04-02-IMG_0957.jpg"
       ],
       "status": "documented",
+      "daily_driver": false,
       "notes": "I wanted a build that matches my IDE. I also wanted to have a bit of fun, and these custom legends bring me joy. I used the Codelia typeface and the Dracula Pro colorway"
     },
     {
@@ -118,6 +122,7 @@
       },
       "photo": "images/kb-05-IMG_0835.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "It took me a long time to find the right board for this keycap set. It didn't come with enough keys to support a WKL type keyboard."
     },
     {
@@ -140,6 +145,7 @@
       },
       "photo": "images/kb-06-IMG_0774.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Red case ordered as possible replacement; I think it would look good on red; plus the red keyboard doesn't have a logo on the volume knob."
     },
     {
@@ -162,6 +168,7 @@
       },
       "photo": "images/kb-07-IMG_0688.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Display and knob on keyboard; I think there's an opportunity to find a higher-quality black board and keep this as a collection piece."
     },
     {
@@ -184,6 +191,7 @@
       },
       "photo": "images/kb-08-IMG_1476.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Silver knob, despite plates being black. Back of the board has a textured strip that is silver"
     },
     {
@@ -210,6 +218,7 @@
         "images/kb-09-02-IMG_1421.jpg"
       ],
       "status": "documented",
+      "daily_driver": false,
       "notes": "I love this combination. It is aesthetically pleasing and completely adorable all while being a little irreverent."
     },
     {
@@ -232,6 +241,7 @@
       },
       "photo": "images/kb-10-IMG_1375.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "The keycap set came with pink legends/novelties, but I thought the board was more enjoyable with a single colorway."
     },
     {
@@ -254,6 +264,7 @@
       },
       "photo": "images/kb-11-IMG_1437.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Added bottom plate weight and silicone plate dampener. Had to substitute color-matched 7u spacebar."
     },
     {
@@ -276,6 +287,7 @@
       },
       "photo": "images/kb-12-image.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "This is our favorite keyboard so far. First endgame!"
     },
     {
@@ -298,6 +310,7 @@
       },
       "photo": null,
       "status": "documented",
+      "daily_driver": false,
       "notes": "What about another CSTM80 with Mt3 Operator keycaps but different switches, you say? Well, look no further!"
     },
     {
@@ -320,6 +333,7 @@
       },
       "photo": "images/kb-14-IMG_1489.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": null
     },
     {
@@ -342,6 +356,7 @@
       },
       "photo": "images/kb-15-IMG_0407.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Only used the white and purple keycaps; added a video game character (Keqing) illustrated spacebar and amethyst artisan ESC. Also: this was before I figured out _not_ to buy this keyboard brand."
     },
     {
@@ -364,6 +379,7 @@
       },
       "photo": "images/kb-16-IMG_0191.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "I love looking at this board so much that I've been hesitant to use it!"
     },
     {
@@ -386,6 +402,7 @@
       },
       "photo": "images/kb-17-IMG_1505.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Purchased keycaps via Crunchyroll"
     },
     {
@@ -408,6 +425,7 @@
       },
       "photo": "images/kb-18-IMG_0589.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": null
     },
     {
@@ -430,6 +448,7 @@
       },
       "photo": "images/kb-19-IMG_1507.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": null
     },
     {
@@ -452,6 +471,7 @@
       },
       "photo": "images/kb-20-IMG_1374.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Dark caps with green legends and highlight novelties"
     },
     {
@@ -474,6 +494,7 @@
       },
       "photo": "images/kb-21-IMG_0808.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Jiji artisan"
     },
     {
@@ -496,6 +517,7 @@
       },
       "photo": null,
       "status": "documented",
+      "daily_driver": false,
       "notes": "I made this board for travel. I bought a BYOK device recently, and my hope is that a light keyboard like this will make it easy to write while I travel."
     },
     {
@@ -518,6 +540,7 @@
       },
       "photo": "images/kb-23-IMG_1282.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "This was a keyboard that came fully built. I didn't like the sound, so I replaced the switches and the caps. It now sounds deeper and fuller."
     },
     {
@@ -543,6 +566,7 @@
         "images/kb-24-01-IMG_0134.jpg"
       ],
       "status": "documented",
+      "daily_driver": false,
       "notes": "This was my first mechanical keyboard. I don't think they even sell this board anymore. Not knowing any better back then, I chose soldered switches. I was able to remove the keys, clean everything up really good, and then add fresh keycaps."
     },
     {
@@ -565,6 +589,7 @@
       },
       "photo": "images/kb-25-IMG_0300.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Rei (Evangelion) inspired colorway"
     },
     {
@@ -587,6 +612,7 @@
       },
       "photo": "images/kb-26-IMG_1470.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "ABS injection-molded case; polycarbonate plate; hot-swap PCB; dampening foams; gasket socks. Sound: muted but not deep; constrained brightness"
     },
     {
@@ -609,6 +635,7 @@
       },
       "photo": "images/kb-27-IMG_1490.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Yin: white alphas, black modifiers"
     },
     {
@@ -631,6 +658,7 @@
       },
       "photo": "images/kb-28-IMG_1509.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": "Yang: black alphas, white modifiers"
     },
     {
@@ -653,6 +681,7 @@
       },
       "photo": "images/kb-29-IMG_1552.jpg",
       "status": "documented",
+      "daily_driver": true,
       "notes": "Silver volume knob (even though the board is white). This is, surprisingly, my current daily driver."
     },
     {
@@ -675,6 +704,7 @@
       },
       "photo": "images/kb-30-IMG_0819.jpg",
       "status": "documented",
+      "daily_driver": false,
       "notes": null
     }
   ]

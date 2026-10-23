@@ -82,6 +82,15 @@ body:
         - Documented
         - Work in progress
       default: 0
+  - type: dropdown
+    id: daily_driver
+    attributes:
+      label: Daily driver
+      description: Yes shows a "Daily driver" badge on the card. There's only one daily driver, so this replaces the current one.
+      options:
+        - "No"
+        - "Yes"
+      default: 0
   - type: textarea
     id: notes
     attributes:

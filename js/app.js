@@ -98,6 +98,7 @@
       b.switches.model, b.switches.description, b.switches.type,
       b.keycaps.set, b.keycaps.profile, b.notes,
       b.status === 'work_in_progress' ? 'work in progress' : null,
+      b.daily_driver ? 'daily driver' : null,
     ].filter((v) => !isBlank(v)).join(' ');
     return fold(text);
   }
@@ -116,6 +117,7 @@
         ? raw.additional_photos.filter((p) => !isBlank(p))
         : [],
       status: raw.status ?? null,
+      daily_driver: raw.daily_driver === true,
       notes: raw.notes ?? null,
     };
   }
@@ -182,6 +184,9 @@
       wrap.append(button);
     } else {
       wrap.append(placeholder());
+    }
+    if (b.daily_driver) {
+      wrap.append(el('span', { class: 'card__daily', text: 'Daily driver' }));
     }
     return wrap;
   }
@@ -417,6 +422,8 @@
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       builds = (data.builds || []).map(normalize).map((b) => ({ ...b, _search: searchText(b) }));
+      const drivers = builds.filter((b) => b.daily_driver).map((b) => `#${b.id}`);
+      if (drivers.length > 1) console.warn(`More than one daily driver (${drivers.join(', ')}); set all but one to false.`);
     } catch (err) {
       console.error(err);
       els.count.textContent = 'Sorry, the keyboard collection could not be loaded.';
