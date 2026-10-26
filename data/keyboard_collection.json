@@ -70,7 +70,7 @@
         "set": "Black Panther keycaps",
         "profile": "MT3"
       },
-      "photo": null,
+      "photo": "images/kb-03-DSC00120.JPG",
       "status": "documented",
       "daily_driver": false,
       "notes": null
@@ -215,10 +215,11 @@
         "set": "Dokodoko Panda",
         "profile": "Cherry"
       },
-      "photo": "images/kb-09-IMG_1478.jpg",
+      "photo": "images/kb-09-IMG_1421.jpg",
       "additional_photos": [
-        "images/kb-09-01-IMG_1419.jpg",
-        "images/kb-09-02-IMG_1421.jpg"
+        "images/kb-09-01-DSC00149.JPG",
+        "images/kb-09-02-DSC00150.JPG",
+        "images/kb-09-03-IMG_1478.jpg"
       ],
       "status": "documented",
       "daily_driver": false,
