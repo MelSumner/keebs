@@ -360,7 +360,10 @@
         "set": "DSA Hana keycap set",
         "profile": "DSA"
       },
-      "photo": "images/kb-15-IMG_0407.jpg",
+      "photo": "images/kb-15-DSC00035.JPG",
+      "additional_photos": [
+        "images/kb-15-01-IMG_0407.jpg"
+      ],
       "status": "documented",
       "daily_driver": false,
       "notes": "Only used the white and purple keycaps; added a video game character (Keqing) illustrated spacebar and amethyst artisan ESC. Also: this was before I figured out _not_ to buy this keyboard brand."
@@ -409,7 +412,10 @@
         "set": "Nahida (Genshin Impact) keycaps",
         "profile": "Cherry"
       },
-      "photo": "images/kb-17-IMG_1505.jpg",
+      "photo": "images/kb-17-DSC00043.JPG",
+      "additional_photos": [
+        "images/kb-17-01-IMG_1505.jpg"
+      ],
       "status": "documented",
       "daily_driver": false,
       "notes": "Purchased keycaps via Crunchyroll"
@@ -455,7 +461,10 @@
         "set": "Astrolokeys by cassidoo & sailorhg",
         "profile": "DSA"
       },
-      "photo": "images/kb-19-IMG_1507.jpg",
+      "photo": "images/kb-19-DSC00030.JPG",
+      "additional_photos": [
+        "images/kb-19-01-IMG_1507.jpg"
+      ],
       "status": "documented",
       "daily_driver": false,
       "notes": null
@@ -575,7 +584,8 @@
       },
       "photo": "images/kb-24-IMG_0134.jpg",
       "additional_photos": [
-        "images/kb-24-01-IMG_1492.jpg"
+        "images/kb-24-01-DSC00071.JPG",
+        "images/kb-24-02-IMG_1492.jpg"
       ],
       "status": "documented",
       "daily_driver": false,
@@ -645,7 +655,10 @@
         "set": "Signature Plastics WoB and BoW",
         "profile": "DSA"
       },
-      "photo": "images/kb-27-IMG_1490.jpg",
+      "photo": "images/kb-27-DSC00082.JPG",
+      "additional_photos": [
+        "images/kb-27-01-IMG_1490.jpg"
+      ],
       "status": "documented",
       "daily_driver": false,
       "notes": "Yin: white alphas, black modifiers"
@@ -668,7 +681,11 @@
         "set": "Signature Plastics WoB and BoW",
         "profile": "DSA"
       },
-      "photo": "images/kb-28-IMG_1509.jpg",
+      "photo": "images/kb-28-DSC00077.JPG",
+      "additional_photos": [
+        "images/kb-28-01-DSC00078.JPG",
+        "images/kb-28-02-IMG_1509.jpg"
+      ],
       "status": "documented",
       "daily_driver": false,
       "notes": "Yang: black alphas, white modifiers"
