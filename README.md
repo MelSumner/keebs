@@ -11,6 +11,8 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
+When you change `css/styles.css` or `js/app.js`, update the `?v=` date on its link in `index.html`. Browsers cache those files, and a new page running old code can break (for example, showing no cards).
+
 ## Adding a keyboard
 
 Open a new issue on GitHub and choose **New keyboard**. Fill in what you know, and drag a photo into the Photo box if you have one. When you submit it, a GitHub Action adds the entry and opens a pull request. Merging the pull request publishes the keyboard and closes the issue.
