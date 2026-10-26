@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "collection": "Mechanical keyboard inventory",
-  "total_builds": 32,
-  "next_id": 33,
+  "total_builds": 33,
+  "next_id": 34,
   "photo_field_description": "Set photo to the path or URL of a future replacement photograph; null means not assigned.",
   "additional_photos_field_description": "Optional list of extra photo paths. The photo dialog shows photo first, then these in order.",
   "builds": [
@@ -796,6 +796,29 @@
       "status": "documented",
       "daily_driver": false,
       "notes": "This is a really enjoyable board to use. It's one of the quietest boards I've made yet!"
+    },
+    {
+      "id": 33,
+      "brand": "WOBKEY",
+      "model": "Crush80",
+      "case": {
+        "color_or_finish": "Red",
+        "material": "CNC Aluminum"
+      },
+      "plate": null,
+      "switches": {
+        "model": null,
+        "description": null,
+        "type": null
+      },
+      "keycaps": {
+        "set": "MT3 Fairlane",
+        "profile": "MT3"
+      },
+      "photo": "images/kb-33-wobkey-crush80.jpg",
+      "status": "documented",
+      "daily_driver": false,
+      "notes": null
     }
   ]
 }
