@@ -722,8 +722,8 @@
         "type": "linear"
       },
       "keycaps": {
-        "set": null,
-        "profile": null
+        "set": "GMK Dracula v2 Git Core",
+        "profile": "Cherry"
       },
       "photo": null,
       "status": "documented",
