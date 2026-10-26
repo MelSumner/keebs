@@ -3,20 +3,11 @@
 
   const DATA_URL = 'data/keyboard_collection.json';
   const TBD = 'TBD';
-  const TBD_VALUE = '__tbd';
 
   const els = {
-    form: document.getElementById('filters'),
-    q: document.getElementById('q'),
-    switchType: document.getElementById('switch'),
-    profile: document.getElementById('profile'),
-    sort: document.getElementById('sort'),
     count: document.getElementById('count'),
     countHint: document.getElementById('count-hint'),
     grid: document.getElementById('grid'),
-    empty: document.getElementById('empty'),
-    emptyClear: document.getElementById('empty-clear'),
-    results: document.getElementById('results'),
     lightbox: document.getElementById('lightbox'),
     lightboxTitle: document.getElementById('lightbox-title'),
     lightboxImg: document.getElementById('lightbox-img'),
@@ -33,7 +24,6 @@
   const isBlank = (v) => v === null || v === undefined || String(v).trim() === '';
   const display = (v) => (isBlank(v) ? TBD : String(v));
   const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
-  const filterValue = (v) => (isBlank(v) ? TBD_VALUE : String(v));
   const fold = (s) => s
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -92,17 +82,6 @@
     return label;
   }
 
-  function searchText(b) {
-    const text = [
-      b.brand, b.model, b.case.color_or_finish, b.case.material, b.plate,
-      b.switches.model, b.switches.description, b.switches.type,
-      b.keycaps.set, b.keycaps.profile, b.notes,
-      b.status === 'work_in_progress' ? 'work in progress' : null,
-      b.daily_driver ? 'daily driver' : null,
-    ].filter((v) => !isBlank(v)).join(' ');
-    return fold(text);
-  }
-
   function normalize(raw) {
     return {
       id: raw.id,
@@ -117,7 +96,6 @@
         ? raw.additional_photos.filter((p) => !isBlank(p))
         : [],
       status: raw.status ?? null,
-      daily_driver: raw.daily_driver === true,
       notes: raw.notes ?? null,
     };
   }
@@ -184,9 +162,6 @@
       wrap.append(button);
     } else {
       wrap.append(placeholder());
-    }
-    if (b.daily_driver) {
-      wrap.append(el('span', { class: 'card__daily', 'aria-hidden': 'true', text: 'Daily driver' }));
     }
     return wrap;
   }
@@ -303,29 +278,6 @@
     }, [media(b), body]));
   }
 
-  function populateSelect(select, values, transform) {
-    const counts = new Map();
-    for (const v of values) counts.set(filterValue(v), (counts.get(filterValue(v)) || 0) + 1);
-    const keys = [...counts.keys()]
-      .filter((k) => k !== TBD_VALUE)
-      .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
-    if (counts.has(TBD_VALUE)) keys.push(TBD_VALUE);
-    for (const k of keys) {
-      const label = k === TBD_VALUE ? TBD : transform ? transform(k) : k;
-      select.append(el('option', { value: k, text: `${label} (${counts.get(k)})` }));
-    }
-  }
-
-  function currentFilters() {
-    return {
-      q: fold(els.q.value.trim()),
-      switchType: els.switchType.value,
-      profile: els.profile.value,
-      sort: els.sort.value,
-    };
-  }
-
-  const DEFAULT_SORT = 'brand';
   const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
 
   // Blank values sort last so "TBD" entries don't lead the list.
@@ -336,70 +288,21 @@
     return collator.compare(String(a), String(b));
   }
 
-  const SORTS = {
-    brand: (a, b) => compareText(a.brand, b.brand) || compareText(a.model, b.model) || a.id - b.id,
-    model: (a, b) => compareText(a.model, b.model) || compareText(a.brand, b.brand) || a.id - b.id,
-    id: (a, b) => a.id - b.id,
-  };
-
-  function matches(b, f) {
-    if (f.switchType && filterValue(b.switches.type) !== f.switchType) return false;
-    if (f.profile && filterValue(b.keycaps.profile) !== f.profile) return false;
-    if (f.q) {
-      const hay = b._search;
-      return f.q.split(/\s+/).every((term) => hay.includes(term));
-    }
-    return true;
-  }
-
-  function syncUrl(f) {
-    const params = new URLSearchParams();
-    if (els.q.value.trim()) params.set('q', els.q.value.trim());
-    if (f.switchType) params.set('switch', f.switchType);
-    if (f.profile) params.set('profile', f.profile);
-    if (f.sort && f.sort !== DEFAULT_SORT) params.set('sort', f.sort);
-    const qs = params.toString();
-    const url = `${location.pathname}${qs ? `?${qs}` : ''}${location.hash}`;
-    history.replaceState(null, '', url);
-  }
-
-  function setSelect(select, value) {
-    if (value && [...select.options].some((o) => o.value === value)) select.value = value;
-  }
-
-  function readUrl() {
-    const params = new URLSearchParams(location.search);
-    els.q.value = params.get('q') || '';
-    setSelect(els.switchType, params.get('switch'));
-    setSelect(els.profile, params.get('profile'));
-    setSelect(els.sort, params.get('sort'));
-  }
+  const byBrand = (a, b) => compareText(a.brand, b.brand) || compareText(a.model, b.model) || a.id - b.id;
 
   function render() {
-    const f = currentFilters();
-    const visible = builds.filter((b) => matches(b, f)).sort(SORTS[f.sort] || SORTS[DEFAULT_SORT]);
-    els.grid.replaceChildren(...visible.map(card));
-    els.empty.hidden = visible.length !== 0;
+    els.grid.replaceChildren(...builds.map(card));
     const noun = builds.length === 1 ? 'keyboard' : 'keyboards';
-    els.count.textContent = visible.length === builds.length
-      ? `Showing all ${builds.length} ${noun}.`
-      : `Showing ${visible.length} of ${builds.length} ${noun}.`;
-    els.countHint.hidden = !visible.some((b) => !isBlank(b.photo));
-    syncUrl(f);
+    els.count.textContent = `Showing all ${builds.length} ${noun}.`;
+    els.countHint.hidden = !builds.some((b) => !isBlank(b.photo));
   }
 
-  // Shared links point at #kb-<id>. Clear filters that would hide the card, then move focus to it.
+  // Shared links point at #kb-<id>. Highlight the card and move focus to it.
   function showTarget() {
     const hash = location.hash.slice(1);
     targetId = builds.some((b) => `kb-${b.id}` === hash) ? hash : null;
-    if (targetId && !document.getElementById(targetId)) {
-      // The reset handler re-renders on the next tick, so focus after that.
-      els.form.reset();
-      setTimeout(focusTarget, 0);
-    } else {
-      render();
-      focusTarget();
-    }
+    render();
+    focusTarget();
   }
 
   function focusTarget() {
@@ -410,45 +313,20 @@
     }
   }
 
-  function clearFilters() {
-    els.form.reset();
-    render();
-    els.q.focus();
-  }
-
   async function init() {
     try {
       const res = await fetch(DATA_URL);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      builds = (data.builds || []).map(normalize).map((b) => ({ ...b, _search: searchText(b) }));
-      const drivers = builds.filter((b) => b.daily_driver).map((b) => `#${b.id}`);
-      if (drivers.length > 1) console.warn(`More than one daily driver (${drivers.join(', ')}); set all but one to false.`);
+      builds = (data.builds || []).map(normalize).sort(byBrand);
     } catch (err) {
       console.error(err);
       els.count.textContent = 'Sorry, the keyboard collection could not be loaded.';
       return;
     }
 
-    populateSelect(els.switchType, builds.map((b) => b.switches.type), capitalize);
-    populateSelect(els.profile, builds.map((b) => b.keycaps.profile));
-    readUrl();
-
-    let timer;
-    els.q.addEventListener('input', () => {
-      clearTimeout(timer);
-      timer = setTimeout(render, 150);
-    });
-    els.switchType.addEventListener('change', render);
-    els.profile.addEventListener('change', render);
-    els.sort.addEventListener('change', render);
-    els.form.addEventListener('submit', (e) => e.preventDefault());
-    els.form.addEventListener('reset', () => setTimeout(render, 0));
-    els.emptyClear.addEventListener('click', clearFilters);
-
     window.addEventListener('hashchange', showTarget);
     setupLightbox();
-
 
     render();
     if (location.hash) showTarget();

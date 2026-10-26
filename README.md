@@ -25,12 +25,12 @@ Open a new issue on GitHub and choose **New keyboard**. Fill in what you know, a
 
 ## Editing the collection
 
-All content comes from `data/keyboard_collection.json`. Edit the `builds` array, and the filters and counts update on their own.
+All content comes from `data/keyboard_collection.json`. Edit the `builds` array, and the cards and count update on their own. Cards are sorted by brand, then model.
 
 - Fields set to `null` show as **TBD**.
 - When `switches.model` is `null`, the card shows `switches.description` instead.
 - A `status` of `"work_in_progress"` shows a "Work in progress" badge.
-- `daily_driver` is `true` or `false`. `true` shows a "Daily driver" badge in the top-left corner of the card's photo. Only one build should be `true` at a time. To switch on GitHub, open `data/keyboard_collection.json`, select the pencil icon, set the old board to `false` and the new one to `true`, and commit. (Search the file for `"daily_driver": true` to find the current one.) A new keyboard added through the issue form with **Daily driver: Yes** switches it for you.
+- `daily_driver` is `true` or `false`. It isn't shown on the site (say so in `notes` instead), but it records which board is in use. Only one build should be `true` at a time. To switch on GitHub, open `data/keyboard_collection.json`, select the pencil icon, set the old board to `false` and the new one to `true`, and commit. (Search the file for `"daily_driver": true` to find the current one.) A new keyboard added through the issue form with **Daily driver: Yes** switches it for you.
 - `id` is permanent: it's the card's link, `#kb-12`. Never change or reuse an ID. To retire a board, keep its record (or delete it, but don't give its ID to another board). When adding a build by hand, use `next_id` as its `id` and then increase `next_id` by one.
 
 ### Photos
@@ -72,11 +72,9 @@ Cards load the thumbnail and the photo dialog loads the full photo. If a thumbna
 
 ## Features
 
-- A card grid that searches across every field (brand, model, case, plate, switches, keycaps, notes).
-- Filters for switch type and keycap profile.
-- Filter state lives in the URL, so a filtered view can be bookmarked or shared, e.g. `?switch=tactile&profile=SA`.
-- Every card has a link icon in its top-right corner that links to the card (`#kb-<id>`). Its accessible name ("Link to …" with the brand, model, switches, and keycaps) is unique per card. Opening one clears any filter that would hide the card, then scrolls to it, highlights it, and moves focus to it.
+- A card grid of every build, sorted by brand.
+- Every card has a link icon in its top-right corner that links to the card (`#kb-<id>`). Its accessible name ("Link to …" with the brand, model, switches, and keycaps) is unique per card. Opening one scrolls to the card, highlights it, and moves focus to it.
 - Card photos show the whole keyboard, uncropped, over a blurred copy of the photo, with an expand icon. Selecting one opens the full-size photo in a modal dialog. A build with more than one photo shows a "3 photos" label on its card, and the dialog has previous and next buttons (or the Left and Right arrow keys) and a "Photo 1 of 3" counter. Focus stays in the dialog until you close it with the close button, Esc, or a click outside the photo, and then returns to the card.
 - A dark, minimal theme set in MonoLisa Text, with `system-ui` as the fallback. Every color pair meets WCAG 2.2 AA contrast, and the ratios are listed at the top of `css/styles.css`.
-- Keyboard accessible, with a skip link, labeled controls, visible focus rings, and a live region that announces the result count.
+- Keyboard accessible, with a skip link, visible focus rings, and a status line with the keyboard count.
 

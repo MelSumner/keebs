@@ -40,40 +40,6 @@
   </header>
 
   <main id="main" class="container">
-    <form class="filters" id="filters" role="search" aria-labelledby="filters-heading">
-      <div class="filters__intro">
-        <h2 class="filters__heading" id="filters-heading">Find a keyboard</h2>
-        <p class="filters__hint">Search by brand, model, switch, or keycaps, or narrow the list by switch type and keycap profile. Results update automatically as you type or change a filter.</p>
-      </div>
-      <div class="field field--search">
-        <label for="q">Search</label>
-        <input type="search" id="q" name="q" autocomplete="off" placeholder="Brand, model, switch, keycaps…">
-      </div>
-      <div class="field">
-        <label for="switch">Switch type</label>
-        <select id="switch" name="switch">
-          <option value="">All</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="profile">Keycap profile</label>
-        <select id="profile" name="profile">
-          <option value="">All</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="sort">Sort by</label>
-        <select id="sort" name="sort">
-          <option value="brand">Brand (A–Z)</option>
-          <option value="model">Model (A–Z)</option>
-          <option value="id">Inventory number</option>
-        </select>
-      </div>
-      <div class="field field--action">
-        <button type="reset" class="button" id="clear">Clear filters</button>
-      </div>
-    </form>
-
     <section id="results" tabindex="-1" aria-labelledby="results-heading">
       <h2 class="results__heading" id="results-heading">Keyboards</h2>
       <p class="status">
@@ -82,10 +48,6 @@
         <span>To learn more about keycap profiles, visit <a href="https://www.keycaps.info">keycaps.info</a>.</span>
       </p>
       <ul class="grid" id="grid"></ul>
-      <div class="empty" id="empty" hidden>
-        <p>No keyboards match these filters.</p>
-        <button type="button" class="button" id="empty-clear">Clear filters</button>
-      </div>
       <noscript>
         <p class="notice">This site needs JavaScript to load the collection. The raw data is available at <a href="data/keyboard_collection.json">data/keyboard_collection.json</a>.</p>
       </noscript>
