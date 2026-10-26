@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "collection": "Mechanical keyboard inventory",
-  "total_builds": 31,
-  "next_id": 32,
+  "total_builds": 32,
+  "next_id": 33,
   "photo_field_description": "Set photo to the path or URL of a future replacement photograph; null means not assigned.",
   "additional_photos_field_description": "Optional list of extra photo paths. The photo dialog shows photo first, then these in order.",
   "builds": [
@@ -773,6 +773,29 @@
       "status": "documented",
       "daily_driver": false,
       "notes": null
+    },
+    {
+      "id": 32,
+      "brand": "Womier",
+      "model": "RD75",
+      "case": {
+        "color_or_finish": "Black",
+        "material": "Aluminum"
+      },
+      "plate": null,
+      "switches": {
+        "model": "Otemu Pomelo",
+        "description": null,
+        "type": "silent tactile"
+      },
+      "keycaps": {
+        "set": "KAT Operator",
+        "profile": "KAT"
+      },
+      "photo": null,
+      "status": "documented",
+      "daily_driver": false,
+      "notes": "This is a really enjoyable board to use. It's one of the quietest boards I've made yet!"
     }
   ]
 }
