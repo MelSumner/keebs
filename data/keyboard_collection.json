@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "collection": "Mechanical keyboard inventory",
-  "total_builds": 30,
-  "next_id": 31,
+  "total_builds": 31,
+  "next_id": 32,
   "photo_field_description": "Set photo to the path or URL of a future replacement photograph; null means not assigned.",
   "additional_photos_field_description": "Optional list of extra photo paths. The photo dialog shows photo first, then these in order.",
   "builds": [
@@ -703,6 +703,29 @@
         "profile": "SA"
       },
       "photo": "images/kb-30-IMG_0819.jpg",
+      "status": "documented",
+      "daily_driver": false,
+      "notes": null
+    },
+    {
+      "id": 31,
+      "brand": "Yunzii",
+      "model": "AL80",
+      "case": {
+        "color_or_finish": "Black",
+        "material": null
+      },
+      "plate": null,
+      "switches": {
+        "model": "Epomaker Whisper Linear",
+        "description": null,
+        "type": "linear"
+      },
+      "keycaps": {
+        "set": null,
+        "profile": null
+      },
+      "photo": null,
       "status": "documented",
       "daily_driver": false,
       "notes": null
