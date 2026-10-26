@@ -621,6 +621,10 @@
         "profile": "Cherry"
       },
       "photo": "images/kb-25-IMG_0300.jpg",
+      "additional_photos": [
+        "images/kb-25-01-DSC00101.JPG",
+        "images/kb-25-02-DSC00102.JPG"
+      ],
       "status": "documented",
       "daily_driver": false,
       "notes": "Rei (Evangelion) inspired colorway"
