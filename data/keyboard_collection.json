@@ -275,6 +275,11 @@
         "profile": "MOA"
       },
       "photo": "images/kb-11-IMG_1437.jpg",
+      "additional_photos": [
+        "images/kb-11-01-DSC00142.JPG",
+        "images/kb-11-02-DSC00143.JPG",
+        "images/kb-11-03-DSC00146.JPG"
+      ],
       "status": "documented",
       "daily_driver": false,
       "notes": "Added bottom plate weight and silicone plate dampener. Had to substitute color-matched 7u spacebar."
