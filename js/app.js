@@ -6,7 +6,6 @@
 
   const els = {
     count: document.getElementById('count'),
-    countHint: document.getElementById('count-hint'),
     grid: document.getElementById('grid'),
     lightbox: document.getElementById('lightbox'),
     lightboxTitle: document.getElementById('lightbox-title'),
@@ -294,7 +293,6 @@
     els.grid.replaceChildren(...builds.map(card));
     const noun = builds.length === 1 ? 'keyboard' : 'keyboards';
     els.count.textContent = `Showing all ${builds.length} ${noun}.`;
-    els.countHint.hidden = !builds.some((b) => !isBlank(b.photo));
   }
 
   // Shared links point at #kb-<id>. Highlight the card and move focus to it.
