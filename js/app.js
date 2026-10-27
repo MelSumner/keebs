@@ -5,7 +5,6 @@
   const TBD = 'TBD';
 
   const els = {
-    count: document.getElementById('count'),
     grid: document.getElementById('grid'),
     lightbox: document.getElementById('lightbox'),
     lightboxTitle: document.getElementById('lightbox-title'),
@@ -236,7 +235,7 @@
   function card(b) {
     const cardId = `kb-${b.id}`;
     const headingId = `${cardId}-title`;
-    const title = el('h3', { id: headingId }, [
+    const title = el('h2', { id: headingId }, [
       el('span', { class: 'card__brand' }, valueNode(b.brand)),
       valueNode(b.model),
     ]);
@@ -266,7 +265,7 @@
     const body = el('div', { class: 'card__body' }, [header, dl]);
     if (!isBlank(b.notes)) {
       body.append(el('div', { class: 'card__notes' }, [
-        el('h4', { class: 'card__notes-label', text: 'Build Notes' }),
+        el('h3', { class: 'card__notes-label', text: 'Build Notes' }),
         el('p', { text: b.notes }),
       ]));
     }
@@ -291,8 +290,6 @@
 
   function render() {
     els.grid.replaceChildren(...builds.map(card));
-    const noun = builds.length === 1 ? 'keyboard' : 'keyboards';
-    els.count.textContent = `Showing all ${builds.length} ${noun}.`;
   }
 
   // Shared links point at #kb-<id>. Highlight the card and move focus to it.
@@ -319,7 +316,7 @@
       builds = (data.builds || []).map(normalize).sort(byBrand);
     } catch (err) {
       console.error(err);
-      els.count.textContent = 'Sorry, the keyboard collection could not be loaded.';
+      els.grid.after(el('p', { class: 'notice', role: 'alert', text: 'Sorry, the keyboard collection could not be loaded.' }));
       return;
     }
 

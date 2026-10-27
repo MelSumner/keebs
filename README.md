@@ -27,7 +27,7 @@ Open a new issue on GitHub and choose **New keyboard**. Fill in what you know, a
 
 ## Editing the collection
 
-All content comes from `data/keyboard_collection.json`. Edit the `builds` array, and the cards and count update on their own. Cards are sorted by brand, then model.
+All content comes from `data/keyboard_collection.json`. Edit the `builds` array, and the cards update on their own. Cards are sorted by brand, then model.
 
 - Fields set to `null` show as **TBD**.
 - When `switches.model` is `null`, the card shows `switches.description` instead.
@@ -78,5 +78,5 @@ Cards load the thumbnail and the photo dialog loads the full photo. If a thumbna
 - Every card has a link icon in its top-right corner that links to the card (`#kb-<id>`). Its accessible name ("Link to …" with the brand, model, switches, and keycaps) is unique per card. Opening one scrolls to the card, highlights it, and moves focus to it.
 - Card photos show the whole keyboard, uncropped, over a blurred copy of the photo, with an expand icon. Selecting one opens the full-size photo in a modal dialog. A build with more than one photo shows a "3 photos" label on its card, and the dialog has previous and next buttons (or the Left and Right arrow keys) and a "Photo 1 of 3" counter. Focus stays in the dialog until you close it with the close button, Esc, or a click outside the photo, and then returns to the card.
 - A dark, minimal theme set in MonoLisa Text, with `system-ui` as the fallback. Every color pair meets WCAG 2.2 AA contrast, and the ratios are listed at the top of `css/styles.css`.
-- Keyboard accessible, with a skip link, visible focus rings, and a status line with the keyboard count.
+- Keyboard accessible, with a skip link, visible focus rings, and a heading for each card (`h2`, with `h3` for build notes).
 
