@@ -41,7 +41,7 @@
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
-        "type": "silent tactile"
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "CannonKeys PBS WoB",
@@ -64,7 +64,7 @@
       "switches": {
         "model": "Kailh Midnight Pro Silent Tactile",
         "description": "very fast! very quiet!",
-        "type": "silent tactile"
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "Black Panther keycaps",
@@ -86,8 +86,8 @@
       "plate": null,
       "switches": {
         "model": "Cherry MX Honey",
-        "description": "MX2A silent tactile switch, 45g actuation, factory-lubed",
-        "type": "tactile"
+        "description": "MX2A tactile silent switch, 45g actuation, factory-lubed",
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "Personalized Thockfactory keycaps",
@@ -139,8 +139,8 @@
       "plate": "Polypropylene (PP)",
       "switches": {
         "model": "HMX Moksae",
-        "description": "Silent tactile",
-        "type": "tactile"
+        "description": "Tactile silent",
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "DSS Honeywell",
@@ -213,8 +213,8 @@
       "plate": null,
       "switches": {
         "model": "Mode Anthracite",
-        "description": "Silent tactile switch, 48g actuation, 63g tactile peak",
-        "type": "silent tactile"
+        "description": "Tactile silent switch, 48g actuation, 63g tactile peak",
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "Dokodoko Panda",
@@ -241,8 +241,8 @@
       "plate": "Polycarbonate",
       "switches": {
         "model": "Haimu Whisper Silent Tactile",
-        "description": "Silent tactile, 65g spring, nylon PA66 housing, POM stem, factory-lubed",
-        "type": "silent tactile"
+        "description": "Tactile silent, 65g spring, nylon PA66 housing, POM stem, factory-lubed",
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "CannonCaps CXA Iara",
@@ -296,7 +296,7 @@
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
-        "type": "silent tactile"
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "MT3 Operator",
@@ -492,7 +492,7 @@
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
-        "type": "silent tactile"
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "KAM Superuser",
@@ -540,8 +540,8 @@
       "plate": "FR4",
       "switches": {
         "model": "Kinetic Labs Gecko",
-        "description": "Silent linear, made by Gateron",
-        "type": "silent linear"
+        "description": "Linear silent, made by Gateron",
+        "type": "linear silent"
       },
       "keycaps": {
         "set": "CannonKeys CXA WoB",
@@ -586,8 +586,8 @@
       "plate": null,
       "switches": {
         "model": "Cherry MX Silent Red",
-        "description": "Silent linear switch, 45g actuation",
-        "type": "linear"
+        "description": "Linear silent switch, 45g actuation",
+        "type": "linear silent"
       },
       "keycaps": {
         "set": "GMK Mecha-00, bright blue/black/white colorway",
@@ -716,8 +716,8 @@
       "plate": null,
       "switches": {
         "model": "Kinetic Labs Gecko",
-        "description": "Silent linear, made by Gateron",
-        "type": "silent linear"
+        "description": "Linear silent, made by Gateron",
+        "type": "linear silent"
       },
       "keycaps": {
         "set": "KBDiy keycaps in a red, white, and blue colorway",
@@ -740,7 +740,7 @@
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
-        "type": "silent tactile"
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "SP Oblivion V2 Git modifiers, Calm Depths keycaps",
@@ -786,7 +786,7 @@
       "switches": {
         "model": "Otemu Pomelo",
         "description": null,
-        "type": "silent tactile"
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "KAT Operator",
@@ -809,7 +809,7 @@
       "switches": {
         "model": "Kailh Midnight Pro Silent Tactile",
         "description": null,
-        "type": "silent tactile"
+        "type": "tactile silent"
       },
       "keycaps": {
         "set": "MT3 Fairlane",

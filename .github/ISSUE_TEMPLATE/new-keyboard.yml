@@ -53,8 +53,8 @@ body:
         - linear
         - tactile
         - clicky
-        - silent linear
-        - silent tactile
+        - linear silent
+        - tactile silent
         - magnetic
       default: 0
   - type: input
