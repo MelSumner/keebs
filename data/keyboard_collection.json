@@ -807,9 +807,9 @@
       },
       "plate": "FR4",
       "switches": {
-        "model": "Kailh Cocoa",
-        "description": "Linear switch, 45g actuation",
-        "type": "linear"
+        "model": "Kailh Midnight Pro Silent Tactile",
+        "description": null,
+        "type": "silent tactile"
       },
       "keycaps": {
         "set": "MT3 Fairlane",
