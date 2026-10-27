@@ -14,7 +14,7 @@
         "color_or_finish": "White",
         "material": "Aluminum"
       },
-      "plate": null,
+      "plate": "Aluminum",
       "switches": {
         "model": "Keychron Ultra-Fast Lime Silent Banana",
         "description": "Magnetic (Hall effect) switch",
@@ -41,7 +41,7 @@
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
-        "type": "tactile"
+        "type": "silent tactile"
       },
       "keycaps": {
         "set": "CannonKeys PBS WoB",
@@ -267,7 +267,7 @@
       "plate": null,
       "switches": {
         "model": "Akko Creamy Yellow",
-        "description": null,
+        "description": "Linear switch, 50g actuation, factory-lubed",
         "type": "linear"
       },
       "keycaps": {
@@ -296,7 +296,7 @@
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
-        "type": "tactile"
+        "type": "silent tactile"
       },
       "keycaps": {
         "set": "MT3 Operator",
@@ -390,7 +390,7 @@
       "plate": null,
       "switches": {
         "model": "Cherry MX Brown",
-        "description": null,
+        "description": "Tactile switch, 45g actuation, 55g tactile peak",
         "type": "tactile"
       },
       "keycaps": {
@@ -416,7 +416,7 @@
       "plate": null,
       "switches": {
         "model": "Kailh Silver",
-        "description": null,
+        "description": "Linear switch, 40g actuation, 1.1mm actuation point",
         "type": "linear"
       },
       "keycaps": {
@@ -465,7 +465,7 @@
       "plate": null,
       "switches": {
         "model": "Kailh Silver",
-        "description": null,
+        "description": "Linear switch, 40g actuation, 1.1mm actuation point",
         "type": "linear"
       },
       "keycaps": {
@@ -492,7 +492,7 @@
       "switches": {
         "model": "Keychron Silent Banana",
         "description": null,
-        "type": "tactile"
+        "type": "silent tactile"
       },
       "keycaps": {
         "set": "KAM Superuser",
@@ -535,9 +535,9 @@
       "model": "ProjectD Tinker 65",
       "case": {
         "color_or_finish": "Black",
-        "material": "Polycarbonate...probably"
+        "material": "Plastic"
       },
-      "plate": null,
+      "plate": "FR4",
       "switches": {
         "model": "Kinetic Labs Gecko",
         "description": "Silent linear, made by Gateron",
@@ -757,12 +757,12 @@
       "model": "AL80",
       "case": {
         "color_or_finish": "Black",
-        "material": null
+        "material": "Aluminum"
       },
       "plate": null,
       "switches": {
         "model": "Epomaker Whisper Linear",
-        "description": null,
+        "description": "Linear switch, factory-lubed",
         "type": "linear"
       },
       "keycaps": {
@@ -805,11 +805,11 @@
         "color_or_finish": "Red",
         "material": "CNC Aluminum"
       },
-      "plate": null,
+      "plate": "FR4",
       "switches": {
-        "model": null,
-        "description": null,
-        "type": null
+        "model": "Kailh Cocoa",
+        "description": "Linear switch, 45g actuation",
+        "type": "linear"
       },
       "keycaps": {
         "set": "MT3 Fairlane",
