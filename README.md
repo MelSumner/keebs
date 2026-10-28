@@ -70,8 +70,6 @@ Cards load the thumbnail and the photo dialog loads the full photo. If a thumbna
 ### Link preview and icons
 
 - `images/og-preview.jpg` is the 1200×630 image shown when the site is shared (Open Graph and `twitter:card` tags in `index.html`). Its source is `tools/og-image.html`. To change it, edit that file, serve the repo, open `http://localhost:8000/tools/og-image.html` at a 1200×630 viewport, screenshot it, and save it as a JPEG.
-- Each keyboard has its own preview page at `k/<id>/` (for example, `https://melsumner.github.io/keebs/k/29/`). Link-preview crawlers ignore the part of a URL after `#` and don't run JavaScript, so a `#kb-29` link would only show the site-wide preview. Each `k/<id>/index.html` has that keyboard's name, a summary of its switches, keycaps, and case, and its photo, and then redirects people to `#kb-<id>`. Keyboards without a photo use `images/og-preview.jpg`. The preview images are in `images/og/`: the whole card photo at 1200×630 over a blurred copy of itself.
-- `tools/build_previews.py` generates the `k/` pages and `images/og/` images. Don't edit them by hand. The **Build link previews** Action reruns the script and commits the result whenever `data/` or `images/` changes on `main`. To run it locally (it needs Pillow: `pip install pillow`), run `python3 tools/build_previews.py`. It only creates preview images that don't exist yet, so if you replace a photo but keep its file name, run it with `--force`.
 - `favicon.svg` is the browser icon. `favicon-32.png` (32×32) and `apple-touch-icon.png` (180×180) are PNG copies of it for browsers and devices that need them.
 
 ## Features
