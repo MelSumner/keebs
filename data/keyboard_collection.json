@@ -24,7 +24,7 @@
         "set": "KBDiy keycaps, BoW",
         "profile": "SA-like"
       },
-      "photo": "images/kb-01-IMG_1485.jpg",
+      "photo": null,
       "status": "documented",
       "daily_driver": false,
       "notes": null
@@ -647,7 +647,7 @@
         "set": "Signature Plastics WoB DCS keycaps",
         "profile": "DCS"
       },
-      "photo": "images/kb-26-IMG_1470.jpg",
+      "photo": null,
       "status": "documented",
       "daily_driver": false,
       "notes": "ABS injection-molded case; polycarbonate plate; hot-swap PCB; dampening foams; gasket socks. Sound: muted but not deep; constrained brightness"
@@ -723,7 +723,7 @@
         "set": "KBDiy keycaps in a red, white, and blue colorway",
         "profile": "SA-like"
       },
-      "photo": "images/kb-29-IMG_1552.jpg",
+      "photo": null,
       "status": "documented",
       "daily_driver": true,
       "notes": "Silver volume knob (even though the board is white). This is, surprisingly, my current daily driver."
