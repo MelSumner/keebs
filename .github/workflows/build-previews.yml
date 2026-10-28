@@ -1,0 +1,46 @@
+name: Build link previews
+
+# Regenerates k/<id>/ preview pages and images/og/ images when the data or photos change.
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/**
+      - images/**
+      - "!images/og/**"
+      - tools/build_previews.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-previews
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pillow
+
+      - run: python tools/build_previews.py
+
+      - name: Commit changes
+        run: |
+          git add k images/og
+          if git diff --cached --quiet; then
+            echo "Previews are up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update link previews"
+          git pull --rebase
+          git push

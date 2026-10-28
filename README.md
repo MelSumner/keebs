@@ -33,7 +33,7 @@ All content comes from `data/keyboard_collection.json`. Edit the `builds` array,
 - When `switches.model` is `null`, the card shows `switches.description` instead.
 - A `status` of `"work_in_progress"` shows a "Work in progress" badge.
 - `daily_driver` is `true` or `false`. It isn't shown on the site (say so in `notes` instead), but it records which board is in use. Only one build should be `true` at a time. To switch on GitHub, open `data/keyboard_collection.json`, select the pencil icon, set the old board to `false` and the new one to `true`, and commit. (Search the file for `"daily_driver": true` to find the current one.) A new keyboard added through the issue form with **Daily driver: Yes** switches it for you.
-- `id` is permanent: it's the card's link, `#kb-12`. Never change or reuse an ID. To retire a board, keep its record (or delete it, but don't give its ID to another board). When adding a build by hand, use `next_id` as its `id` and then increase `next_id` by one.
+- `id` is permanent: it's the card's link, `k/12/` (which opens `#kb-12`). Never change or reuse an ID. To retire a board, keep its record (or delete it, but don't give its ID to another board). When adding a build by hand, use `next_id` as its `id` and then increase `next_id` by one.
 
 ### Photos
 
@@ -69,13 +69,15 @@ Cards load the thumbnail and the photo dialog loads the full photo. If a thumbna
 
 ### Link preview and icons
 
-- `images/og-preview.jpg` is the 1200×630 image shown when the site is shared (Open Graph and `twitter:card` tags in `index.html`). Its source is `tools/og-image.html`. To change it, edit that file, serve the repo, open `http://localhost:8000/tools/og-image.html` at a 1200×630 viewport, screenshot it, and save it as a JPEG. Every `#kb-<id>` link shares this one preview, because link-preview crawlers ignore the part after `#`.
+- `images/og-preview.jpg` is the 1200×630 image shown when the site is shared (Open Graph and `twitter:card` tags in `index.html`). Its source is `tools/og-image.html`. To change it, edit that file, serve the repo, open `http://localhost:8000/tools/og-image.html` at a 1200×630 viewport, screenshot it, and save it as a JPEG.
+- Each keyboard has its own preview page at `k/<id>/` (for example, `https://melsumner.github.io/keebs/k/29/`). Link-preview crawlers ignore the part of a URL after `#` and don't run JavaScript, so a `#kb-29` link would only show the site-wide preview. Each `k/<id>/index.html` has that keyboard's name, a summary of its switches, keycaps, and case, and its photo, and then redirects people to `#kb-<id>`. Keyboards without a photo use `images/og-preview.jpg`. The preview images are in `images/og/`: the whole card photo at 1200×630 over a blurred copy of itself.
+- `tools/build_previews.py` generates the `k/` pages and `images/og/` images. Don't edit them by hand. The **Build link previews** Action reruns the script and commits the result whenever `data/` or `images/` changes on `main`. To run it locally (it needs Pillow: `pip install pillow`), run `python3 tools/build_previews.py`. It only creates preview images that don't exist yet, so if you replace a photo but keep its file name, run it with `--force`.
 - `favicon.svg` is the browser icon. `favicon-32.png` (32×32) and `apple-touch-icon.png` (180×180) are PNG copies of it for browsers and devices that need them.
 
 ## Features
 
 - A card grid of every build, sorted by brand.
-- Every card has a link icon in its top-right corner that links to the card (`#kb-<id>`). Its accessible name ("Link to …" with the brand, model, switches, and keycaps) is unique per card. Opening one scrolls to the card, highlights it, and moves focus to it.
+- Every card has a link icon in its top-right corner that links to the card's preview page (`k/<id>/`), so a copied link shows that keyboard in link previews. Its accessible name ("Link to …" with the brand, model, switches, and keycaps) is unique per card. Selecting it, or opening a shared link, scrolls to the card, highlights it, and moves focus to it.
 - Card photos show the whole keyboard, uncropped, over a blurred copy of the photo, with an expand icon. Selecting one opens the full-size photo in a modal dialog. A build with more than one photo shows a "3 photos" label on its card, and the dialog has previous and next buttons (or the Left and Right arrow keys) and a "Photo 1 of 3" counter. Focus stays in the dialog until you close it with the close button, Esc, or a click outside the photo, and then returns to the card.
 - A dark, minimal theme set in MonoLisa Text, with `system-ui` as the fallback. Every color pair meets WCAG 2.2 AA contrast, and the ratios are listed at the top of `css/styles.css`.
 - Keyboard accessible, with a skip link, visible focus rings, and a heading for each card (`h2`, with `h3` for build notes).

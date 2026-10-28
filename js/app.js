@@ -245,8 +245,16 @@
       [b.brand, b.model].filter((v) => !isBlank(v)).join(' '), b.switches.model, b.keycaps.set,
     ].filter((v) => !isBlank(v)).join(', ');
     const label = `Link to ${linkName}`;
-    const permalink = el('a', { class: 'permalink', href: `#${cardId}`, 'aria-label': label });
+    // The href is the keyboard's preview page (k/<id>/), so copied links get their own link preview.
+    // A plain click stays on this page instead of loading that page and redirecting back.
+    const permalink = el('a', { class: 'permalink', href: `k/${b.id}/`, 'aria-label': label });
     permalink.innerHTML = LINK_SVG;
+    permalink.addEventListener('click', (event) => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      if (location.hash === `#${cardId}`) showTarget();
+      else location.hash = cardId;
+    });
 
     const header = el('div', { class: 'card__header' }, title);
     if (b.status === 'work_in_progress') {
